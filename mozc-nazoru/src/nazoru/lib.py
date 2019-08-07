@@ -29,10 +29,7 @@ from enum import Enum
 SCOPE = 'Nazorunet'
 INPUT_NODE_NAME = 'inputs'
 OUTPUT_NODE_NAME = SCOPE + '/Predictions/Reshape_1'
-KANAS = (u'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほ'
-         u'まみむめもやゆよらりるれろわゐんゑを'
-         u'abcdefghijklmnopqrstuvwxyz1234567890'
-         u'♡ーずぐ')
+KANAS = (u'abcdefghijklmnopqrstuvwxyz1234567890')
 KEYS = ('a', 'i', 'u', 'e', 'o',
         'ka', 'ki', 'ku', 'ke', 'ko',
         'sa', 'si', 'su', 'se', 'so',
