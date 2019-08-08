@@ -18,7 +18,8 @@ from __future__ import absolute_import
 
 from . import lib
 from .bluetooth import Bluetooth
-from .keyboard_recorder import *
+# from .keyboard_recorder import *
+from .mpr121 import *
 from .nazorunet import nazorunet
 from .nazorunet import Conv
 from .nazorunet import DepthSepConv
