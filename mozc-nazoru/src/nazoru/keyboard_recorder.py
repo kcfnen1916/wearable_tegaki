@@ -19,29 +19,49 @@ from __future__ import print_function
 import datetime
 from datetime import timedelta
 import os
-import serial
+import termios
+from time import sleep
+ #import serial
+import sys
 
 def record():
-  wait_seconds = 1000
+  data = []
+  wait_seconds = 300
   recording = False
-  while True:
-    ser = serial.Serial('/dev/cu.usbserial-DN05JJRP', 115200, timeout=1)
-    data = []
-    while True:
-      c = ser.read().decode('utf-8')
+
+  #ser = serial.Serial('/dev/cu.usbserial-DN05JJRP', 115200, timeout=1)
+
+  fd = sys.stdin.fileno()
+  old = termios.tcgetattr(fd)
+  new = termios.tcgetattr(fd)
+  new[3] &= ~termios.ICANON
+  new[3] &= ~termios.ECHO
+  new[6][termios.VMIN] = 0  # cc
+  new[6][termios.VTIME] = 0 # cc
+  termios.tcsetattr(fd, termios.TCSANOW, new)
+
+  flag = 0
+  record = 0
+  while 1:
+    if record == 0:
+      record = 1
+      start_time = datetime.datetime.now()
+      last_now = start_time
+    try:
+      #c = ser.read().decode('utf-8')
+      key = sys.stdin.read(1)
+      if key != '':
+        last_now = datetime.datetime.now()
+        rec_time = (last_now - start_time).total_seconds() * 1000
+        data.append((key,int(rec_time)))
+    finally:
       now = datetime.datetime.now()
-      if not recording:
-        recording = True
-        start_time = datetime.datetime.now()
-      ep_time_ms = int((now-start_time).total_seconds() * 1000)
-      last_time = now
-      if last_time and ep_time_ms > wait_seconds:
-        break
-      if c == '':
-        continue
-      else:
-        data.append((c,ep_time_ms))
-    ser.close
-    if len(data) != 1:
+    ep_time_from_last = (now-last_now).total_seconds() * 1000
+    if abs(ep_time_from_last) > wait_seconds and start_time != last_now:
       break
+  termios.tcsetattr(fd, termios.TCSANOW, old)
   return (data,None)
+
+if __name__ == '__main__':
+  data,command = record()
+  print(data)
