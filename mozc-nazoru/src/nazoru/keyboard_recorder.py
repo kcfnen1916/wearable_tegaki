@@ -43,25 +43,31 @@ def record():
   flag = 0
   record = 0
   while 1:
+    """
     if record == 0:
       record = 1
       start_time = datetime.datetime.now()
       last_now = start_time
+    """
     try:
       #c = ser.read().decode('utf-8')
       key = sys.stdin.read(1)
       if key != '':
+        if record == 0:
+          record = 1
+          start_time = datetime.datetime.now()
+          last_now = start_time
         last_now = datetime.datetime.now()
         rec_time = (last_now - start_time).total_seconds() * 1000
         data.append((key,int(rec_time)))
     finally:
       now = datetime.datetime.now()
+    if record == 0:
+      last_now = now
     ep_time_from_last = (now-last_now).total_seconds() * 1000
     if abs(ep_time_from_last) > wait_seconds and start_time != last_now:
       break
   termios.tcsetattr(fd, termios.TCSANOW, old)
   return (data,None)
 
-if __name__ == '__main__':
-  data,command = record()
-  print(data)
+

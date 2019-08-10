@@ -25,12 +25,17 @@ from tensorflow.python.saved_model import signature_constants
 from tensorflow.python.saved_model import tag_constants
 from tensorflow.python.tools import optimize_for_inference_lib
 
-import argparse
-import json
-import nazoru.core as nazoru
 import numpy as np
 import os
 import sys
+
+CWD_PATH = os.getcwd()
+src_path = os.path.join('/'.join(sys.path[0].split('/')[:-1]), 'src')
+sys.path.append(src_path)
+
+import argparse
+import json
+import nazoru.core as nazoru
 import tensorflow as tf
 import zipfile
 
@@ -61,7 +66,6 @@ def load_data(kanas):
   labels = np.eye(len(kanas))[labels]  # Idiom to one-hot encode.
   return data, labels
 
-
 def convert_data_to_tensors(x, y):
   inputs = tf.constant(x, dtype=tf.float32)
   inputs.set_shape([None] + list(x[0].shape))
@@ -72,14 +76,14 @@ def convert_data_to_tensors(x, y):
 
 def save_inference_graph(checkpoint_dir, input_shape, num_classes, conv_defs,
     output_graph, optimized_output_graph,
-    input_node_name=nazoru.lib.INPUT_NODE_NAME,
-    output_node_name=nazoru.lib.OUTPUT_NODE_NAME):
+    input_node_name=nazoru.INPUT_NODE_NAME,
+    output_node_name=nazoru.OUTPUT_NODE_NAME):
   with tf.Graph().as_default():
     inputs = tf.placeholder(
         tf.float32, shape=[1] + list(input_shape), name=input_node_name)
     outputs, _ = nazoru.nazorunet(
         inputs, num_classes=num_classes, conv_defs=conv_defs, is_training=False,
-        dropout_keep_prob=1, scope=nazoru.lib.SCOPE, reuse=tf.AUTO_REUSE)
+        dropout_keep_prob=1, scope=nazoru.SCOPE, reuse=tf.AUTO_REUSE)
     sv = tf.train.Supervisor(logdir=checkpoint_dir)
     with sv.managed_session() as sess:
       output_graph_def = graph_util.convert_variables_to_constants(
@@ -96,8 +100,8 @@ def save_inference_graph(checkpoint_dir, input_shape, num_classes, conv_defs,
         f.write(output_graph_def.SerializeToString())
 
 def export_saved_model_from_pb(saved_model_dir, graph_name,
-    input_node_name=nazoru.lib.INPUT_NODE_NAME,
-    output_node_name=nazoru.lib.OUTPUT_NODE_NAME):
+    input_node_name=nazoru.INPUT_NODE_NAME,
+    output_node_name=nazoru.OUTPUT_NODE_NAME):
   builder = tf.saved_model.builder.SavedModelBuilder(saved_model_dir)
   with tf.gfile.GFile(graph_name, 'rb') as f:
     graph_def = tf.GraphDef()
@@ -118,19 +122,18 @@ def export_saved_model_from_pb(saved_model_dir, graph_name,
 
   builder.save()
 
-
 def main(_):
-  kanas = nazoru.lib.KANAS
+  kanas = nazoru.KANAS
   keydown_strokes, labels = load_data(kanas)
   x = np.array([
-    nazoru.lib.keydowns2image(
+    nazoru.keydowns2image(
       keydown_stroke,
-      directional_feature=not FLAGS.no_directional_feature,
-      temporal_feature=not FLAGS.no_temporal_feature,
+      directional_feature=True,
+      temporal_feature=True,
       scale=FLAGS.image_size,
       stroke_width=FLAGS.stroke_width)
     for keydown_stroke in keydown_strokes])
-  train_x, train_t, val_x, val_t, test_x, test_t = nazoru.lib.split_data(
+  train_x, train_t, val_x, val_t, test_x, test_t = nazoru.split_data(
       x, labels, 0.2, 0.2)
   conv_defs = [
     nazoru.Conv(kernel=[3, 3], stride=2, depth=32),
@@ -138,43 +141,40 @@ def main(_):
     nazoru.DepthSepConv(kernel=[3, 3], stride=2, depth=128),
     nazoru.DepthSepConv(kernel=[3, 3], stride=1, depth=128),
   ]
-
   with tf.Graph().as_default():
     tf.logging.set_verbosity(tf.logging.INFO)
 
     train_x, train_t = convert_data_to_tensors(train_x, train_t)
     val_x, val_t = convert_data_to_tensors(val_x, val_t)
-
     # Make the model.
     train_logits, train_endpoints = nazoru.nazorunet(
         train_x, num_classes=len(kanas), conv_defs=conv_defs,
-        dropout_keep_prob=FLAGS.dropout_keep_prob, scope=nazoru.lib.SCOPE,
+        dropout_keep_prob=FLAGS.dropout_keep_prob, scope=nazoru.SCOPE,
         reuse=tf.AUTO_REUSE, is_training=True)
     val_logits, val_endpoints = nazoru.nazorunet(
         val_x, num_classes=len(kanas), conv_defs=conv_defs,
-        dropout_keep_prob=1, scope=nazoru.lib.SCOPE, reuse=tf.AUTO_REUSE,
+        dropout_keep_prob=1, scope=nazoru.SCOPE, reuse=tf.AUTO_REUSE,
         is_training=True)
 
     # Add the loss function to the graph.
-    tf.losses.softmax_cross_entropy(train_t, train_logits)
+    tf.compat.v1.losses.softmax_cross_entropy(train_t, train_logits)
     train_total_loss = tf.losses.get_total_loss()
-    tf.summary.scalar('train_total_loss', train_total_loss)
+    tf.compat.v1.summary.scalar('train_total_loss', train_total_loss)
 
     val_total_loss = tf.losses.get_total_loss()
-    tf.summary.scalar('val_total_loss', val_total_loss)
+    tf.compat.v1.summary.scalar('val_total_loss', val_total_loss)
 
     train_accuracy = tf.reduce_mean(tf.cast(tf.equal(
       tf.argmax(train_logits, axis=1), tf.argmax(train_t, axis=1)), tf.float32))
-    tf.summary.scalar('train_accuracy', train_accuracy)
+    tf.compat.v1.summary.scalar('train_accuracy', train_accuracy)
 
     val_accuracy = tf.reduce_mean(tf.cast(tf.equal(
       tf.argmax(val_logits, axis=1), tf.argmax(val_t, axis=1)), tf.float32))
-    tf.summary.scalar('val_accuracy', val_accuracy)
+    tf.compat.v1.summary.scalar('val_accuracy', val_accuracy)
 
     # Specify the optimizer and create the train op:
-    optimizer = tf.train.AdamOptimizer(learning_rate=0.005)
+    optimizer = tf.compat.v1.train.AdamOptimizer(learning_rate=0.005)
     train_op = slim.learning.create_train_op(train_total_loss, optimizer)
-
     def train_step_fn(sess, *args, **kwargs):
       total_loss, should_stop = train_step(sess, *args, **kwargs)
       if train_step_fn.step % FLAGS.n_steps_to_log == 0:
@@ -184,7 +184,6 @@ def main(_):
       train_step_fn.step += 1
       return [total_loss, should_stop]
     train_step_fn.step = 0
-
     # Run the training inside a session.
     final_loss = slim.learning.train(
         train_op,
@@ -193,7 +192,6 @@ def main(_):
         train_step_fn=train_step_fn,
         save_summaries_secs=5,
         log_every_n_steps=FLAGS.n_steps_to_log)
-
     save_inference_graph(checkpoint_dir=FLAGS.checkpoint_dir,
         input_shape=train_x.shape[1:], num_classes=len(kanas),
         conv_defs=conv_defs, output_graph=FLAGS.output_graph,
@@ -274,6 +272,5 @@ if __name__ == '__main__':
       action='store_true',
       help='Not to use temporal feature.'
   )
-
   FLAGS, unparsed = parser.parse_known_args()
   tf.app.run(main=main, argv=[sys.argv[0]] + unparsed)
