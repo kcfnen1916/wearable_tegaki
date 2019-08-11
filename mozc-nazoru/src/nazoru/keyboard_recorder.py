@@ -21,7 +21,8 @@ from datetime import timedelta
 import os
 import termios
 from time import sleep
- #import serial
+#シリアル通信の時は以下1行のコメントアウトをやめる
+#import serial
 import sys
 
 def record():
@@ -29,8 +30,10 @@ def record():
   wait_seconds = 300
   recording = False
 
-  #ser = serial.Serial('/dev/cu.usbserial-DN05JJRP', 115200, timeout=1)
+  #シリアル通信の時は以下1行のコメントアウトをやめる
+  #ser = serial.Serial('/dev/cu.usbserial-DN05JJRP', 115200, timeout=0)
 
+  #シリアル通信の時は以下8行をコメントアウトする
   fd = sys.stdin.fileno()
   old = termios.tcgetattr(fd)
   new = termios.tcgetattr(fd)
@@ -43,15 +46,12 @@ def record():
   flag = 0
   record = 0
   while 1:
-    """
-    if record == 0:
-      record = 1
-      start_time = datetime.datetime.now()
-      last_now = start_time
-    """
     try:
+      #シリアル通信の時は以下1行のコメントアウトをやめる
       #c = ser.read().decode('utf-8')
+      #シリアル通信の時は以下1行をコメントアウトする
       key = sys.stdin.read(1)
+
       if key != '':
         if record == 0:
           record = 1
@@ -67,7 +67,10 @@ def record():
     ep_time_from_last = (now-last_now).total_seconds() * 1000
     if abs(ep_time_from_last) > wait_seconds and start_time != last_now:
       break
+  #シリアル通信の時は以下1行をコメントアウトする
   termios.tcsetattr(fd, termios.TCSANOW, old)
+  #シリアル通信の時は以下1行のコメントアウトをやめる
+  #ser.close()
   return (data,None)
 
 

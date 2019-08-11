@@ -28,6 +28,7 @@ from tensorflow.python.tools import optimize_for_inference_lib
 import numpy as np
 import os
 import sys
+import shutil
 
 CWD_PATH = os.getcwd()
 src_path = os.path.join('/'.join(sys.path[0].split('/')[:-1]), 'src')
@@ -274,3 +275,6 @@ if __name__ == '__main__':
   )
   FLAGS, unparsed = parser.parse_known_args()
   tf.app.run(main=main, argv=[sys.argv[0]] + unparsed)
+
+  shutil.rmtree(os.path.join(os.sep, 'tmp', 'nazorunet'))
+  os.mkdir(os.path.join(os.sep, 'tmp', 'nazorunet'))
