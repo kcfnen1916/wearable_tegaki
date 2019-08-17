@@ -3,6 +3,9 @@ class Key:
         self.pin = pin
         self.chr = chr
 
+    def __repr__(self):
+        return self.chr
+
 
 class Gesture:
     def __init__(self, key_lst, process, output, mode):

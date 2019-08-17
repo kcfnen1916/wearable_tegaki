@@ -5,18 +5,18 @@ upper_flag = False
 
 # Keyの宣言
 
-hij = Key(0, 'u')
-delete = Key(1, 'del')
+hij = Key(0, 'hij')
+delete = Key(1, 'delete')
 space = Key(2, 'space')
-tuvw = Key(3, 'j')
-bracket = Key(4, 'n')
-pcqe = Key(5, 'b')
-opqrs = Key(6, 'h')
-xyz = Key(7, 'v')
-klmn = Key(8, 'g')
+tuvw = Key(3, 'tuvw')
+bracket = Key(4, 'bracket')
+pcqe = Key(5, 'pcqe')
+opqrs = Key(6, 'opqrs')
+xyz = Key(7, 'xyz')
+klmn = Key(8, 'klmn')
 cul = Key(9, 'cul')
-abc = Key(10, 't')
-defg = Key(11, 'y')
+abc = Key(10, 'abc')
+defg = Key(11, 'defg')
 
 
 # Gestureによる処理の定義

@@ -59,6 +59,7 @@ while True:
 # test
 # input_key_lst = [gesture_config.cul, gesture_config.klmn, gesture_config.opqrs,
 #                  gesture_config.tuvw, gesture_config.space]
+# print(input_key_lst)
 # print(gesture_config.mode)
 # if input_key_lst != []:
 #     for g in gesture_config.ges_lst[gesture_config.mode - 1]:
