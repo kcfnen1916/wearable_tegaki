@@ -26,6 +26,7 @@ last_touched = cap.touched()
 while True:
     input_key_lst = []
     record = 0
+    print("Input Start")
     while True:
         current_touched = cap.touched()
         if record == 0:
@@ -38,19 +39,22 @@ while True:
                 if current_touched & pin_bit and not last_touched & pin_bit:
                     last_now = datetime.datetime.now()
                     rec_time = (last_now - start_time).total_seconds() * 1000
-                    input_key_lst.append(key_lst[i])
+                    input_key_lst.append(gesture_config.key_lst[i])
         finally:
             now = datetime.datetime.now()
         ep_time_from_last = (now - last_now).total_seconds() * 1000
         if abs(ep_time_from_last) > wait_seconds and start_time != last_now:
             break
         last_touched = current_touched
+    print("Input Finish")
+    print(input_key_lst)
     # gesture判定
     if input_key_lst != []:
-        for g in ges_lst[mode]:
+        for g in gesture_config.ges_lst[gesture_config.mode - 1]:
             res = g.judge_gesture(input_key_lst)
             if res == 1:
                 break
+        print("Input Serch Finished")
 
 # test
 # input_key_lst = [gesture_config.cul, gesture_config.klmn, gesture_config.opqrs,
