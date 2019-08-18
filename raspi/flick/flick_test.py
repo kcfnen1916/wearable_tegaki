@@ -46,7 +46,6 @@ while True:
         if abs(ep_time_from_last) > wait_seconds and start_time != last_now:
             break
         last_touched = current_touched
-    print("Input Finish")
     print(input_key_lst)
     # gesture判定
     if input_key_lst != []:
@@ -54,7 +53,6 @@ while True:
             res = g.judge_gesture(input_key_lst)
             if res == 1:
                 break
-        print("Input Serch Finished")
 
 # test
 # input_key_lst = [gesture_config.cul, gesture_config.klmn, gesture_config.opqrs,
