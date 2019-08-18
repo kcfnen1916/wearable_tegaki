@@ -27,6 +27,7 @@ Conv = namedtuple('Conv', ['kernel', 'stride', 'depth'])
 DepthSepConv = namedtuple('DepthSepConv', ['kernel', 'stride', 'depth'])
 
 
+
 def mobilenet_v1_base(inputs,
                       final_endpoint,
                       conv_defs,

@@ -27,8 +27,17 @@ import time
 import argparse
 import os
 import unicodedata
-from nazoru import get_default_graph_path
+import sys
+
+CWD_PATH = os.getcwd()
+src_path = os.path.join('/'.join(sys.path[0].split('/')[:-1]), 'src')
+sys.path.append(src_path)
+
+from nazoru.keyboard_recorder import record
 from nazoru.core import *
+
+def get_default_graph_path():
+  return os.path.join(src_path,'nazoru/data/optimized_nazoru.pb')
 
 def main():
   FLAGS = None
@@ -42,10 +51,10 @@ def main():
   FLAGS, unparsed = parser.parse_known_args()
 
   predictor = NazoruPredictor(FLAGS.graph)
-
   print('Ready. Please scrrible on your keyboard.')
   while True:
     data, command = record()
+    print(data)
     if command is not None:
       print('command: %s' % command)
       continue
@@ -76,11 +85,7 @@ def main():
     most_likely_result = result[0]
     print(u'prediction: %s (%s)' % (
       most_likely_result[0], most_likely_result[1]))
-    with open("/Users/sanoyuki/Documents/SFP2019/test.txt","a") as f:
-      for x in data:
-        f.write(str(x) + "\n")
-      f.write("result : "+most_likely_result[0] + "\n")
-      f.write("--------\n")
+
 
 if __name__ == '__main__':
   main()
