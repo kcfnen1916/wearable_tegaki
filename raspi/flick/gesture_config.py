@@ -63,9 +63,9 @@ def set_upper_flag(arg):
 spc = Gesture([space], out_chr, ' ', 0)
 # dlt = Gesture([delete],,0) TODO : delete実装
 dlt = None
-enter = Gesture([delete, space, bracket], out_chr, '\n', 0)
-mode_r = Gesture([space, tuvw, opqrs, klmn, cul], change_mode, 'r', 0)
-mode_l = Gesture([cul, klmn, opqrs, tuvw, space], change_mode, 'l', 0)
+enter = Gesture([delete, space, bracket], out_chr, '\n', 0, True)
+mode_r = Gesture([space, tuvw, opqrs, klmn, cul], change_mode, 'r', 0, True)
+mode_l = Gesture([cul, klmn, opqrs, tuvw, space], change_mode, 'l', 0, True)
 
 # アルファベットフリック入力モード 1
 a = Gesture([abc], out_alph, 'a', 1)
