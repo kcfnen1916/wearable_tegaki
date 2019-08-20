@@ -60,6 +60,7 @@ def record():
 
     # mpr121
     last_touched = cap.touched()
+    last_key = [0] * 12
 
     while 1:
         try:
@@ -83,7 +84,12 @@ def record():
                 if current_touched & pin_bit and not last_touched & pin_bit:
                     last_now = datetime.datetime.now()
                     rec_time = (last_now - start_time).total_seconds() * 1000
-                    data.append((pin_to_key_dic[i], int(rec_time)))
+                    if last_key[i] == 0:
+                        last_key[i] = 1
+                        data.append((pin_to_key_dic[i], int(rec_time)))
+                if not current_touched & pin_bit and last_touched & pin_bit:
+                    last_key[i] = 0
+
         finally:
             now = datetime.datetime.now()
         if record == 0:
