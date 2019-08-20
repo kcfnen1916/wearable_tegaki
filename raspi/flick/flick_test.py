@@ -39,7 +39,8 @@ while True:
                 if current_touched & pin_bit and not last_touched & pin_bit:
                     last_now = datetime.datetime.now()
                     rec_time = (last_now - start_time).total_seconds() * 1000
-                    input_key_lst.append(gesture_config.key_lst[i])
+                    if not gesture_config.key_lst[i] in input_key_lst:
+                        input_key_lst.append(gesture_config.key_lst[i])
         finally:
             now = datetime.datetime.now()
         ep_time_from_last = (now - last_now).total_seconds() * 1000
