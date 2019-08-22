@@ -8,7 +8,7 @@
 #
 
 #from __future__ import absolute_import, print_function, unicode_literals
-
+from __future__ import absolute_import, print_function
 
 from optparse import OptionParser, make_option
 import os
@@ -47,7 +47,7 @@ class BTKbBluezProfile(dbus.service.Object):
     def NewConnection(self, path, fd, properties):
             self.fd = fd.take()
             print("NewConnection(%s, %d)" % (path, self.fd))
-            for key in list(properties.keys()):
+            for key in properties.keys():
                     if key == "Version" or key == "Features":
                             print("  %s = 0x%04x" % (key, properties[key]))
                     else:
@@ -73,7 +73,7 @@ class BTKbBluezProfile(dbus.service.Object):
 #
 class BTKbDevice():
     #change these constants
-    MY_ADDRESS="B8:27:EB:2F:B6:13"
+    MY_ADDRESS="00:1A:7D:DA:71:13"
     MY_DEV_NAME="DeskPi_BTKb"
 
     #define some constants
