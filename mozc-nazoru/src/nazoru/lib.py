@@ -30,26 +30,26 @@ SCOPE = 'Nazorunet'
 INPUT_NODE_NAME = 'inputs'
 OUTPUT_NODE_NAME = SCOPE + '/Predictions/Reshape_1'
 KANAS = (u'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほ'
-         u'まみむめもやゆよらりるれろわゐんゑを'
-         u'abcdefghijklmnopqrstuvwxyz1234567890'
-         u'♡ーずぐ')
+u'まみむめもやゆよらりるれろわゐんゑを'
+u'abcdefghijklmnopqrstuvwxyz1234567890'u'♡ーずぐ')
 KEYS = ('a', 'i', 'u', 'e', 'o',
-        'ka', 'ki', 'ku', 'ke', 'ko',
-        'sa', 'si', 'su', 'se', 'so',
-        'ta', 'ti', 'tu', 'te', 'to',
-        'na', 'ni', 'nu', 'ne', 'no',
-        'ha', 'hi', 'hu', 'he', 'ho',
-        'ma', 'mi', 'mu', 'me', 'mo',
-        'ya',       'yu',       'yo',
-        'ra', 'ri', 'ru', 're', 'ro',
-        'wa', 'wi', 'nn', 'we', 'wo',
-        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
-        'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
-        '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
-        'ha-to', '-', 'zu', 'gu')
+'ka', 'ki', 'ku', 'ke', 'ko',
+'sa', 'si', 'su', 'se', 'so',
+'ta', 'ti', 'tu', 'te', 'to',
+'na', 'ni', 'nu', 'ne', 'no',
+'ha', 'hi', 'hu', 'he', 'ho',
+'ma', 'mi', 'mu', 'me', 'mo',
+'ya',       'yu',       'yo',
+'ra', 'ri', 'ru', 're', 'ro',
+'wa', 'wi', 'nn', 'we', 'wo',
+'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
+'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+'1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
+'ha-to', '-', 'zu', 'gu')
 
 class KeyboardArrangement(Enum):
-  """Enum for keyboard arrangements.
+  """Enum for keyboard arrangements
+    キーボードの並び順を書いている
   """
   qwerty_jis = [
       u'1234567890-^¥',
@@ -97,7 +97,6 @@ def keydowns2points(keydowns):
       points.append((pos[0], pos[1], keydown[1]))
   return points
 
-
 def normalize_x(x):
   """Normalizes position.
 
@@ -113,7 +112,10 @@ def normalize_x(x):
   x = np.array(x)
   max_ = np.max(x[:, :2], axis=0)
   min_ = np.min(x[:, :2], axis=0)
-  x[:, :2] = (x[:, :2] - min_) / (max_ - min_)
+  maxminusmin = max_ - min_
+  np.where(maxminusmin == 0, 1, maxminusmin)
+
+  x[:, :2] = (x[:, :2] - min_) / maxminusmin
   return x
 
 
@@ -385,7 +387,7 @@ def keydowns2image(keydowns, directional_feature, temporal_feature, scale=16,
   Returns:
     X_im: Image dataset in numpy array format. The shape differs by used
     features.
-    (directional=True, temporal=True)   => (scale, scale, 10)
+    (directional=True, temporal=True)   => (scale, scale, 10)　#デフォはこれ
     (directional=True, temporal=False)  => (scale, scale, 8)
     (directional=False, temporal=True)  => (scale, scale, 3)
     (directional=False, temporal=False) => (scale, scale, 1)

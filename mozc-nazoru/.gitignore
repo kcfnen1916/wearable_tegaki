@@ -107,8 +107,3 @@ venv.bak/
 # macOS filesystem
 .DS_Store
 
-# Uncompressed training data
-data/strokes.ndjson
-nazoru_saved_model/
-nazoru.pb
-optimized_nazoru.pb

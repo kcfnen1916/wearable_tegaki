@@ -17,8 +17,8 @@
 from __future__ import absolute_import
 
 import tensorflow as tf
-from . import lib
-from . import utils
+from .lib import *
+from .utils import *
 import numpy as np
 
 def _load_graph(model_file): #model_fileは学習済みモデル
@@ -35,15 +35,15 @@ class NazoruPredictor():
     graph = _load_graph(model_file)#学習済みモデルを読み込む
     self._graph = graph
     self._input_operation = graph.get_operation_by_name(
-        'import/' + lib.INPUT_NODE_NAME)
+        'import/' + INPUT_NODE_NAME)
     self._output_operation = graph.get_operation_by_name(
-        'import/' + lib.OUTPUT_NODE_NAME)
+        'import/' + OUTPUT_NODE_NAME)
 
   def _predict(self, data):
-    with utils.Measure('inputs'):
-      inputs = lib.keydowns2image(data, True, True, 16, 2)#inputを読み込む
+    with Measure('inputs'):
+      inputs = keydowns2image(data, True, True, 16, 2)#inputを読み込む
       inputs = np.expand_dims(inputs, axis=0)
-    with utils.Measure('sess.run'):
+    with Measure('sess.run'):
       with tf.Session(graph=self._graph) as sess:
         result = sess.run(self._output_operation.outputs[0],
                           {self._input_operation.outputs[0]: inputs})[0]
@@ -60,5 +60,5 @@ class NazoruPredictor():
     result = self._predict(data)
     ans = []
     for i in result.argsort()[::-1][:n]:
-      ans.append((lib.KANAS[i], lib.KEYS[i], result[i]))
+      ans.append((KANAS[i], KEYS[i], result[i]))
     return ans
