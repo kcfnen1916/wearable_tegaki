@@ -17,7 +17,7 @@ class Gesture:
         self.unique_key = unique_key
 
     def judge_gesture(self, input_lst):
-        if unique_key:
+        if self.unique_key:
             if self.key_lst == input_lst:
                 self.process(self.output)
                 return 1
