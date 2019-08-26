@@ -12,7 +12,7 @@ import gesture_config
 
 cap = MPR121.MPR121()
 
-# ser = serial.Serial('/dev/cu.usbserial-DN05JJRP', 115200, timeout=0)
+ser = serial.Serial('/dev/cu.usbserial-DN05JJRP', 115200, timeout=0)
 
 if not cap.begin():
     print('Error initializing MPR121.  Check your wiring!')
@@ -53,7 +53,7 @@ while True:
                             if hw_flag:
                                 # シリアルで文字を送る
                                 if gesture_config.key_lst[i].chr != '-':
-                                    # ser.write(gesture_config.key_lst[i].chr)
+                                    ser.write(gesture_config.key_lst[i].chr)
                                     print("Serial Write {}".format(gesture_config.key_lst[i].chr))
                             else:
                                 # 手書きではない時
@@ -65,9 +65,9 @@ while True:
                 if abs(ep_time_from_last) > wait_seconds and start_time != last_now:
                     break
                 last_touched = current_touched
-            print(input_key_lst)
             # gesture判定
             if not hw_flag and input_key_lst != []:
+                print(input_key_lst)
                 for g in gesture_config.ges_lst[gesture_config.mode - 1]:
                     res = g.judge_gesture(input_key_lst)
                     if res == 1:
@@ -83,7 +83,6 @@ while True:
         while True:
             input_key_lst = []
             record = 0
-            print("Input Start")
             while True:
                 current_touched = cap.touched()
                 if record == 0:
@@ -114,4 +113,4 @@ while True:
             if gesture_config.mode == 3:
                 break
 
-# ser.close()
+ser.close()
