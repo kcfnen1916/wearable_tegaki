@@ -1,10 +1,11 @@
 class Key:
-    def __init__(self, pin, chr):
+    def __init__(self, pin, name, chr):
         self.pin = pin
+        self.name = name
         self.chr = chr
 
     def __repr__(self):
-        return self.chr
+        return self.name
 
 
 class Gesture:

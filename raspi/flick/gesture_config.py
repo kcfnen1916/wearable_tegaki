@@ -4,19 +4,33 @@ mode = 1
 upper_flag = False
 
 # Keyの宣言
+# 雑実装のキー配置
+# hij = Key(0, 'hij')
+# delete = Key(1, 'delete')
+# space = Key(2, 'space')
+# tuvw = Key(3, 'tuvw')
+# bracket = Key(4, 'bracket')
+# pcqe = Key(5, 'pcqe')
+# opqrs = Key(6, 'opqrs')
+# xyz = Key(7, 'xyz')
+# klmn = Key(8, 'klmn')
+# cul = Key(9, 'cul')
+# abc = Key(10, 'abc')
+# defg = Key(11, 'defg')
 
-hij = Key(0, 'hij')
-delete = Key(1, 'delete')
-space = Key(2, 'space')
-tuvw = Key(3, 'tuvw')
-bracket = Key(4, 'bracket')
-pcqe = Key(5, 'pcqe')
-opqrs = Key(6, 'opqrs')
-xyz = Key(7, 'xyz')
-klmn = Key(8, 'klmn')
-cul = Key(9, 'cul')
-abc = Key(10, 'abc')
-defg = Key(11, 'defg')
+# 染谷研プロトタイプのキー配置
+delete = Key(0, 'delete', '-')
+space = Key(1, 'space', '-')
+hij = Key(2, 'hij', 'u')
+tuvw = Key(3, 'tuvw', 'j')
+bracket = Key(4, 'bracket', 'm')
+defg = Key(5, 'defg', 'y')
+opqrs = Key(6, 'opqrs', 'h')
+pcqe = Key(7, 'pcqe', 'n')
+abc = Key(8, 'abc', 't')
+klmn = Key(9, 'klmn', 'g')
+xyz = Key(10, 'xyz', 'b')
+cul = Key(11, 'cul', '-')
 
 
 # Gestureによる処理の定義
@@ -115,7 +129,10 @@ eight = Gesture([pcqe], out_num, '8', 2)
 nine = Gesture([bracket], out_num, '9', 2)
 
 # Key list
-key_lst = [hij, delete, space, tuvw, bracket, pcqe, opqrs, xyz, klmn, cul, abc, defg]
+# 雑実装のキー配置
+# key_lst = [hij, delete, space, tuvw, bracket, pcqe, opqrs, xyz, klmn, cul, abc, defg]
+# 染谷研プロトタイプのキー配置
+key_lst = [delete, space, hij, tuvw, bracket, defg, opqrs, pcqe, abc, klmn, xyz, cul]
 
 # Gesture list
 ges_lst = [[spc,  enter, mode_l, mode_r, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y,
