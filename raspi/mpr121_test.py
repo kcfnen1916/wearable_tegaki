@@ -15,7 +15,7 @@ if not cap.begin():
     print('Error initializing MPR121.  Check your wiring!')
     sys.exit(1)
 
-print 'initialized'
+print('initialized')
 # Alternatively, specify a custom I2C address such as 0x5B (ADDR tied to 3.3V),
 # 0x5C (ADDR tied to SDA), or 0x5D (ADDR tied to SCL).
 #cap.begin(address=0x5B)

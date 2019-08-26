@@ -5,16 +5,14 @@ from datetime import timedelta
 
 
 import Adafruit_MPR121.MPR121 as MPR121
-import serial
+# import serial
 
-
-from flick.flick import *
-import flick.gesture_config
+import gesture_config
 
 
 cap = MPR121.MPR121()
 
-ser = serial.Serial('/dev/cu.usbserial-DN05JJRP', 115200, timeout=0)
+# ser = serial.Serial('/dev/cu.usbserial-DN05JJRP', 115200, timeout=0)
 
 if not cap.begin():
     print('Error initializing MPR121.  Check your wiring!')
@@ -26,12 +24,12 @@ wait_seconds = 300
 recording = False
 
 last_touched = cap.touched()
-mode = flick.gesture_config.mode
+mode = gesture_config.mode
 
 print('Press Ctrl-C to quit.')
 while True:
     # 手書きモード
-    if flick.gesture_config.mode != 3:
+    if gesture_config.mode == 3:
         print("Handwriting Mode")
         while True:
             input_key_lst = []
@@ -55,7 +53,8 @@ while True:
                             if hw_flag:
                                 # シリアルで文字を送る
                                 if gesture_config.key_lst[i].chr != '-':
-                                    ser.write(gesture_config.key_lst[i].chr)
+                                    # ser.write(gesture_config.key_lst[i].chr)
+                                    print("Serial Write {}".format(gesture_config.key_lst[i].chr))
                             else:
                                 # 手書きではない時
                                 if not gesture_config.key_lst[i] in input_key_lst:
@@ -73,13 +72,13 @@ while True:
                     res = g.judge_gesture(input_key_lst)
                     if res == 1:
                         break
-            if flick.gesture_config.mode != 3:
+            if gesture_config.mode != 3:
                 break
     # フリックモード
-    elif flick.gesture_config.mode == 1 or flick.gesture_config.mode == 2:
-        if flick.gesture_config.mode == 1:
+    elif gesture_config.mode == 1 or gesture_config.mode == 2:
+        if gesture_config.mode == 1:
             print("Alphabet Flick Mode")
-        elif flick.gesture_config.mode == 2:
+        elif gesture_config.mode == 2:
             print("Number Flick Mode")
         while True:
             input_key_lst = []
@@ -112,7 +111,7 @@ while True:
                     res = g.judge_gesture(input_key_lst)
                     if res == 1:
                         break
-            if flick.gesture_config.mode == 3:
+            if gesture_config.mode == 3:
                 break
 
-ser.close()
+# ser.close()

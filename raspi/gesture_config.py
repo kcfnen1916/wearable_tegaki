@@ -1,4 +1,5 @@
 from flick import *
+#import flick
 
 mode = 1
 upper_flag = False
@@ -43,9 +44,10 @@ def change_mode(d):
     print(d)
     if d == 'r':
         mode = min(mode + 1, 3)
-        print(mode)
+        print("change mode", mode)
     elif d == 'l':
         mode = max(mode - 1, 1)
+        print("change mode", mode)
 
 
 def out_alph(c):
@@ -136,4 +138,4 @@ key_lst = [delete, space, hij, tuvw, bracket, defg, opqrs, pcqe, abc, klmn, xyz,
 
 # Gesture list
 ges_lst = [[spc,  enter, mode_l, mode_r, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y,
-            z, period, comma, question, exclam, brcl, brcr, chuplow], [spc,  enter, mode_l, mode_r, zero, one, two, three, four, five, six, seven, eight, nine]]
+            z, period, comma, question, exclam, brcl, brcr, chuplow], [spc,  enter, mode_l, mode_r, zero, one, two, three, four, five, six, seven, eight, nine],[spc,enter,mode_l,mode_r]]
