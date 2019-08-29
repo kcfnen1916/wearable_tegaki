@@ -41,7 +41,7 @@ def delete():  # TODO
 
 def change_mode(d):
     global mode
-    print(d)
+    # print(d)
     if d == 'r':
         mode = min(mode + 1, 3)
         print("change mode", mode)

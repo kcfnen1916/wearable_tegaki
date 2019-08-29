@@ -5,14 +5,14 @@ from datetime import timedelta
 
 
 import Adafruit_MPR121.MPR121 as MPR121
-# import serial
+import serial
 
 import gesture_config
 
 
 cap = MPR121.MPR121()
 
-ser = serial.Serial('/dev/cu.usbserial-DN05JJRP', 115200, timeout=0)
+ser = serial.Serial('/dev/ttyS0', 115200, timeout=0)
 
 if not cap.begin():
     print('Error initializing MPR121.  Check your wiring!')
@@ -27,10 +27,11 @@ last_touched = cap.touched()
 mode = gesture_config.mode
 
 print('Press Ctrl-C to quit.')
+print('\n')
 while True:
     # 手書きモード
     if gesture_config.mode == 3:
-        print("Handwriting Mode")
+        #print("Handwriting Mode")
         while True:
             input_key_lst = []
             record = 0
@@ -67,7 +68,7 @@ while True:
                 last_touched = current_touched
             # gesture判定
             if not hw_flag and input_key_lst != []:
-                print(input_key_lst)
+                #print(input_key_lst)
                 for g in gesture_config.ges_lst[gesture_config.mode - 1]:
                     res = g.judge_gesture(input_key_lst)
                     if res == 1:
@@ -76,10 +77,10 @@ while True:
                 break
     # フリックモード
     elif gesture_config.mode == 1 or gesture_config.mode == 2:
-        if gesture_config.mode == 1:
-            print("Alphabet Flick Mode")
-        elif gesture_config.mode == 2:
-            print("Number Flick Mode")
+        #if gesture_config.mode == 1:
+            #print("Alphabet Flick Mode")
+        #elif gesture_config.mode == 2:
+            #print("Number Flick Mode")
         while True:
             input_key_lst = []
             record = 0
@@ -103,7 +104,7 @@ while True:
                 if abs(ep_time_from_last) > wait_seconds and start_time != last_now:
                     break
                 last_touched = current_touched
-            print(input_key_lst)
+            #print(input_key_lst)
             # gesture判定
             if input_key_lst != []:
                 for g in gesture_config.ges_lst[gesture_config.mode - 1]:
