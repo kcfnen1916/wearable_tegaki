@@ -68,4 +68,5 @@ if __name__ == '__main__':
         val = input()
         if val == "exit":
             break
+        val = val.encode()
         bt_connection.send(val)
