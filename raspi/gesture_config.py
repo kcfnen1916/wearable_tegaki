@@ -1,5 +1,6 @@
 from flick import *
 #import flick
+import struct
 
 mode = 1
 upper_flag = False
@@ -36,7 +37,7 @@ defg = Key(11, 'defg', 'y')
 
 # Gestureによる処理の定義
 def delete():  # TODO
-    pass
+    return struct.pack('b', 4)
 
 
 def change_mode(d):
