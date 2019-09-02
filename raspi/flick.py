@@ -20,13 +20,13 @@ class Gesture:
     def judge_gesture(self, input_lst):
         if self.unique_key:
             if self.key_lst == input_lst:
-                self.process(self.output)
-                return 1
+                out = self.process(self.output)
+                return 1, out
             else:
-                return 0
+                return 0, None
         else:
             if self.key_lst == input_lst[0:2]:
-                self.process(self.output)
-                return 1
+                out = self.process(self.output)
+                return 1, out
             else:
-                return 0
+                return 0, None
