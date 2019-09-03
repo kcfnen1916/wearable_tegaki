@@ -12,7 +12,7 @@ import gesture_config
 
 cap = MPR121.MPR121()
 
-ser = serial.Serial('/dev/cu.usbserial-DN05JJRP', 115200, timeout=0)
+#ser = serial.Serial('/dev/cu.usbserial-DN05JJRP', 115200, timeout=0)
 
 if not cap.begin():
     print('Error initializing MPR121.  Check your wiring!')

@@ -73,7 +73,7 @@ def record():
             #c = ser.read().decode('utf-8')
             # シリアル通信の時は以下1行をコメントアウトする
             key = s.recv(1024) # keyに送られてきた文字を入れるらしい
-
+            print(key)
             #current_touched = cap.touched()
             if record == 0:
                 record = 1
