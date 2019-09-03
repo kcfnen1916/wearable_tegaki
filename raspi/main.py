@@ -29,6 +29,7 @@ mode = gesture_config.mode
 # この辺にsocketのimportとかを書く　サーバー
 import socket 
 s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 s.bind(('192.168.87.56', 50000))
 s.listen(1)
 print("hello")
