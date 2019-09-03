@@ -36,9 +36,14 @@ defg = Key(11, 'defg', 'y')
 
 
 # Gestureによる処理の定義
-def delete(arg):  # TODO
-    print("delete")
-    return struct.pack('b', 4)
+# def delete(arg):  # TODO
+#     print("delete")
+#     return struct.pack('b', 4)
+
+
+def out_cmd(code):
+    print("command : {}".format(code))
+    return struct.pack('b', code)
 
 
 def change_mode(d):
@@ -81,8 +86,8 @@ def set_upper_flag(arg):
 # Gestureの宣言
 # モード共通 0
 spc = Gesture([space], out_chr, ' ', 0)
-dlt = Gesture([delete],delete,None,0)
-enter = Gesture([delete, space, bracket], out_chr, '\n', 0, True)
+dlt = Gesture([delete], out_cmd, 8, 0)
+enter = Gesture([delete, space, bracket], out_cmd, 10, 0, True)
 mode_r = Gesture([space, tuvw, opqrs, klmn, cul], change_mode, 'r', 0, True)
 mode_l = Gesture([cul, klmn, opqrs, tuvw, space], change_mode, 'l', 0, True)
 
