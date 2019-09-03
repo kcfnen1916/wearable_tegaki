@@ -26,6 +26,13 @@ recording = False
 last_touched = cap.touched()
 mode = gesture_config.mode
 
+# この辺にsocketのimportとかを書く　サーバー
+import socket 
+s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.bind(('192.168.87.56', 50000))
+s.listen(1)
+conn, addr = s.accept()
+
 print('Press Ctrl-C to quit.')
 while True:
     # 手書きモード
@@ -53,7 +60,7 @@ while True:
                             if hw_flag:
                                 # シリアルで文字を送る
                                 if gesture_config.key_lst[i].chr != '-':
-                                    ser.write(gesture_config.key_lst[i].chr)
+                                    conn.send(gesture_config.key_lst[i].chr) # 文字を送っている、send
                                     print("Serial Write {}".format(gesture_config.key_lst[i].chr))
                             else:
                                 # 手書きではない時
@@ -113,4 +120,4 @@ while True:
             if gesture_config.mode == 3:
                 break
 
-ser.close()
+s.close()
