@@ -27,11 +27,11 @@ last_touched = cap.touched()
 mode = gesture_config.mode
 
 # この辺にsocketのimportとかを書く　サーバー
-print("hello")
 import socket 
 s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind(('192.168.87.56', 50000))
 s.listen(1)
+print("hello")
 conn, addr = s.accept()
 
 print('Press Ctrl-C to quit.')
