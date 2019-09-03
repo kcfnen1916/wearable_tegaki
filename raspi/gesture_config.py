@@ -1,62 +1,70 @@
 from flick import *
 #import flick
+import struct
 
-mode = 1
+mode = 3
 upper_flag = False
 
 # Keyの宣言
 # 雑実装のキー配置
-# hij = Key(0, 'hij')
-# delete = Key(1, 'delete')
-# space = Key(2, 'space')
-# tuvw = Key(3, 'tuvw')
-# bracket = Key(4, 'bracket')
-# pcqe = Key(5, 'pcqe')
-# opqrs = Key(6, 'opqrs')
-# xyz = Key(7, 'xyz')
-# klmn = Key(8, 'klmn')
-# cul = Key(9, 'cul')
-# abc = Key(10, 'abc')
-# defg = Key(11, 'defg')
-
-# 染谷研プロトタイプのキー配置
-delete = Key(0, 'delete', '-')
-space = Key(1, 'space', '-')
-hij = Key(2, 'hij', 'u')
+hij = Key(0, 'hij', 'u')
+delete = Key(1, 'delete', '-')
+space = Key(2, 'space', '-')
 tuvw = Key(3, 'tuvw', 'j')
 bracket = Key(4, 'bracket', 'm')
-defg = Key(5, 'defg', 'y')
+pcqe = Key(5, 'pcqe', 'n')
 opqrs = Key(6, 'opqrs', 'h')
-pcqe = Key(7, 'pcqe', 'n')
-abc = Key(8, 'abc', 't')
-klmn = Key(9, 'klmn', 'g')
-xyz = Key(10, 'xyz', 'b')
-cul = Key(11, 'cul', '-')
+xyz = Key(7, 'xyz', 'b')
+klmn = Key(8, 'klmn', 'g')
+cul = Key(9, 'cul', '-')
+abc = Key(10, 'abc', 't')
+defg = Key(11, 'defg', 'y')
+
+# 染谷研プロトタイプのキー配置
+# delete = Key(0, 'delete', '-')
+# space = Key(1, 'space', '-')
+# hij = Key(2, 'hij', 'u')
+# tuvw = Key(3, 'tuvw', 'j')
+# bracket = Key(4, 'bracket', 'm')
+# defg = Key(5, 'defg', 'y')
+# opqrs = Key(6, 'opqrs', 'h')
+# pcqe = Key(7, 'pcqe', 'n')
+# abc = Key(8, 'abc', 't')
+# klmn = Key(9, 'klmn', 'g')
+# xyz = Key(10, 'xyz', 'b')
+# cul = Key(11, 'cul', '-')
 
 
 # Gestureによる処理の定義
-def delete():  # TODO
-    pass
+# def delete(arg):  # TODO
+#     print("delete")
+#     return struct.pack('b', 4)
+
+
+def out_cmd(code):
+    print("command : {}".format(code))
+    return struct.pack('b', code)
 
 
 def change_mode(d):
     global mode
-    print(d)
+    # print(d)
     if d == 'r':
         mode = min(mode + 1, 3)
         print("change mode", mode)
     elif d == 'l':
         mode = max(mode - 1, 1)
         print("change mode", mode)
+    return None
 
 
 def out_alph(c):
     if upper_flag:
         print(str.upper(c))
-        # return str.upper(c)
+        return str.upper(c)
     else:
         print(c)
-        # return c
+        return c
 
 
 def out_chr(c):
@@ -72,14 +80,14 @@ def out_num(n):
 def set_upper_flag(arg):
     global upper_flag
     upper_flag = not upper_flag
+    return None
 
 
 # Gestureの宣言
 # モード共通 0
 spc = Gesture([space], out_chr, ' ', 0)
-# dlt = Gesture([delete],,0) TODO : delete実装
-dlt = None
-enter = Gesture([delete, space, bracket], out_chr, '\n', 0, True)
+dlt = Gesture([delete], out_cmd, 8, 0)
+enter = Gesture([delete, space, bracket], out_cmd, 10, 0, True)
 mode_r = Gesture([space, tuvw, opqrs, klmn, cul], change_mode, 'r', 0, True)
 mode_l = Gesture([cul, klmn, opqrs, tuvw, space], change_mode, 'l', 0, True)
 
@@ -132,10 +140,10 @@ nine = Gesture([bracket], out_num, '9', 2)
 
 # Key list
 # 雑実装のキー配置
-# key_lst = [hij, delete, space, tuvw, bracket, pcqe, opqrs, xyz, klmn, cul, abc, defg]
+key_lst = [hij, delete, space, tuvw, bracket, pcqe, opqrs, xyz, klmn, cul, abc, defg]
 # 染谷研プロトタイプのキー配置
-key_lst = [delete, space, hij, tuvw, bracket, defg, opqrs, pcqe, abc, klmn, xyz, cul]
+# key_lst = [delete, space, hij, tuvw, bracket, defg, opqrs, pcqe, abc, klmn, xyz, cul]
 
 # Gesture list
-ges_lst = [[spc,  enter, mode_l, mode_r, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y,
-            z, period, comma, question, exclam, brcl, brcr, chuplow], [spc,  enter, mode_l, mode_r, zero, one, two, three, four, five, six, seven, eight, nine],[spc,enter,mode_l,mode_r]]
+ges_lst = [[spc, dlt, enter, mode_l, mode_r, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y,
+            z, period, comma, question, exclam, brcl, brcr, chuplow], [spc, dlt, enter, mode_l, mode_r, zero, one, two, three, four, five, six, seven, eight, nine], [spc, dlt, enter, mode_l, mode_r]]
