@@ -30,7 +30,7 @@ mode = gesture_config.mode
 import socket 
 s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-s.bind(('192.168.87.56', 10000))
+s.bind(('192.168.43.27', 50000))
 s.listen(1)
 print("hello")
 conn, addr = s.accept()

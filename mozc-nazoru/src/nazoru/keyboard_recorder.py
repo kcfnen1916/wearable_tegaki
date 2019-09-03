@@ -33,7 +33,7 @@ nottegaki_pin = [i for i in range(len(pin_to_key_dic)) if pin_to_key_dic[i] == N
 # socketの設定を書く クライアント
 import socket
 s=socket.socket (socket.AF_INET, socket.SOCK_STREAM)
-s.connect(('192.168.87.56', 10000))
+s.connect(('192.168.43.27', 50000))
 
 
 def record():
