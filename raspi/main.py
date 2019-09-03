@@ -113,7 +113,7 @@ while True:
                 for g in gesture_config.ges_lst[gesture_config.mode - 1]:
                     res, out = g.judge_gesture(input_key_lst)
                     if res == 1:
-                        if not type(out) is bytes:
+                        if not type(out) is bytes and out != None:
                             val = out.encode()
                         else:
                             val = out
