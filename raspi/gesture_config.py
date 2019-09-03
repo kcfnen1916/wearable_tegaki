@@ -36,7 +36,8 @@ defg = Key(11, 'defg', 'y')
 
 
 # Gestureによる処理の定義
-def delete():  # TODO
+def delete(arg):  # TODO
+    print("delete")
     return struct.pack('b', 4)
 
 
@@ -80,8 +81,7 @@ def set_upper_flag(arg):
 # Gestureの宣言
 # モード共通 0
 spc = Gesture([space], out_chr, ' ', 0)
-# dlt = Gesture([delete],,0) TODO : delete実装
-dlt = None
+dlt = Gesture([delete],delete,None,0)
 enter = Gesture([delete, space, bracket], out_chr, '\n', 0, True)
 mode_r = Gesture([space, tuvw, opqrs, klmn, cul], change_mode, 'r', 0, True)
 mode_l = Gesture([cul, klmn, opqrs, tuvw, space], change_mode, 'l', 0, True)
@@ -140,5 +140,5 @@ key_lst = [hij, delete, space, tuvw, bracket, pcqe, opqrs, xyz, klmn, cul, abc, 
 # key_lst = [delete, space, hij, tuvw, bracket, defg, opqrs, pcqe, abc, klmn, xyz, cul]
 
 # Gesture list
-ges_lst = [[spc,  enter, mode_l, mode_r, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y,
-            z, period, comma, question, exclam, brcl, brcr, chuplow], [spc,  enter, mode_l, mode_r, zero, one, two, three, four, five, six, seven, eight, nine], [spc, enter, mode_l, mode_r]]
+ges_lst = [[spc, dlt, enter, mode_l, mode_r, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y,
+            z, period, comma, question, exclam, brcl, brcr, chuplow], [spc, dlt, enter, mode_l, mode_r, zero, one, two, three, four, five, six, seven, eight, nine], [spc, dlt, enter, mode_l, mode_r]]

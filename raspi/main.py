@@ -113,7 +113,10 @@ while True:
                 for g in gesture_config.ges_lst[gesture_config.mode - 1]:
                     res, out = g.judge_gesture(input_key_lst)
                     if res == 1:
-                        val = out.encode()
+                        if not type(out) is bytes:
+                            val = out.encode()
+                        else:
+                            val = out
                         bt_connection.send(val)
                         break
             if gesture_config.mode == 3:
