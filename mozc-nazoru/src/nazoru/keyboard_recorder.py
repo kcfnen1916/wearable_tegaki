@@ -112,7 +112,7 @@ def record():
 
     key = s.recv(1024)
     key = key.decode()
-    key.split(" ")
+    key = key.split(" ")
     data=[]
     for i in range(len(key)/2):
         data.append((key[2*i], key[2*i+1]))
