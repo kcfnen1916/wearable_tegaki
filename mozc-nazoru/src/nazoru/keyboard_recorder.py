@@ -67,45 +67,50 @@ def record():
     #last_touched = cap.touched()
     #last_key = [0] * 12
 
-    while 1:
-        try:
-            # シリアル通信の時は以下1行のコメントアウトをやめる
-            #c = ser.read().decode('utf-8')
-            # シリアル通信の時は以下1行をコメントアウトする
-            key = s.recv(1024) # keyに送られてきた文字を入れるらしい
-            key=key.decode()
-            
-            print(key)
-            #current_touched = cap.touched()
-            if record == 0:
-                record = 1
-                start_time = datetime.datetime.now()
-                last_now = start_time
-            last_now = datetime.datetime.now()
-            rec_time = (last_now - start_time).total_seconds() * 1000
-            data.append((key, int(rec_time)))
-            # for i in range(12):
-            #     pin_bit = 1 << i
-            #     if i in nottegaki_pin:
-            #         continue
-            #     if current_touched & pin_bit and not last_touched & pin_bit:
-            #         last_now = datetime.datetime.now()
-            #         rec_time = (last_now - start_time).total_seconds() * 1000
-            #         if last_key[i] == 0:
-            #             last_key[i] = 1
-            #             data.append((pin_to_key_dic[i], int(rec_time)))
-            #     if not current_touched & pin_bit and last_touched & pin_bit:
-            #         last_key[i] = 0
+    # while 1:
+    #     try:
+    #         # シリアル通信の時は以下1行のコメントアウトをやめる
+    #         #c = ser.read().decode('utf-8')
+    #         # シリアル通信の時は以下1行をコメントアウトする
+    #         key = s.recv(1024) # keyに送られてきた文字を入れるらしい
+    #         key=key.decode()
 
-        finally:
-            now = datetime.datetime.now()
-        if record == 0:
-            last_now = now
-        ep_time_from_last = (now - last_now).total_seconds() * 1000
-        if abs(ep_time_from_last) > wait_seconds and start_time != last_now:
-            break
-    # シリアル通信の時は以下1行をコメントアウトする
-    # termios.tcsetattr(fd, termios.TCSANOW, old)
-    # シリアル通信の時は以下1行のコメントアウトをやめる
+    #         print(key)
+    #         #current_touched = cap.touched()
+    #         if record == 0:
+    #             record = 1
+    #             start_time = datetime.datetime.now()
+    #             last_now = start_time
+    #         last_now = datetime.datetime.now()
+    #         rec_time = (last_now - start_time).total_seconds() * 1000
+    #         data.append((key, int(rec_time)))
+    #         # for i in range(12):
+    #         #     pin_bit = 1 << i
+    #         #     if i in nottegaki_pin:
+    #         #         continue
+    #         #     if current_touched & pin_bit and not last_touched & pin_bit:
+    #         #         last_now = datetime.datetime.now()
+    #         #         rec_time = (last_now - start_time).total_seconds() * 1000
+    #         #         if last_key[i] == 0:
+    #         #             last_key[i] = 1
+    #         #             data.append((pin_to_key_dic[i], int(rec_time)))
+    #         #     if not current_touched & pin_bit and last_touched & pin_bit:
+    #         #         last_key[i] = 0
+
+    #     finally:
+    #         now = datetime.datetime.now()
+    #     if record == 0:
+    #         last_now = now
+    #     ep_time_from_last = (now - last_now).total_seconds() * 1000
+    #     if abs(ep_time_from_last) > wait_seconds and start_time != last_now:
+    #         break
+    # # シリアル通信の時は以下1行をコメントアウトする
+    # # termios.tcsetattr(fd, termios.TCSANOW, old)
+    # # シリアル通信の時は以下1行のコメントアウトをやめる
+    # s.close()
+    # return (data, None)
+
+    data = s.recv(1024)
+    data = data.decode()
     s.close()
-    return (data, None)
+    return(data, None)

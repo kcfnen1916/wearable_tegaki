@@ -62,7 +62,9 @@ while True:
                             if hw_flag:
                                 # シリアルで文字を送る
                                 if gesture_config.key_lst[i].chr != '-':
-                                    conn.send(gesture_config.key_lst[i].chr.encode()) # 文字を送っている、send
+                                    chr_list=[]
+                                    chr_list.append((gesture_config.key_lst[i],int(rec_time)))
+                                    #conn.send(gesture_config.key_lst[i].chr.encode()) # 文字を送っている、send
                                     print("Serial Write {}".format(gesture_config.key_lst[i].chr))
                             else:
                                 # 手書きではない時
@@ -72,6 +74,8 @@ while True:
                     now = datetime.datetime.now()
                 ep_time_from_last = (now - last_now).total_seconds() * 1000
                 if abs(ep_time_from_last) > wait_seconds and start_time != last_now:
+                    print(chr_list)
+                    conn.send(chr_list.encode())
                     break
                 last_touched = current_touched
             # gesture判定
