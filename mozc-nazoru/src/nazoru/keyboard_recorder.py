@@ -114,7 +114,7 @@ def record():
     key = key.decode()
     key = key.split(" ")
     data=[]
-    for i in range(len(key)/2):
+    for i in range(int(len(key)/2)):
         data.append((key[2*i], key[2*i+1]))
     s.close()
     return(data, None)
