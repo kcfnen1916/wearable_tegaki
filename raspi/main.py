@@ -62,7 +62,7 @@ while True:
                             if hw_flag:
                                 # シリアルで文字を送る
                                 if gesture_config.key_lst[i].chr != '-':
-                                    conn.send(gesture_config.key_lst[i].chr) # 文字を送っている、send
+                                    conn.send(gesture_config.key_lst[i].chr.encode()) # 文字を送っている、send
                                     print("Serial Write {}".format(gesture_config.key_lst[i].chr))
                             else:
                                 # 手書きではない時
