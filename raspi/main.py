@@ -32,7 +32,6 @@ s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 s.bind(('192.168.43.27', 50000))
 s.listen(1)
-print("hello")
 conn, addr = s.accept()
 
 print('Press Ctrl-C to quit.')
@@ -44,7 +43,7 @@ while True:
             input_key_lst = []
             record = 0
             hw_flag = True
-
+            chr_list=[]
             while True:
                 current_touched = cap.touched()
                 if record == 0:
@@ -62,8 +61,7 @@ while True:
                             if hw_flag:
                                 # シリアルで文字を送る
                                 if gesture_config.key_lst[i].chr != '-':
-                                    chr_list=[]
-                                    chr_list.append((gesture_config.key_lst[i],str(int(rec_time))))
+                                    chr_list.append((gesture_config.key_lst[i].chr,str(int(rec_time))))
                                     #conn.send(gesture_config.key_lst[i].chr.encode()) # 文字を送っている、send
                                     print("Serial Write {}".format(gesture_config.key_lst[i].chr))
                             else:
