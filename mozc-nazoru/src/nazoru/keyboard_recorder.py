@@ -110,6 +110,7 @@ def record():
     # s.close()
     # return (data, None)
 
+    
     key = s.recv(1024)
     key = key.decode()
     key = key.split(" ")
@@ -117,6 +118,6 @@ def record():
     for i in range(int(len(key)/2)):
         data.append((key[2*i], int(key[2*i+1])))
 
-    
-    s.close()
     return(data, None)
+
+s.close()
