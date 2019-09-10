@@ -32,8 +32,8 @@ nottegaki_pin = [i for i in range(len(pin_to_key_dic)) if pin_to_key_dic[i] == N
 
 # socketの設定を書く クライアント
 import socket
-s=socket.socket (socket.AF_INET, socket.SOCK_STREAM)
-s.connect(('192.168.43.27', 50000))
+client=socket.socket (socket.AF_INET, socket.SOCK_STREAM)
+client.connect(('192.168.43.27', 50000))
 
 
 def record():
@@ -111,7 +111,7 @@ def record():
     # return (data, None)
 
     
-    key = s.recv(1024)
+    key = client.recv(1024)
     key = key.decode()
     key = key.split(" ")
     data=[]
@@ -120,4 +120,4 @@ def record():
 
     return(data, None)
 
-#s.close()
+#client.close()
