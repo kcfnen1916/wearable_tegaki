@@ -86,6 +86,8 @@ def main():
     print(u'prediction: %s (%s)' % (
       most_likely_result[0], most_likely_result[1]))
 
+    s.send(most_likely_result[0].encode)
+
 
 if __name__ == '__main__':
   main()

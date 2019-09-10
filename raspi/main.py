@@ -2,6 +2,7 @@ import sys
 import time
 import datetime
 from datetime import timedelta
+import threading
 
 
 import Adafruit_MPR121.MPR121 as MPR121
@@ -35,7 +36,8 @@ s.listen(1)
 conn, addr = s.accept()
 
 print('Press Ctrl-C to quit.')
-while True:
+
+def writing():
     # 手書きモード
     if gesture_config.mode == 3:
         print("Handwriting Mode")
@@ -128,5 +130,18 @@ while True:
                         break
             if gesture_config.mode == 3:
                 break
+
+def receiving():
+    data = conn.recv(1024)
+    data = data.decode()
+    print("receive:")
+    print(data)
+
+if __name__ == '__main__':
+    t1 = threading.Thread(target=writing)
+    t2 = threading.Thread(target=receivnig)
+
+    t1.start()
+    t2.start()
 
 s.close()
