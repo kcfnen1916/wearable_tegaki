@@ -139,7 +139,7 @@ def receiving():
 
 if __name__ == '__main__':
     t1 = threading.Thread(target=writing)
-    t2 = threading.Thread(target=receivnig)
+    t2 = threading.Thread(target=receiving)
 
     t1.start()
     t2.start()
