@@ -1,13 +1,6 @@
 import boto3
 import sys
-import zipfile
-s3 = boto3.resource('s3')
-bucket = s3.Bucket('tf-test-packages')
-bucket.download_file('tf-test-packages.zip', '/tmp/tf-test-packages.zip')
-with zipfile.ZipFile('/tmp/tf-test-packages.zip') as existing_zip:
-    existing_zip.extractall('/tmp/tf-test-packages')
-
-sys.path.append("/tmp/tf-test-packages")
+import tensorflow
 
 # Surpress warnings. Please unvail these warnings when development.
 import warnings
@@ -19,7 +12,6 @@ import time
 import argparse
 import os
 import unicodedata
-import boto3
 
 CWD_PATH = os.getcwd()
 
@@ -43,3 +35,9 @@ def main(event, context):
         'statusCode': 200,
         'body': result
     }
+
+
+
+data = ["u","y","g","v","b","n","m","j","u","y"]
+result = nazoru_input(data)
+print(result)
