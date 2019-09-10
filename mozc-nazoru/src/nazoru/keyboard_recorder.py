@@ -120,4 +120,4 @@ def record():
 
     return(data, None)
 
-s.close()
+#s.close()
