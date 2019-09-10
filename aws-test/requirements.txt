@@ -1,0 +1,5 @@
+cairocffi
+numpy
+tensorflow
+argparse
+boto3
