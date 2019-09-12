@@ -132,11 +132,12 @@ def writing():
                 break
 
 def receiving():
-    data = conn.recv(1024)
-    data = data.decode()
-    if data:
-        print("receive:")
-        print(data)
+    while(1):
+        data = conn.recv(1024)
+        data = data.decode()
+        if data:
+            print("receive:")
+            print(data)
 
 if __name__ == '__main__':
     t1 = threading.Thread(target=writing)
