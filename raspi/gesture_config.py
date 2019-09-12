@@ -36,11 +36,6 @@ defg = Key(11, 'defg', 'y')
 
 
 # Gestureによる処理の定義
-# def delete(arg):  # TODO
-#     print("delete")
-#     return struct.pack('b', 4)
-
-
 def out_cmd(code):
     print("command : {}".format(code))
     return struct.pack('b', code)
@@ -90,6 +85,8 @@ dlt = Gesture([delete], out_cmd, 8, 0)
 enter = Gesture([delete, space, bracket], out_cmd, 10, 0, True)
 mode_r = Gesture([space, tuvw, opqrs, klmn, cul], change_mode, 'r', 0, True)
 mode_l = Gesture([cul, klmn, opqrs, tuvw, space], change_mode, 'l', 0, True)
+right = Gesture([cul, abc, defg, hij, dlt], out_cmd, 7, 0, True)
+left = Gesture([dlt, hij, defg, abc, cul], out_cmd, 11, 0, True)
 
 # アルファベットフリック入力モード 1
 a = Gesture([abc], out_alph, 'a', 1)
@@ -145,5 +142,5 @@ key_lst = [hij, delete, space, tuvw, bracket, pcqe, opqrs, xyz, klmn, cul, abc, 
 # key_lst = [delete, space, hij, tuvw, bracket, defg, opqrs, pcqe, abc, klmn, xyz, cul]
 
 # Gesture list
-ges_lst = [[spc, dlt, enter, mode_l, mode_r, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y,
-            z, period, comma, question, exclam, brcl, brcr, chuplow], [spc, dlt, enter, mode_l, mode_r, zero, one, two, three, four, five, six, seven, eight, nine], [spc, dlt, enter, mode_l, mode_r]]
+ges_lst = [[spc, dlt, enter, mode_l, mode_r, right, left, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y,
+            z, period, comma, question, exclam, brcl, brcr, chuplow], [spc, dlt, enter, mode_l, mode_r, right, left, zero, one, two, three, four, five, six, seven, eight, nine], [spc, dlt, enter, mode_l, mode_r, right, left]]
