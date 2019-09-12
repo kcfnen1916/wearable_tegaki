@@ -145,10 +145,11 @@ def writing():
 def receiving():
     while(1):
         data = conn.recv(1024)
-        data = data.decode()
+        #data = data.decode()
         if data:
             print("receive:")
             print(data)
+            bt_connection.send(data)
 
 
 if __name__ == '__main__':
