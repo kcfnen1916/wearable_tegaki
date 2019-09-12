@@ -88,4 +88,7 @@ def main():
 
     client.send(most_likely_result[0].encode())
 
+if __name__ == '__main__':
+  main()
+
 

@@ -134,8 +134,9 @@ def writing():
 def receiving():
     data = conn.recv(1024)
     data = data.decode()
-    print("receive:")
-    print(data)
+    if data:
+        print("receive:")
+        print(data)
 
 if __name__ == '__main__':
     t1 = threading.Thread(target=writing)
