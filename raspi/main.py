@@ -31,10 +31,11 @@ last_touched = cap.touched()
 mode = gesture_config.mode
 
 # この辺にsocketのimportとかを書く　サーバー
+ip=input()
 import socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-s.bind(('192.168.43.27', 50000))
+s.bind((ip, 50000))
 s.listen(1)
 conn, addr = s.accept()
 

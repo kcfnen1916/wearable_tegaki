@@ -31,9 +31,10 @@ pin_to_key_dic = ['u', None, None, 'j', 'm', 'n', 'h', 'b', 'g', None, 't', 'y']
 nottegaki_pin = [i for i in range(len(pin_to_key_dic)) if pin_to_key_dic[i] == None]
 
 # socketの設定を書く クライアント
+ip = input()
 import socket
 client=socket.socket (socket.AF_INET, socket.SOCK_STREAM)
-client.connect(('192.168.43.27', 50000))
+client.connect((ip, 50000))
 
 
 def record():
