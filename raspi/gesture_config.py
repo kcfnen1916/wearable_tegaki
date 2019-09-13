@@ -37,15 +37,15 @@ upper_flag = False
 #完成品
 delete = Key(11, 'delete', '-')
 space = Key(10, 'space', '-')
-hij = Key(3, 'hij', 'u')
-tuvw = Key(2, 'tuvw', 'j')
-bracket = Key(1, 'bracket', 'm')
+hij = Key(9, 'hij', 'u')
+tuvw = Key(8, 'tuvw', 'j')
+bracket = Key(7, 'bracket', 'm')
 defg = Key(6, 'defg', 'y')
 opqrs = Key(5, 'opqrs', 'h')
 pcqe = Key(4, 'pcqe', 'n')
-abc = Key(9, 'abc', 't')
-klmn = Key(8, 'klmn', 'g')
-xyz = Key(7, 'xyz', 'b')
+abc = Key(3, 'abc', 't')
+klmn = Key(2, 'klmn', 'g')
+xyz = Key(1, 'xyz', 'b')
 cul = Key(0, 'cul', '-')
 
 
@@ -154,7 +154,7 @@ nine = Gesture([bracket], out_num, '9', 2)
 #key_lst = [hij, delete, space, tuvw, bracket, pcqe, opqrs, xyz, klmn, cul, abc, defg]
 # 染谷研プロトタイプのキー配置
 #key_lst = [delete, space, hij, tuvw, bracket, defg, opqrs, pcqe, abc, klmn, xyz, cul]
-key_lst = [cul, bracket, tuvw, hij, pcqe, opqrs, defg, xyz, klmn, abc, space, delete]
+key_lst = [cul, xyz, klmn, abc, pcqe, opqrs, defg, bracket, tuvw, hij, space, delete]
 
 # Gesture list
 ges_lst = [[spc, dlt, enter, mode_l, mode_r, right, left, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y,
