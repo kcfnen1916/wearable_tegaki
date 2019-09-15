@@ -99,8 +99,8 @@ dlt = Gesture([delete], out_cmd, 8, 0)
 enter = Gesture([delete, space, bracket], out_cmd, 10, 0, True)
 mode_r = Gesture([space, tuvw, opqrs, klmn, cul], change_mode, 'r', 0, True)
 mode_l = Gesture([cul, klmn, opqrs, tuvw, space], change_mode, 'l', 0, True)
-right = Gesture([cul, abc, defg, hij, dlt], out_cmd, 7, 0, True)
-left = Gesture([dlt, hij, defg, abc, cul], out_cmd, 11, 0, True)
+right = Gesture([cul, abc, defg, hij, delete], out_cmd, 7, 0, True)
+left = Gesture([delete, hij, defg, abc, cul], out_cmd, 11, 0, True)
 
 # アルファベットフリック入力モード 1
 a = Gesture([abc], out_alph, 'a', 1)

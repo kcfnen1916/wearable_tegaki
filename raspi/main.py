@@ -130,7 +130,7 @@ def writing():
                     if abs(ep_time_from_last) > wait_seconds and start_time != last_now:
                         break
                     last_touched = current_touched
-                # print(input_key_lst)
+                print(input_key_lst)
                 # gesture判定
                 if input_key_lst != []:
                     for g in gesture_config.ges_lst[gesture_config.mode - 1]:
