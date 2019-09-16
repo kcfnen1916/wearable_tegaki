@@ -2,23 +2,23 @@ from flick import *
 #import flick
 import struct
 
-mode = 1
+mode = 3
 upper_flag = False
 
 # Keyの宣言
 # 雑実装のキー配置
-hij = Key(0, 'hij', 'u')
-delete = Key(1, 'delete', '-')
-space = Key(2, 'space', '-')
-tuvw = Key(3, 'tuvw', 'j')
-bracket = Key(4, 'bracket', 'm')
-pcqe = Key(5, 'pcqe', 'n')
-opqrs = Key(6, 'opqrs', 'h')
-xyz = Key(7, 'xyz', 'b')
-klmn = Key(8, 'klmn', 'g')
-cul = Key(9, 'cul', '-')
-abc = Key(10, 'abc', 't')
-defg = Key(11, 'defg', 'y')
+# hij = Key(0, 'hij', 'u')
+# delete = Key(1, 'delete', '-')
+# space = Key(2, 'space', '-')
+# tuvw = Key(3, 'tuvw', 'j')
+# bracket = Key(4, 'bracket', 'm')
+# pcqe = Key(5, 'pcqe', 'n')
+# opqrs = Key(6, 'opqrs', 'h')
+# xyz = Key(7, 'xyz', 'b')
+# klmn = Key(8, 'klmn', 'g')
+# cul = Key(9, 'cul', '-')
+# abc = Key(10, 'abc', 't')
+# defg = Key(11, 'defg', 'y')
 
 # 染谷研プロトタイプのキー配置
 # delete = Key(0, 'delete', '-')
@@ -33,6 +33,20 @@ defg = Key(11, 'defg', 'y')
 # klmn = Key(9, 'klmn', 'g')
 # xyz = Key(10, 'xyz', 'b')
 # cul = Key(11, 'cul', '-')
+
+#完成品
+delete = Key(11, 'delete', '-')
+space = Key(10, 'space', '-')
+hij = Key(9, 'hij', 'u')
+tuvw = Key(8, 'tuvw', 'j')
+bracket = Key(7, 'bracket', 'm')
+defg = Key(6, 'defg', 'y')
+opqrs = Key(5, 'opqrs', 'h')
+pcqe = Key(4, 'pcqe', 'n')
+abc = Key(3, 'abc', 't')
+klmn = Key(2, 'klmn', 'g')
+xyz = Key(1, 'xyz', 'b')
+cul = Key(0, 'cul', '-')
 
 
 # Gestureによる処理の定義
@@ -85,8 +99,8 @@ dlt = Gesture([delete], out_cmd, 8, 0)
 enter = Gesture([delete, space, bracket], out_cmd, 10, 0, True)
 mode_r = Gesture([space, tuvw, opqrs, klmn, cul], change_mode, 'r', 0, True)
 mode_l = Gesture([cul, klmn, opqrs, tuvw, space], change_mode, 'l', 0, True)
-right = Gesture([cul, abc, defg, hij, dlt], out_cmd, 7, 0, True)
-left = Gesture([dlt, hij, defg, abc, cul], out_cmd, 11, 0, True)
+right = Gesture([cul, abc, defg, hij, delete], out_cmd, 7, 0, True)
+left = Gesture([delete, hij, defg, abc, cul], out_cmd, 11, 0, True)
 
 # アルファベットフリック入力モード 1
 a = Gesture([abc], out_alph, 'a', 1)
@@ -137,9 +151,10 @@ nine = Gesture([bracket], out_num, '9', 2)
 
 # Key list
 # 雑実装のキー配置
-key_lst = [hij, delete, space, tuvw, bracket, pcqe, opqrs, xyz, klmn, cul, abc, defg]
+#key_lst = [hij, delete, space, tuvw, bracket, pcqe, opqrs, xyz, klmn, cul, abc, defg]
 # 染谷研プロトタイプのキー配置
-# key_lst = [delete, space, hij, tuvw, bracket, defg, opqrs, pcqe, abc, klmn, xyz, cul]
+#key_lst = [delete, space, hij, tuvw, bracket, defg, opqrs, pcqe, abc, klmn, xyz, cul]
+key_lst = [cul, xyz, klmn, abc, pcqe, opqrs, defg, bracket, tuvw, hij, space, delete]
 
 # Gesture list
 ges_lst = [[spc, dlt, enter, mode_l, mode_r, right, left, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y,

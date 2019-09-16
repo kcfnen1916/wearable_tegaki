@@ -32,7 +32,7 @@ def mk_traindata(filename):
                 continue
             else:
                 c += 1
-                data = list(map(lambda x: [num_to_key(x[0]), x[1]], data))
+                data = list(map(lambda x: [x[0], x[1]], data))
                 print(data)
                 sys.stdout.write("{}回目の入力をしました。やめたい時はCtrl+Cを押してください。\n".format(c))
                 list(map(lambda x: x.insert(1, 'down'), data))
@@ -41,6 +41,7 @@ def mk_traindata(filename):
             if c % 10 == 0:
                 with open(os.path.join('../../data/', filename), 'a') as f:
                     ndjson.dump(output_list, f)
+                    f.write("\n")
                 print("ここまでの入力を保存しました")
                 output_list = []
     except KeyboardInterrupt:
