@@ -7,8 +7,8 @@ BOTTOM_RIGHT = ['h', 'j', 'n', 'm']
 BOTTOM_LEFT = ['g', 'h', 'b', 'n']
 UPPER_RIGHT = ['h', 'j', 'y', 'u']
 UPPER_LEFT = ['t', 'y', 'g', 'h']
-BOTTOM_LINE = ['t', 'y', 'u']
-UPPER_LINE = ['b', 'n', 'm']
+BOTTOM_LINE = ['b', 'n', 'm']
+UPPER_LINE = ['t', 'y', 'u']
 EVERYWHERE = ['t', 'y', 'u', 'g', 'h', 'j', 'b', 'n', 'm']
 
 
@@ -46,7 +46,7 @@ t = Data('t', 15, 3, UPPER_LEFT, BOTTOM_RIGHT)
 u = Data('u', 15, 3, UPPER_LEFT, BOTTOM_RIGHT)
 v = Data('v', 15, 3, UPPER_LEFT, UPPER_RIGHT)
 w = Data('w', 20, 5, UPPER_LEFT, UPPER_RIGHT)
-x = Data('x', 13, 3, UPPER_LEFT, BOTTOM_RIGHT)
+x = Data('x', 13, 3, UPPER_LEFT, BOTTOM_LEFT)
 y = Data('y', 15, 3, UPPER_LEFT, BOTTOM_LINE)
 z = Data('z', 15, 3, UPPER_LEFT, BOTTOM_RIGHT)
 
