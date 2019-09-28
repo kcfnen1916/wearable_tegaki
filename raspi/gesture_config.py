@@ -158,6 +158,18 @@ def set_upper_flag(arg):
 
 right = Gesture([space], out_cmd, 7, 0, True)
 left = Gesture([cul], out_cmd, 11, 0, True)
+right1 = Gesture([space, wxyzh], out_cmd, 7, 0)
+left1 = Gesture([cul, abcd], out_cmd, 11, 0)
+right2 = Gesture([space, pcqe], out_cmd, 7, 0)
+left2 = Gesture([cul, mnopq], out_cmd, 11, 0)
+right3 = Gesture([space, delete], out_cmd, 7, 0)
+left3 = Gesture([cul, assc], out_cmd, 11, 0)
+right4 = Gesture([wxyzh, space], out_cmd, 7, 0)
+left4 = Gesture([abcd, cul], out_cmd, 11, 0)
+right5 = Gesture([pcqe, space], out_cmd, 7, 0)
+left5 = Gesture([mnopq, cul], out_cmd, 11, 0)
+right6 = Gesture([delete, space], out_cmd, 7, 0)
+left6 = Gesture([assc, cul], out_cmd, 11, 0)
 
 # Key list
 # 雑実装のキー配置
@@ -168,4 +180,5 @@ key_lst = [cul, assc, mnopq, abcd, brqdq, rstuv, efgh, pcqe, wxyzh, ijkl, space,
 
 # Gesture list
 # ges_lst = [[spc, dlt, enter, mode_l, mode_r, right, left, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, hyphen, at, slash, sharp, colon, brcl, brcr, quot, dubquot, period, comma, question, exclam, chuplow], [spc, dlt, enter, mode_l, mode_r, right, left, zero, one, two, three, four, five, six, seven, eight, nine], [spc, dlt, enter, mode_l, mode_r, right, left]]
-ges_lst = [right, left]
+ges_lst = [right, left, right1, left1, right2, left2, right3,
+           left3, right4, left4, right5, left5, right6, left6]
