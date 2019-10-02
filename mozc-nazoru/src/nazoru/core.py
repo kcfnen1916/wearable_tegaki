@@ -16,8 +16,9 @@
 
 from __future__ import absolute_import
 
-from .bluetooth import Bluetooth
-from .keyboard_recorder import record
+#from .bluetooth import Bluetooth
+#from .keyboard_recorder import record
+#from .keyboard_recorder import client
 from .nazorunet import nazorunet
 from .nazorunet import Conv
 from .nazorunet import DepthSepConv
