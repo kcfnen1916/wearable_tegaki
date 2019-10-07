@@ -25,6 +25,9 @@ import numpy as np
 from PIL import Image
 from io import BytesIO
 from enum import Enum
+import scipy.misc
+from PIL import Image
+import datetime
 
 SCOPE = 'Nazorunet'
 INPUT_NODE_NAME = 'inputs'
@@ -59,7 +62,7 @@ class KeyboardArrangement(Enum):
   ]
 
 
-def key2pos(key, arrangement=KeyboardArrangement.qwerty_jis.value, offset=0.5):
+def key2pos(key, arrangement=KeyboardArrangement.qwerty_jis.value, offset=0):
   """Returns the key position.
 
   Args:
@@ -78,7 +81,6 @@ def key2pos(key, arrangement=KeyboardArrangement.qwerty_jis.value, offset=0.5):
       x = row.index(key) + i * offset
       return (x, y)
   return None
-
 
 def keydowns2points(keydowns):
   """Translates keydowns to points.
@@ -108,16 +110,19 @@ def normalize_x(x):
     x (list): [[x', y', t], ...] List of points with the normalized potision
     (x', y').
   """
-
-  x = np.array(x)
+  x = np.array(x,dtype = 'float64')
   max_ = np.max(x[:, :2], axis=0)
   min_ = np.min(x[:, :2], axis=0)
   maxminusmin = max_ - min_
-  np.where(maxminusmin == 0, 1, maxminusmin)
-
-  x[:, :2] = (x[:, :2] - min_) / maxminusmin
+  if maxminusmin[0] == 0 and maxminusmin[1] != 0:
+    x[:,0] = 0.5
+    x[:,1] = (x[:, 1] - min_[1]) / maxminusmin[1]
+  if maxminusmin[1] == 0 and maxminusmin[0] != 0:
+    x[:,1] = 0.5
+    x[:,0] = (x[:, 0] - min_[0]) / maxminusmin[0]
+  if maxminusmin[0] != 0 and maxminusmin[1] != 0:
+    x[:, :2] = (x[:, :2] - min_) / maxminusmin
   return x
-
 
 def pendown_encode(x_diff, sigma=1.6):
   """Encodes time difference into pendown state.
@@ -170,7 +175,6 @@ def get_direction(diff):
     First direction (Right (0), Down, (2), Left (4), Up (6)) and its weight, and
     Second direction (Bottom right (1), Bottom left (3), Up left (5), Up right
     (7)) and its weight.
-
   """
 
   if np.abs(diff[0]) >= np.abs(diff[1]):
@@ -407,6 +411,41 @@ def keydowns2image(keydowns, directional_feature, temporal_feature, scale=16,
 
   # Render into images.
   X_im = generate_images(X_norm, X_diff_encoded, directional_feature,
-      temporal_feature, scale, stroke_width) / 255.
+      temporal_feature, scale, stroke_width) / 255
+  img = X_im
+  print(img.shape)
+
+  X_im_1 = img[:,:,0]*100
+  X_im_2 = img[:,:,1]*100
+  X_im_3 = img[:,:,2]*100
+  X_im_4 = img[:,:,3]*100
+  X_im_5 = img[:,:,4]*100
+  X_im_6 = img[:,:,5]*100
+  X_im_7 = img[:,:,6]*100
+  X_im_8 = img[:,:,7]*100
+  X_im_9 = img[:,:,8]*100
+  X_im_10 = img[:,:,9]*100
+  kana = "test"
+
+  k = 1
+  pil_img_f_8 = Image.fromarray(X_im_8.astype(np.uint8))
+  pil_img_f_9 = Image.fromarray(X_im_9.astype(np.uint8))
+  pil_img_f_8.save('./images/{}_{}_8.png'.format(k,kana))
+  pil_img_f_9.save('./images/{}_{}_usuku.png'.format(k,kana))
+  pil_img_f_1 = Image.fromarray(X_im_1.astype(np.uint8))
+  pil_img_f_2 = Image.fromarray(X_im_2.astype(np.uint8))
+  pil_img_f_1.save('./images/{}_{}_1.png'.format(k,kana))
+  pil_img_f_2.save('./images/{}_{}_2.png'.format(k,kana))
+  pil_img_f_3 = Image.fromarray(X_im_3.astype(np.uint8))
+  pil_img_f_4 = Image.fromarray(X_im_4.astype(np.uint8))
+  pil_img_f_3.save('./images/{}_{}_3.png'.format(k,kana))
+  pil_img_f_4.save('./images/{}_{}_4.png'.format(k,kana))
+  pil_img_f_5 = Image.fromarray(X_im_5.astype(np.uint8))
+  pil_img_f_6 = Image.fromarray(X_im_6.astype(np.uint8))
+  pil_img_f_5.save('./images/{}_{}_5.png'.format(k,kana))
+  pil_img_f_6.save('./images/{}_{}_6.png'.format(k,kana))
+  pil_img_f_7 = Image.fromarray(X_im_7.astype(np.uint8))
+  pil_img_f_10 = Image.fromarray(X_im_8.astype(np.uint8))
+  pil_img_f_7.save('./images/{}_{}_7.png'.format(k,kana))
 
   return X_im

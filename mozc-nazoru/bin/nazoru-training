@@ -36,7 +36,7 @@ sys.path.append(src_path)
 
 import argparse
 import json
-import nazoru.core as nazoru
+import nazoru.core_train as nazoru
 import tensorflow as tf
 import zipfile
 
@@ -73,7 +73,6 @@ def convert_data_to_tensors(x, y):
   outputs = tf.constant(y)
   outputs.set_shape([None] + list(y[0].shape))
   return inputs, outputs
-
 
 def save_inference_graph(checkpoint_dir, input_shape, num_classes, conv_defs,
     output_graph, optimized_output_graph,

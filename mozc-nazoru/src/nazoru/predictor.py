@@ -47,7 +47,7 @@ class NazoruPredictor():
       with tf.Session(graph=self._graph) as sess:
         result = sess.run(self._output_operation.outputs[0],
                           {self._input_operation.outputs[0]: inputs})[0]
-    return result
+    return result, inputs
   def predict_top_n(self, data, n):
     """Predict the charactor drawn by |data|.
 
@@ -57,8 +57,8 @@ class NazoruPredictor():
     Returns:
       ans: [(kana, key, probability)] sorted by the probability.
     """
-    result = self._predict(data)
+    result, inputs = self._predict(data)
     ans = []
     for i in result.argsort()[::-1][:n]:
       ans.append((KANAS[i], KEYS[i], result[i]))
-    return ans
+    return ans, inputs

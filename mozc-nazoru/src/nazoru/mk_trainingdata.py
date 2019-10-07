@@ -8,7 +8,7 @@ from time import sleep
 import sys
 import ndjson
 
-from keyboard_recorder import *
+from keyboard_recorder_test import *
 
 num_to_key_dic = {1: 't', 2: 'y', 3: 'u', 4: 'g', 5: 'h', 6: 'j', 7: 'b', 8: 'n', 9: 'm'}
 #num_to_key_dic = {'1':'t','2':'y','3':'u','4':'g','5':'h','6':'j','7':'b','8':'n','9':'m'}
@@ -27,7 +27,7 @@ def mk_traindata(filename):
     c = 0
     try:
         while True:
-            data, command = record()
+            data, command = record_test()
             if len(data) == 1:
                 continue
             else:
