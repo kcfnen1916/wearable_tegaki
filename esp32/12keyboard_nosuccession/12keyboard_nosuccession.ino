@@ -12,37 +12,37 @@ Adafruit_MPR121 cap = Adafruit_MPR121();
 // so we know when buttons are 'released'
 uint16_t lasttouched = 0;
 uint16_t currtouched = 0;
-int res[20];
-char key[12] = {'0','u','0','j','m','n','h','b','g','0','y','t'};
+int res[12];
+char key[12] = {'0','b','g','t','n','h','y','m','j','u','0','0'};
 char pressed_key;
 char last_pressed_key;
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   delay(1000); //シリアル通信準備待ち時間
-  //Serial.println("ESP32 Touch Test with MPR121");
+  Serial.println("ESP32 Touch Test with MPR121");
   
   // Default address is 0x5A, if tied to 3.3V its 0x5B
   // If tied to SDA its 0x5C and if SCL then 0x5D
   if (!cap.begin(0x5A)) {
-    //Serial.println("MPR121 not found, check wiring?");
+    Serial.println("MPR121 not found, check wiring?");
     while (1);
   }
-  //Serial.println("MPR121 found!");
+  Serial.println("MPR121 found!");
 
-  for (uint8_t i = 0; i < 20; i++) {
+  for (uint8_t i = 0; i < 12; i++) {
     res[i] = 0;
   }
 
 }
 
-void get_esptouch(int id, int sen_out){
-  if(sen_out < 23){
-    res[id] = 1;
-   }else{
-    res[id] = 0;
-  }
-}
+//void get_esptouch(int id, int sen_out){
+//  if(sen_out < 23){
+//    res[id] = 1;
+//   }else{
+//    res[id] = 0;
+//  }
+//}
 
 void loop() {
   
@@ -62,5 +62,7 @@ void loop() {
   // reset our state
   lasttouched = currtouched;
   last_pressed_key = pressed_key;
+
+  delay(100);
 
 }
