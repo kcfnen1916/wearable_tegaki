@@ -10,7 +10,7 @@ void setup()
 
     connectWiFi();
 
-    Key testKey = Key(1, "test");
+    // Key testKey = Key(1, "test");
 }
 
 void loop()
