@@ -51,6 +51,7 @@ def writing():
             while True:
                 input_key_lst = []
                 record = 0
+                record_count = 0
                 hw_flag = True
                 chr_list = []
                 while True:
@@ -60,6 +61,7 @@ def writing():
                         start_time = datetime.datetime.now()
                         last_now = start_time
                     try:
+                        record_count += 1
                         for i in range(12):
                             pin_bit = 1 << i
                             if current_touched & pin_bit and not last_touched & pin_bit:
@@ -82,7 +84,9 @@ def writing():
                     finally:
                         now = datetime.datetime.now()
                     ep_time_from_last = (now - last_now).total_seconds() * 1000
-                    if abs(ep_time_from_last) > wait_seconds and start_time != last_now:
+                    ep_time_ave = min(1000, max((ep_time_ave * (record_count - 1) +
+                                                 ep_time_from_last) / record_count, 300))
+                    if abs(ep_time_from_last) > ep_time_ave and start_time != last_now:
                         print(chr_list)
                         save = []
                         for i in range(len(chr_list)):
