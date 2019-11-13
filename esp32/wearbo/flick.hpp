@@ -15,13 +15,13 @@ class Wearbo;
 class Key
 {
 public:
-    Key(int pin, String name, char hwc, Wearbo& wearbo, bool unique_key = false);
+    Key(int pin, String name, String hwc, Wearbo& wearbo, bool unique_key = false);
     bool operator!=(const Key& r) const;
 
 private:
     int m_pin;
     String m_name;
-    char m_hwc;
+    String m_hwc;
     bool m_unique_key;
 };
 
@@ -57,7 +57,7 @@ class Wearbo
 public:
     Wearbo(int key_num);
     void main();
-    void record(int* length, TouchData* input_lst);
+    void record(String& input_data, String& input_time);
     // int search_gesture(TouchData* input_lst);
     void send_hwd(TouchData* input_lst);
     void receive_hwd();
