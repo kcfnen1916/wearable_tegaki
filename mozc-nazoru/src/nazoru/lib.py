@@ -32,23 +32,9 @@ import datetime
 SCOPE = 'Nazorunet'
 INPUT_NODE_NAME = 'inputs'
 OUTPUT_NODE_NAME = SCOPE + '/Predictions/Reshape_1'
-KANAS = (u'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほ'
-u'まみむめもやゆよらりるれろわゐんゑを'
-u'abcdefghijklmnopqrstuvwxyz1234567890'u'♡ーずぐ')
-KEYS = ('a', 'i', 'u', 'e', 'o',
-'ka', 'ki', 'ku', 'ke', 'ko',
-'sa', 'si', 'su', 'se', 'so',
-'ta', 'ti', 'tu', 'te', 'to',
-'na', 'ni', 'nu', 'ne', 'no',
-'ha', 'hi', 'hu', 'he', 'ho',
-'ma', 'mi', 'mu', 'me', 'mo',
-'ya',       'yu',       'yo',
-'ra', 'ri', 'ru', 're', 'ro',
-'wa', 'wi', 'nn', 'we', 'wo',
-'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
-'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
-'1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
-'ha-to', '-', 'zu', 'gu')
+KANAS = (u'abcdefghijklmnopqrstuvwxyz1234567890')
+KEYS = ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
+'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
 
 class KeyboardArrangement(Enum):
   """Enum for keyboard arrangements
