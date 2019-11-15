@@ -17,11 +17,11 @@ class Key
 public:
     Key(int pin, String name, String hwc, Wearbo& wearbo, bool unique_key = false);
     bool operator!=(const Key& r) const;
+    String m_hwc;
 
 private:
     int m_pin;
     String m_name;
-    String m_hwc;
     bool m_unique_key;
 };
 
@@ -39,11 +39,11 @@ public:
 class Gesture
 {
 public:
-    Gesture(Key* key_lst, int length, String output, int mode_);
-    String judge_gesture(int length, TouchData* input_lst);
+    Gesture(String key_lst, int length, String output, int mode_);
+    String judge_gesture(String input_data);
 
 private:
-    Key* m_key_lst;
+    String m_key_lst;
     int m_length;
     String m_output;
     int m_mode;
@@ -67,7 +67,7 @@ public:
 
 private:
     int m_key_num;
-    int m_mode;  //0 : 英字フリック入力モード; 1 : 数字フリック入力モード;	2 : 手書き入力モード;
+    int m_mode;  //0 : 共通;　1 : 英字フリック入力モード; 2 : 数字フリック入力モード;	3 : 手書き入力モード;
     int m_ulst;  //0 : 小文字; 1 : 大文字;
     Gesture m_ges_lst[];
     Adafruit_MPR121 m_cap;

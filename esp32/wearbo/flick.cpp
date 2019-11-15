@@ -1,5 +1,6 @@
 #include "flick.hpp"
 
+
 Key::Key(int pin, String name, String hwc, Wearbo& wearbo, bool unique_key)
 {
     m_pin = pin;
@@ -14,23 +15,24 @@ bool Key::operator!=(const Key& r) const
     return m_pin != r.m_pin && m_name != r.m_name;
 }
 
-Gesture::Gesture(Key* key_lst, int length, String output, int mode_)
+Gesture::Gesture(String key_lst, int length, String output, int mode_)
 {
+    // m_key_lst = "";
+    // for (int i = 0; i < length; i++) {
+    //     m_key_lst.concat(key_lst[i].m_hwc);
+    // }
     m_key_lst = key_lst;
     m_length = length;
     m_output = output;
     m_mode = mode_;
 }
 
-String Gesture::judge_gesture(int length, TouchData* input_lst)
+String Gesture::judge_gesture(String input_data)
 {
     bool eq_flg = true;
-    if (m_length > length) {
-        return "NOT";
-    }
-    int count = min(length, m_length);
+    int count = min((int)input_data.length(), (int)m_length);
     for (int i = 0; i < count; i++) {
-        if (m_key_lst[i] != input_lst[i].m_key) {
+        if (input_data.indexOf(m_key_lst) == 0) {
             eq_flg = false;
             break;
         }
@@ -71,10 +73,10 @@ void Wearbo::main()
     String input_data = "";
     String input_time = "";
     record(input_data, input_time);
-    if (m_mode == 0 || m_mode == 1) {
+    if (m_mode == 1 || m_mode == 2) {
         String output = "";
         for (auto g : m_ges_lst) {
-            output = g.judge_gesture(length, input_lst);
+            output = g.judge_gesture(input_data);
             if (output != "NOT") {
                 break;
             }
@@ -82,10 +84,10 @@ void Wearbo::main()
 
         if (output == "CHANGE_ULST") {
             change_ulst();
-        } else if (output == "CHANGE_MODE0") {
-            change_mode(0);
         } else if (output == "CHANGE_MODE1") {
             change_mode(1);
+        } else if (output == "CHANGE_MODE2") {
+            change_mode(2);
         } else {
             send_ble(output);
         }
@@ -108,13 +110,13 @@ void Wearbo::record(String& input_data, String& input_time)
 
         if (rec == 0) {
             rec = 1;
-            start_time = now();
+            start_time = millis();
             last_now = start_time;
         }
 
         for (uint8_t i = 0; i < 12; i++) {
             if ((currtouched & _BV(i)) && !(lasttouched & _BV(i))) {
-                last_now = now();
+                last_now = millis();
                 rec_time = (last_now - start_time) * 1000;
                 if (input_data.indexOf(m_key_lst[i].m_hwc) == -1) {
                     input_data.concat(m_key_lst[i].m_hwc);
@@ -124,12 +126,12 @@ void Wearbo::record(String& input_data, String& input_time)
             }
         }
 
-        now_ = now();
-        ep_time_from_last = (now_ - last_now).total_seconds() * 1000;
+        now_ = millis();
+        ep_time_from_last = now_ - last_now;
         if (abs(ep_time_from_last) > wait_seconds && start_time != last_now) {
             break;
         }
-        lasttouched = currenttouched;
+        lasttouched = currtouched;
     }
 }
 
