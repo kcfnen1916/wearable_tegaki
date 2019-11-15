@@ -64,37 +64,65 @@ Wearbo::Wearbo(int key_num)
 
     m_lasttouched = 0;
     m_currtouched = 0;
+    m_input_data = "";
+    m_input_time = "";
+    m_unique = false;
+    m_send_data = "";
 }
 
 void Wearbo::main()
 {
-    int length = 0;
-    TouchData* input_lst;
-    String input_data = "";
-    String input_time = "";
-    record(input_data, input_time);
-    if (m_mode == 1 || m_mode == 2) {
-        String output = "";
-        for (auto g : m_ges_lst) {
-            output = g.judge_gesture(input_data);
-            if (output != "NOT") {
-                break;
+    // int length = 0;
+    while (1) {
+        m_input_data = "";
+        m_input_time = "";
+        m_unique = false;
+        record();
+        if (m_mode == 1 || m_mode == 2) {
+            String output = "";
+            for (auto g : m_ges_lst) {
+                output = g.judge_gesture(m_input_data);
+                if (output != "NOT") {
+                    break;
+                }
             }
-        }
 
-        if (output == "CHANGE_ULST") {
-            change_ulst();
-        } else if (output == "CHANGE_MODE1") {
-            change_mode(1);
-        } else if (output == "CHANGE_MODE2") {
-            change_mode(2);
-        } else {
-            send_ble(output);
+            if (output == "CHANGE_ULST") {
+                change_ulst();
+            } else if (output == "CHANGE_MODE1") {
+                change_mode(1);
+            } else if (output == "CHANGE_MODE2") {
+                change_mode(2);
+            } else {
+                send_ble(output);
+            }
+        } else if (m_mode = 3) {
+            if (m_unique) {
+                String output = "";
+                for (auto g : m_ges_lst) {
+                    output = g.judge_gesture(m_input_data);
+                    if (output != "NOT") {
+                        break;
+                    }
+                }
+
+                if (output == "CHANGE_ULST") {
+                    change_ulst();
+                } else if (output == "CHANGE_MODE1") {
+                    change_mode(1);
+                } else if (output == "CHANGE_MODE2") {
+                    change_mode(2);
+                } else {
+                    send_ble(output);
+                }
+            } else {
+                send_hwd();
+            }
         }
     }
 }
 
-void Wearbo::record(String& input_data, String& input_time)
+void Wearbo::record()
 {
     uint16_t lasttouched = 0;
     uint16_t currtouched = 0;
@@ -118,10 +146,13 @@ void Wearbo::record(String& input_data, String& input_time)
             if ((currtouched & _BV(i)) && !(lasttouched & _BV(i))) {
                 last_now = millis();
                 rec_time = (last_now - start_time) * 1000;
-                if (input_data.indexOf(m_key_lst[i].m_hwc) == -1) {
-                    input_data.concat(m_key_lst[i].m_hwc);
-                    input_time.concat((String)rec_time);
-                    input_time.concat(" ");
+                if (m_input_data.indexOf(m_key_lst[i].m_hwc) == -1) {
+                    m_input_data.concat(m_key_lst[i].m_hwc);
+                    m_input_time.concat((String)rec_time);
+                    m_input_time.concat(" ");
+                    if (m_input_data.length() == 1 && m_key_lst[i].m_unique_key) {
+                        m_unique = true;
+                    }
                 }
             }
         }
@@ -132,6 +163,24 @@ void Wearbo::record(String& input_data, String& input_time)
             break;
         }
         lasttouched = currtouched;
+    }
+}
+
+void Wearbo::send_hwd()
+{
+    m_send_data = "";
+    m_send_data.concat(m_input_data);
+    m_send_data.concat(":");
+    m_send_data.concat(m_input_time);
+    client.print(m_send_data);
+}
+
+void Wearbo::receive_hwd()
+{
+    while (1) {
+        if (client.available() > 0) {
+            send_ble((String)client.read());
+        }
     }
 }
 
