@@ -10,6 +10,7 @@ import serial
 
 import gesture_config
 from bluetooth import *
+import hand_writing
 
 
 cap = MPR121.MPR121()
@@ -88,12 +89,15 @@ def writing():
                                                  ep_time_from_last) / record_count, 300))
                     if abs(ep_time_from_last) > ep_time_ave and start_time != last_now:
                         print(chr_list)
-                        save = []
-                        for i in range(len(chr_list)):
-                            for j in range(2):
-                                save.append(chr_list[i][j])
-                        save = " ".join(save)
-                        conn.send(save.encode())
+                        val = judge_hand_writing(chr_list)
+                        print(val)
+                        bt_connection.send(val)
+                        # save = []
+                        # for i in range(len(chr_list)):
+                        #     for j in range(2):
+                        #         save.append(chr_list[i][j])
+                        # save = " ".join(save)
+                        # conn.send(save.encode())
                         break
                     last_touched = current_touched
                 # gesture判定
