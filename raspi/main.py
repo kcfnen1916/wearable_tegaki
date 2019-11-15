@@ -88,7 +88,7 @@ def writing():
                     # ep_time_ave = min(1000, max((ep_time_ave * (record_count - 1) + ep_time_from_last) / record_count, 300))
                     if abs(ep_time_from_last) > wait_seconds and start_time != last_now:
                         print(chr_list)
-                        val = judge_hand_writing(chr_list)
+                        val = hand_writing.judge_hand_writing(chr_list)
                         print(val)
                         bt_connection.send(val.encode())
                         # save = []
