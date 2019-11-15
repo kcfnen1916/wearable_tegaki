@@ -92,6 +92,8 @@ def writing():
                         val = hand_writing.judge_hand_writing(chr_list)
                         if val == 'h':
                             val = random.choice(['h','k'])
+                        elif val = '=':
+                            break
                         print(val)
                         bt_connection.send(val.encode())
                         # save = []

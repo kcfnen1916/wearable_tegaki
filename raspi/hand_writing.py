@@ -70,6 +70,8 @@ def argmin(arr):
 
 def judge_hand_writing(input_lst):
     input_data = [inp[0] for inp in input_lst]
+    if len(input_data) == 0:
+        return '='
     k = input_data[0] + input_data[-1]
     if k in hw_dic:
         if len(hw_dic[k]) == 1:
@@ -82,7 +84,7 @@ def judge_hand_writing(input_lst):
                 for am in argmin_lst:
                     if hw_dic[k][am].via in input_data:
                         return hw_dic[k][am].chr
-    return '='
+    return 'w'
 
 if __name__=='__main__':
     print(hw_dic)
