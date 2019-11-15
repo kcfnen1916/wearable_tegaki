@@ -2,22 +2,21 @@
 #include "config.hpp"
 #include "flick.hpp"
 #include "wifi.hpp"
-//#include <WiFi.h>
-// void ArrayOut(int AccData[])
-// {
-//     for (int i = 0; i < sizeof(AccData) + 1; i++) {
-//         Serial.println(AccData[i]);
-//     }
-// }
+#include <M5StickC.h>
+
+
 void setup()
 {
     Serial.begin(115200);
-    Serial.println("Starting BLE work!");
+    Serial.println("Starting wearbo");
+
+    M5.begin();
 
     connectWiFi();
-    int myData[] = {1, 2, 3, 4, 5};
-    // ArrayOut(myData);
-    // Key testKey = Key(1, "test");
+    setup_client();
+
+    xTaskCreatePinnedToCore(task_main, "Task_main", 4096, NULL, 1, NULL, 0);
+    xTaskCreatePinnedToCore(task_recv, "Task_recv", 4096, NULL, 2, NULL, 1);
 }
 
 void loop()
@@ -28,5 +27,15 @@ void loop()
     } else {
         connectWiFi();
     }
-    delay(1000);
+}
+
+
+void task_main(void* arg)
+{
+    wearbo.main();
+}
+
+void task_recv(void* arg)
+{
+    wearbo.receive_hwd();
 }

@@ -4,6 +4,7 @@
 #include "Adafruit_MPR121.h"
 #include "Arduino.h"
 #include "bluetooth.hpp"
+#include "wifi.hpp"
 #include <Wire.h>
 
 #ifndef _BV
@@ -18,11 +19,11 @@ public:
     Key(int pin, String name, String hwc, Wearbo& wearbo, bool unique_key = false);
     bool operator!=(const Key& r) const;
     String m_hwc;
+    bool m_unique_key;
 
 private:
     int m_pin;
     String m_name;
-    bool m_unique_key;
 };
 
 class TouchData
@@ -57,9 +58,8 @@ class Wearbo
 public:
     Wearbo(int key_num);
     void main();
-    void record(String& input_data, String& input_time);
-    // int search_gesture(TouchData* input_lst);
-    void send_hwd(TouchData* input_lst);
+    void record();
+    void send_hwd();
     void receive_hwd();
     void change_mode(int next_mode);
     void change_ulst();
@@ -73,6 +73,10 @@ private:
     Adafruit_MPR121 m_cap;
     uint16_t m_lasttouched;
     uint16_t m_currtouched;
+    String m_input_data;
+    String m_input_time;
+    boolean m_unique;
+    String m_send_data;
 };
 
 

@@ -15,21 +15,9 @@ Key mnopq = Key(2, "mnopq", "g", wearbo, false);
 Key assc = Key(1, "assc", "b", wearbo, false);
 Key cul = Key(0, "cul", "-", wearbo, true);
 
-// String key_to_str(Key key_lst[], int len)
-// {
-//     String key_str = "";
-//     for (int i = 0; i < len; i++) {
-//         key_str.concat(key_lst[i].m_hwc);
-//     }
-//     return key_str;
-// }
-//
-// Key klst = {space};
-// String testtest = key_to_str(klst, 1);
-
 
 // モード共通 0
-Gesture spc = Gesture("-", 1, " ", 0);
+// Gesture spc = Gesture("s", 1, " ", 0);
 // Gesture delet = Gesture({dlt}, 1, " ", 0);
 // Gesture enter = Gesture({dlt, space, pcqe}, 3, " ", 0);
 // Gesture mode_10 = Gesture({space, dlt}, 2, "CHANGE_MODE1", 0);
