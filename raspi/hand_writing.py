@@ -16,6 +16,7 @@ class HandWriting:
         return self.chr
 
 a_hw = HandWriting('a', 11, 'u', 'm', 'j')
+x_hw = HandWriting('x', 6, 't', 'b', 'm')
 b_hw = HandWriting('b', 7, 't', 'b', 'n')
 c_hw = HandWriting('c', 7, 'u', 'm')
 d_hw = HandWriting('d', 8, 'j', 'm')
@@ -39,7 +40,6 @@ t_hw = HandWriting('t', 7, 'g', 'm')
 u_hw = HandWriting('u', 9, 't', 'm', 'n')
 v_hw = HandWriting('v', 7, 't', 'u', 'n')
 w_hw = HandWriting('w', 10, 't', 'u')
-x_hw = HandWriting('x', 6, 't', 'b', 'm')
 y_hw = HandWriting('y', 5, 't', 'b')
 
 
