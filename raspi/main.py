@@ -3,6 +3,7 @@ import time
 import datetime
 from datetime import timedelta
 import threading
+import random
 
 
 import Adafruit_MPR121.MPR121 as MPR121
@@ -89,6 +90,8 @@ def writing():
                     if abs(ep_time_from_last) > wait_seconds and start_time != last_now:
                         print(chr_list)
                         val = hand_writing.judge_hand_writing(chr_list)
+                        if val == 'h':
+                            val = random.choice(['h','k'])
                         print(val)
                         bt_connection.send(val.encode())
                         # save = []
