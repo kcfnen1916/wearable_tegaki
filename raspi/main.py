@@ -33,13 +33,13 @@ mode = gesture_config.mode
 
 # この辺にsocketのimportとかを書く　サーバー
 # ip=input()
-import socket
-args = sys.argv
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-s.bind((args[1], 50000))
-s.listen(1)
-conn, addr = s.accept()
+# import socket
+# args = sys.argv
+# s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+# s.bind((args[1], 50000))
+# s.listen(1)
+# conn, addr = s.accept()
 
 print('Press Ctrl-C to quit.')
 
@@ -87,11 +87,11 @@ def writing():
                     ep_time_from_last = (now - last_now).total_seconds() * 1000
                     ep_time_ave = min(1000, max((ep_time_ave * (record_count - 1) +
                                                  ep_time_from_last) / record_count, 300))
-                    if abs(ep_time_from_last) > ep_time_ave and start_time != last_now:
+                    if abs(ep_time_from_last) > wait_seconds and start_time != last_now:
                         print(chr_list)
                         val = judge_hand_writing(chr_list)
                         print(val)
-                        bt_connection.send(val)
+                        bt_connection.send(val.encode())
                         # save = []
                         # for i in range(len(chr_list)):
                         #     for j in range(2):
@@ -161,12 +161,13 @@ def writing():
 
 def receiving():
     while(1):
-        data = conn.recv(1024)
-        #data = data.decode()
-        if data:
-            print("receive:")
-            print(data)
-            bt_connection.send(data)
+        pass
+        # data = conn.recv(1024)
+        # #data = data.decode()
+        # if data:
+        #     print("receive:")
+        #     print(data)
+        #     bt_connection.send(data)
 
 
 if __name__ == '__main__':
@@ -176,4 +177,4 @@ if __name__ == '__main__':
     t1.start()
     t2.start()
 
-s.close()
+# s.close()

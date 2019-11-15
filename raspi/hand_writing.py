@@ -28,6 +28,7 @@ j_hw = HandWriting('j', 4, 'h', 'y', 'b')
 k_hw = HandWriting('k', 6, 't', 'n') # TODO
 l_hw = HandWriting('l', 3, 'y', 'n')
 m_hw = HandWriting('m', 13, 't', 'm')
+z_hw = HandWriting('z', 7, 't', 'm', 'h')
 n_hw = HandWriting('n', 9, 't', 'm', 'y')
 o_hw = HandWriting('o', 9, 'y', 'y')
 p_hw = HandWriting('p', 7, 't', 'b', 'y')
@@ -40,7 +41,7 @@ v_hw = HandWriting('v', 7, 't', 'u', 'n')
 w_hw = HandWriting('w', 10, 't', 'u')
 x_hw = HandWriting('x', 6, 't', 'b', 'm')
 y_hw = HandWriting('y', 5, 't', 'b')
-z_hw = HandWriting('z', 7, 't', 'm', 'h')
+
 
 hw_dic = {}
 
