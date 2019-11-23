@@ -12,6 +12,9 @@ file = open("gesture.config", "r")
 export_file = open("new_config.cpp" ,"w")
 
 dic={}
+count=0
+gesture_list=[]
+
 for line in file:
     export = ""
     line=line.replace(", ",",")
@@ -27,6 +30,8 @@ for line in file:
             export_file.write("\n")
 
         if(line[0]=="Gesture"):
+            count=count+1
+            gesture_list.append(line[1])
             if(line[1]=="spc"):
                 line[3] = '" "'
                 line[4] = line[5]
@@ -36,6 +41,11 @@ for line in file:
     except IndexError:
         export_file.write("\n")
 
+gesture_list.sort(reverse=True, key=len)
+gesture_list_str=', '.join(gesture_list)
+export_list="gesture["+str(count)+"]=["+gesture_list_str+"]"
+export_file.write(export_list)
+export_file.write("\n")
 
 file.close()
 export_file.close()
