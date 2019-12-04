@@ -1,4 +1,4 @@
-// #include "config.hpp"
+// // #include "config.hpp"
 //
 // Wearbo wearbo = Wearbo(12);
 //
@@ -76,3 +76,5 @@
 // Gesture seven = Gesture("b", 1, "7", 2);
 // Gesture eight = Gesture("n", 1, "8", 2);
 // Gesture nine = Gesture("m", 1, "9", 2);
+//
+// Gesture ges_lst[10] = {zero, one, two, three, four, five, six, seven, eight, nine};

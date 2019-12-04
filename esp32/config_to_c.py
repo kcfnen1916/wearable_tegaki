@@ -12,8 +12,10 @@ file = open("gesture.config", "r")
 export_file = open("new_config.cpp" ,"w")
 
 dic={}
-count=0
+gesture_count=0
 gesture_list=[]
+hw_count=0
+hw_list=[]
 
 for line in file:
     export = ""
@@ -29,8 +31,8 @@ for line in file:
             export_file.write(export)
             export_file.write("\n")
 
-        if(line[0]=="Gesture"):
-            count=count+1
+        elif(line[0]=="Gesture"):
+            gesture_count+=1
             gesture_list.append(line[1])
             if(line[1]=="spc"):
                 line[3] = '" "'
@@ -38,13 +40,30 @@ for line in file:
             export += line[0]+" "+line[1]+" = "+line[0]+'("'+translation(dic, line[2])+'", '+str(len((line[2].strip("[]")).split(",")))+", "+line[3]+", "+line[4]+");"
             export_file.write(export)
             export_file.write("\n")
+
+        elif(line[0]=="HandWriting"):
+            hw_count+=1
+            hw_list.append(line[1])
+            if(len(line)==6):
+                export += line[0]+" "+line[1]+" = HandWriting("+line[2]+", "+line[3]+", "+line[4]+", "+line[5]+");"
+            elif(len(line)==7):
+                export += line[0]+" "+line[1]+" = HandWriting("+line[2]+", "+line[3]+", "+line[4]+", "+line[5]+", "+line[6]+");"
+
+            export_file.write(export)
+            export_file.write("\n")
+
     except IndexError:
         export_file.write("\n")
 
 gesture_list.sort(reverse=True, key=len)
 gesture_list_str=', '.join(gesture_list)
-export_list="gesture["+str(count)+"]=["+gesture_list_str+"]"
-export_file.write(export_list)
+export_gesture_list="Gesture ges_lst["+str(gesture_count)+"]=["+gesture_list_str+"]"
+export_file.write(export_gesture_list)
+export_file.write("\n")
+
+hw_list_str=', '.join(hw_list)
+export_hw_list="HandWriting hw_list["+str(hw_count)+"]=["+hw_list_str+"]"
+export_file.write(export_hw_list)
 export_file.write("\n")
 
 file.close()
