@@ -155,6 +155,9 @@ void Wearbo::record()
         }
         for (uint8_t i = 0; i < 12; i++) {
             if ((currtouched & _BV(i)) && !(lasttouched & _BV(i))) {
+                // if (m_input_data.length() == 0) {
+                //     dacWrite(26, 100);
+                // }
                 last_now = millis();
                 rec_time = (last_now - start_time) * 1000;
                 // if (m_input_data.indexOf(m_key_lst[i]) == -1) {

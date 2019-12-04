@@ -2,8 +2,8 @@
 // #include "config.hpp"
 #include "flick.hpp"
 // #include "wifi.hpp"
-//#include <M5StickC.h>
 #include "hand_writing.hpp"
+#include <M5StickC.h>
 
 String output = "";
 
@@ -129,6 +129,7 @@ HandWriting y_hw = HandWriting("y", 5, "t", "b");
 
 HandWriting hw_lst[37] = {a_hw, x_hw, b_hw, c_hw, d_hw, d_hw2, e_hw, f_hw, g_hw, g_hw2, h_hw, h_hw2, i_hw, i_hw2, i_hw3, j_hw, j_hw2, k_hw, p_hw2, b_hw2, q_hw2, l_hw, l_hw2, l_hw3, m_hw, z_hw, n_hw, o_hw, p_hw, q_hw, r_hw, s_hw, t_hw, u_hw, v_hw, w_hw, y_hw};
 
+int vib_pin = 26;
 
 void setup()
 {
@@ -150,7 +151,11 @@ void setup()
     // Gesture test[2] = {zero, one};
 
     // wearbo.m_ges_lst[10] = {zero, one, two, three, four, five, six, seven, eight, nine};
-    //    M5.begin();
+    M5.begin();
+
+    Wire.begin(32, 33);
+
+    pinMode(vib_pin, OUTPUT);
 
     // connectWiFi();
     // setup_client();
@@ -167,6 +172,7 @@ void loop()
     // m_input_time = "";
     wearbo.m_unique = false;
     wearbo.record();
+    dacWrite(vib_pin, 100);
     if (wearbo.m_mode == 1 || wearbo.m_mode == 2) {
         for (auto g : ges_lst) {
             // Serial.println("serch");
@@ -270,6 +276,8 @@ void loop()
             }
         }
     }
+    delay(80);
+    dacWrite(vib_pin, 0);
 }
 
 String low2up(char c)
