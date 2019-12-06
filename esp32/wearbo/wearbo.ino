@@ -31,8 +31,8 @@ Gesture mode_10 = Gesture("cd", 2, "CHANGE_MODE1", 0);
 Gesture mode_11 = Gesture("dc", 2, "CHANGE_MODE1", 0);
 Gesture mode_20 = Gesture("sc", 2, "CHANGE_MODE2", 0);
 Gesture mode_21 = Gesture("cs", 2, "CHANGE_MODE2", 0);
-Gesture mode_30 = Gesture("sd", 2, "CHANGE_MODE3", 0);
-Gesture mode_31 = Gesture("ds", 2, "CHANGE_MODE3", 0);
+Gesture mode_30 = Gesture("sd", 2, "CHANGE_MODE2", 0);
+Gesture mode_31 = Gesture("ds", 2, "CHANGE_MODE2", 0);
 Gesture right = Gesture("ctyud", 5, "RIGHT", 0);
 Gesture left = Gesture("duytc", 5, "LEFT", 0);
 
@@ -88,9 +88,6 @@ Gesture seven = Gesture("b", 1, "7", 2);
 Gesture eight = Gesture("n", 1, "8", 2);
 Gesture nine = Gesture("m", 1, "9", 2);
 
-// Gesture ges_lst[3][10] = {zero, one, two, three, four, five, six, seven, eight, nine};
-Gesture ges_lst[61] = {right, left, enter, mode_10, mode_11, mode_20, mode_21, mode_30, mode_31, spc, delet, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, hyphen, at, slash, sharp, colon, brcl, brcr, quot, dubquot, period, comma, question, exclam, chuplow, zero, one, two, three, four, five, six, seven, eight, nine};
-
 HandWriting a_hw = HandWriting("a", 11, "u", "m", "j");
 HandWriting x_hw = HandWriting("x", 6, "t", "b", "m");
 HandWriting b_hw = HandWriting("b", 7, "t", "b", "n");
@@ -101,14 +98,14 @@ HandWriting e_hw = HandWriting("e", 10, "g", "m", "b");
 HandWriting f_hw = HandWriting("f", 7, "u", "j");
 HandWriting g_hw = HandWriting("g", 8, "u", "n");
 HandWriting g_hw2 = HandWriting("g", 8, "y", "b");
-HandWriting h_hw = HandWriting("h", 6, "t", "n");   // TODO
-HandWriting h_hw2 = HandWriting("h", 6, "y", "m");  // TODO
+HandWriting h_hw = HandWriting("h", 6, "t", "n");
+HandWriting h_hw2 = HandWriting("h", 6, "y", "m");
 HandWriting i_hw = HandWriting("i", 3, "h", "y");
 HandWriting i_hw2 = HandWriting("i", 3, "g", "t");
 HandWriting i_hw3 = HandWriting("i", 3, "j", "u");
 HandWriting j_hw = HandWriting("j", 4, "h", "y", "b");
 HandWriting j_hw2 = HandWriting("j", 4, "j", "u", "n");
-HandWriting k_hw = HandWriting("k", 6, "t", "n");  // TODO
+HandWriting k_hw = HandWriting("k", 6, "t", "n");
 HandWriting p_hw2 = HandWriting("p", 7, "y", "n", "u");
 HandWriting b_hw2 = HandWriting("b", 7, "y", "n", "m");
 HandWriting q_hw2 = HandWriting("q", 7, "y", "n", "t");
@@ -129,6 +126,7 @@ HandWriting v_hw = HandWriting("v", 7, "t", "u", "n");
 HandWriting w_hw = HandWriting("w", 10, "t", "u");
 HandWriting y_hw = HandWriting("y", 5, "t", "b");
 
+Gesture ges_lst[61] = {question, mode_10, mode_11, mode_20, mode_21, mode_30, mode_31, dubquot, chuplow, hyphen, period, exclam, delet, enter, right, slash, sharp, colon, comma, three, seven, eight, left, brcl, brcr, quot, zero, four, five, nine, spc, one, two, six, at, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z};
 HandWriting hw_lst[37] = {a_hw, x_hw, b_hw, c_hw, d_hw, d_hw2, e_hw, f_hw, g_hw, g_hw2, h_hw, h_hw2, i_hw, i_hw2, i_hw3, j_hw, j_hw2, k_hw, p_hw2, b_hw2, q_hw2, l_hw, l_hw2, l_hw3, m_hw, z_hw, n_hw, o_hw, p_hw, q_hw, r_hw, s_hw, t_hw, u_hw, v_hw, w_hw, y_hw};
 
 int vib_pin = 26;
@@ -150,10 +148,11 @@ void setup()
     Serial.println(ges_lst[1].m_output);
     // Serial.println(wearbo.m_key_lst[0]);
 
-    // Gesture test[2] = {zero, one};
+    // Ge9sture test[2] = {zero, one};
 
     // wearbo.m_ges_lst[10] = {zero, one, two, three, four, five, six, seven, eight, nine};
     M5.begin();
+    bleKeyboard.begin();
 
     Wire.begin(32, 33);
 
