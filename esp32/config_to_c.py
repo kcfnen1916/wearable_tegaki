@@ -5,7 +5,7 @@ def translation(dic, list):
         export_translation += dic[i]
 
     return export_translation
-        
+
 
 
 file = open("gesture.config", "r")
@@ -60,12 +60,12 @@ gesture_dic=sorted(gesture_dic.items(), key=lambda x:x[1], reverse=True)
 for k,v in gesture_dic:
     gesture_list.append(k)
 gesture_list_str=', '.join(gesture_list)
-export_gesture_list="Gesture ges_lst["+str(gesture_count)+"]=["+gesture_list_str+"]"
+export_gesture_list="Gesture ges_lst["+str(gesture_count)+"]={"+gesture_list_str+"};"
 export_file.write(export_gesture_list)
 export_file.write("\n")
 
 hw_list_str=', '.join(hw_list)
-export_hw_list="HandWriting hw_list["+str(hw_count)+"]=["+hw_list_str+"]"
+export_hw_list="HandWriting hw_lst["+str(hw_count)+"]={"+hw_list_str+"};"
 export_file.write(export_hw_list)
 export_file.write("\n")
 
