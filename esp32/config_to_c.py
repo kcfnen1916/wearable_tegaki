@@ -14,6 +14,7 @@ export_file = open("new_config.cpp" ,"w")
 dic={}
 gesture_count=0
 gesture_list=[]
+gesture_dic={}
 hw_count=0
 hw_list=[]
 
@@ -33,10 +34,10 @@ for line in file:
 
         elif(line[0]=="Gesture"):
             gesture_count+=1
-            gesture_list.append(line[1])
             if(line[1]=="spc"):
                 line[3] = '" "'
                 line[4] = line[5]
+            gesture_dic[line[1]]=len((line[2].strip("[]")).split(","))
             export += line[0]+" "+line[1]+" = "+line[0]+'("'+translation(dic, line[2])+'", '+str(len((line[2].strip("[]")).split(",")))+", "+line[3]+", "+line[4]+");"
             export_file.write(export)
             export_file.write("\n")
@@ -55,7 +56,9 @@ for line in file:
     except IndexError:
         export_file.write("\n")
 
-gesture_list.sort(reverse=True, key=len)
+gesture_dic=sorted(gesture_dic.items(), key=lambda x:x[1], reverse=True)
+for k,v in gesture_dic:
+    gesture_list.append(k)
 gesture_list_str=', '.join(gesture_list)
 export_gesture_list="Gesture ges_lst["+str(gesture_count)+"]=["+gesture_list_str+"]"
 export_file.write(export_gesture_list)
