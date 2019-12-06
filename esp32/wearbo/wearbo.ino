@@ -7,6 +7,8 @@
 
 String output = "";
 
+BleKeyboard bleKeyboard;
+
 Wearbo wearbo = Wearbo(12);
 
 Key dlt = Key(11, "dlt", "d", wearbo, true);
