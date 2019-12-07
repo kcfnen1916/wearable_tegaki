@@ -167,6 +167,7 @@ void setup()
 
     // wearbo.m_ges_lst[10] = {zero, one, two, three, four, five, six, seven, eight, nine};
     M5.begin();
+    bleKeyboard.begin();
 
     Wire.begin(32, 33);
 
