@@ -98,7 +98,7 @@ HandWriting e_hw = HandWriting("e", 10, "g", "m", "b");
 HandWriting f_hw = HandWriting("f", 7, "u", "j");
 HandWriting g_hw = HandWriting("g", 8, "u", "n");
 HandWriting g_hw2 = HandWriting("g", 8, "y", "b");
-HandWriting h_hw = HandWriting("h", 6, "t", "n");
+// HandWriting h_hw = HandWriting("h", 6, "t", "n");
 HandWriting h_hw2 = HandWriting("h", 6, "y", "m");
 HandWriting i_hw = HandWriting("i", 3, "h", "y");
 HandWriting i_hw2 = HandWriting("i", 3, "g", "t");
@@ -127,7 +127,7 @@ HandWriting w_hw = HandWriting("w", 10, "t", "u");
 HandWriting y_hw = HandWriting("y", 5, "t", "b");
 
 Gesture ges_lst[61] = {right, left, enter, mode_10, mode_11, mode_20, mode_21, mode_30, mode_31, b, c, d, f, g, h, j, k, l, n, o, p, q, s, t, u, v, x, y, z, hyphen, slash, sharp, colon, brcr, quot, dubquot, comma, question, exclam, spc, delet, a, e, i, m, r, w, at, brcl, period, chuplow, zero, one, two, three, four, five, six, seven, eight, nine};
-HandWriting hw_lst[37] = {a_hw, x_hw, b_hw, c_hw, d_hw, d_hw2, e_hw, f_hw, g_hw, g_hw2, h_hw, h_hw2, i_hw, i_hw2, i_hw3, j_hw, j_hw2, k_hw, p_hw2, b_hw2, q_hw2, l_hw, l_hw2, l_hw3, m_hw, z_hw, n_hw, o_hw, p_hw, q_hw, r_hw, s_hw, t_hw, u_hw, v_hw, w_hw, y_hw};
+HandWriting hw_lst[36] = {a_hw, x_hw, b_hw, c_hw, d_hw, d_hw2, e_hw, f_hw, g_hw, g_hw2, /*h_hw,*/ h_hw2, i_hw, i_hw2, i_hw3, j_hw, j_hw2, k_hw, p_hw2, b_hw2, q_hw2, l_hw, l_hw2, l_hw3, m_hw, z_hw, n_hw, o_hw, p_hw, q_hw, r_hw, s_hw, t_hw, u_hw, v_hw, w_hw, y_hw};
 
 int vib_pin = 26;
 
@@ -173,7 +173,7 @@ void loop()
     // m_input_time = "";
     wearbo.m_unique = false;
     wearbo.record();
-    dacWrite(vib_pin, 100);
+    // dacWrite(vib_pin, 100);
     if (wearbo.m_mode == 1 || wearbo.m_mode == 2) {
         for (auto g : ges_lst) {
             // Serial.println("serch");
@@ -219,6 +219,8 @@ void loop()
                 wearbo.change_mode(2);
             } else if (output == "CHANGE_MODE3") {
                 wearbo.change_mode(3);
+            } else if (output == "BACKSPACE" || output == "ENTER" || output == "LEFT" || output == "RIGHT") {
+                send_ble(output);
             }
         } else {
             if (wearbo.m_input_data.length() == 0) {
@@ -277,8 +279,8 @@ void loop()
             }
         }
     }
-    delay(80);
-    dacWrite(vib_pin, 0);
+    // delay(80);
+    // dacWrite(vib_pin, 0);
 }
 
 String low2up(char c)
