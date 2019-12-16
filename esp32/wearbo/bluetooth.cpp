@@ -1,10 +1,11 @@
 #include "bluetooth.hpp"
 #include "Arduino.h"
 
-BleKeyboard bleKeyboard;
+// BleKeyboard bleKeyboard;
 
 void send_ble(String output)
 {
+    Serial.println(output);
     if (output == "ENTER") {
         bleKeyboard.write(KEY_RETURN);
     } else if (output == "BACKSPACE") {

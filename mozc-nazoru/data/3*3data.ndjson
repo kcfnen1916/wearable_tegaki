@@ -1,0 +1,613 @@
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 170], ["h", "down", 241], ["j", "down", 256], ["n", "down", 304], ["m", "down", 378], ["i", "down", 597], ["k", "down", 713], [",", "down", 817]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 74], ["j", "down", 130], ["h", "down", 142], ["n", "down", 218], ["m", "down", 294], ["j", "down", 322], ["i", "down", 410], ["k", "down", 574], ["j", "down", 587], [",", "down", 665]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 126], ["j", "down", 214], ["h", "down", 227], ["n", "down", 306], ["m", "down", 350], ["j", "down", 446], ["k", "down", 466], ["i", "down", 503], ["k", "down", 690], [",", "down", 778]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 98], ["j", "down", 226], ["h", "down", 238], ["n", "down", 314], ["m", "down", 382], ["k", "down", 530], ["i", "down", 594], ["k", "down", 770], [",", "down", 858]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 154], ["h", "down", 250], ["n", "down", 358], ["m", "down", 446], ["k", "down", 574], ["i", "down", 674], ["k", "down", 842], ["m", "down", 942], [",", "down", 956]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 138], ["h", "down", 275], ["n", "down", 406], ["m", "down", 506], ["k", "down", 642], ["i", "down", 758], ["k", "down", 910], [",", "down", 1011]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 158], ["h", "down", 314], ["n", "down", 406], ["m", "down", 510], ["k", "down", 614], ["i", "down", 731], ["k", "down", 870], [",", "down", 982]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 99], ["h", "down", 258], ["n", "down", 370], ["m", "down", 474], ["k", "down", 554], ["i", "down", 638], ["k", "down", 811], ["m", "down", 910], [",", "down", 914]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 106], ["h", "down", 246], ["n", "down", 350], ["m", "down", 438], ["k", "down", 502], ["i", "down", 598], ["k", "down", 762], ["m", "down", 862], [",", "down", 866]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 94], ["h", "down", 246], ["n", "down", 346], ["m", "down", 442], ["k", "down", 520], ["i", "down", 611], ["k", "down", 750], [",", "down", 854]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 141], ["h", "down", 277], ["n", "down", 376], ["m", "down", 465], ["k", "down", 548], ["i", "down", 672], ["k", "down", 800], ["m", "down", 888], [",", "down", 904]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 94], ["h", "down", 214], ["n", "down", 298], ["m", "down", 370], ["k", "down", 458], ["i", "down", 558], ["k", "down", 706], [",", "down", 806]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 130], ["h", "down", 318], ["j", "down", 322], ["n", "down", 422], ["m", "down", 462], ["k", "down", 606], ["i", "down", 726], ["k", "down", 914], [",", "down", 1002]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 122], ["h", "down", 238], ["j", "down", 242], ["n", "down", 322], ["m", "down", 358], ["k", "down", 458], ["i", "down", 542], ["k", "down", 722], [",", "down", 822]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 118], ["j", "down", 234], ["n", "down", 342], ["m", "down", 362], ["k", "down", 526], ["i", "down", 602], ["k", "down", 779], [",", "down", 878]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 155], ["h", "down", 281], ["j", "down", 285], ["n", "down", 358], ["m", "down", 461], ["k", "down", 561], ["i", "down", 650], ["k", "down", 821], [",", "down", 926]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 126], ["h", "down", 258], ["n", "down", 346], ["m", "down", 442], ["k", "down", 514], ["i", "down", 599], ["k", "down", 758], [",", "down", 858]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 126], ["h", "down", 226], ["n", "down", 306], ["m", "down", 378], ["j", "down", 458], ["k", "down", 462], ["i", "down", 518], ["k", "down", 702], ["m", "down", 786], [",", "down", 799]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 126], ["h", "down", 218], ["j", "down", 222], ["n", "down", 274], ["m", "down", 366], ["k", "down", 450], ["i", "down", 522], ["k", "down", 706], [",", "down", 798]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 110], ["h", "down", 214], ["j", "down", 218], ["n", "down", 290], ["m", "down", 370], ["k", "down", 454], ["i", "down", 550], ["k", "down", 722], [",", "down", 830]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 125], ["h", "down", 233], ["j", "down", 237], ["n", "down", 300], ["m", "down", 377], ["k", "down", 448], ["i", "down", 512], ["k", "down", 693], [",", "down", 797]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 110], ["j", "down", 182], ["n", "down", 254], ["m", "down", 314], ["k", "down", 426], ["i", "down", 526], ["k", "down", 682], [",", "down", 790]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 94], ["j", "down", 186], ["n", "down", 270], ["m", "down", 318], ["k", "down", 399], ["i", "down", 470], ["k", "down", 666], [",", "down", 770]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 89], ["j", "down", 169], ["h", "down", 185], ["n", "down", 237], ["m", "down", 313], ["k", "down", 401], ["i", "down", 469], ["k", "down", 625], [",", "down", 717]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 77], ["h", "down", 160], ["n", "down", 260], ["m", "down", 360], ["j", "down", 432], ["k", "down", 448], ["i", "down", 516], ["k", "down", 684], ["m", "down", 764], [",", "down", 779]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 110], ["j", "down", 154], ["n", "down", 254], ["m", "down", 314], ["k", "down", 414], ["i", "down", 486], ["k", "down", 618], [",", "down", 702]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 86], ["h", "down", 170], ["j", "down", 174], ["n", "down", 262], ["m", "down", 338], ["k", "down", 442], ["i", "down", 506], ["k", "down", 666], [",", "down", 746]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 85], ["h", "down", 213], ["n", "down", 305], ["m", "down", 397], ["k", "down", 505], ["i", "down", 581], ["k", "down", 733], [",", "down", 821]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 122], ["h", "down", 258], ["n", "down", 342], ["m", "down", 442], ["k", "down", 510], ["i", "down", 590], ["k", "down", 738], [",", "down", 826]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 127], ["y", "down", 246], ["h", "down", 262], ["n", "down", 374], ["m", "down", 466], ["k", "down", 570], ["i", "down", 630], ["k", "down", 810], ["m", "down", 894], [",", "down", 898]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 118], ["h", "down", 246], ["j", "down", 250], ["n", "down", 322], ["m", "down", 402], ["k", "down", 478], ["i", "down", 534], ["k", "down", 694], [",", "down", 770]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 102], ["h", "down", 206], ["n", "down", 306], ["m", "down", 386], ["k", "down", 458], ["i", "down", 562], ["k", "down", 730], [",", "down", 842]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 94], ["h", "down", 214], ["n", "down", 314], ["m", "down", 378], ["k", "down", 459], ["i", "down", 495], ["k", "down", 671], [",", "down", 755]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 138], ["h", "down", 270], ["n", "down", 366], ["m", "down", 458], ["k", "down", 530], ["i", "down", 598], ["k", "down", 770], [",", "down", 850]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 90], ["h", "down", 218], ["j", "down", 222], ["n", "down", 279], ["m", "down", 358], ["k", "down", 430], ["i", "down", 526], ["k", "down", 662], [",", "down", 759]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 84], ["h", "down", 173], ["n", "down", 240], ["m", "down", 316], ["k", "down", 393], ["i", "down", 452], ["k", "down", 628], [",", "down", 701]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 106], ["h", "down", 182], ["n", "down", 250], ["m", "down", 358], ["j", "down", 398], ["k", "down", 414], ["i", "down", 466], ["k", "down", 658], ["m", "down", 750], [",", "down", 754]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 121], ["j", "down", 226], ["h", "down", 238], ["n", "down", 293], ["m", "down", 374], ["j", "down", 441], ["k", "down", 454], ["i", "down", 506], ["k", "down", 669], [",", "down", 750]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 102], ["h", "down", 234], ["j", "down", 238], ["n", "down", 314], ["m", "down", 410], ["k", "down", 522], ["i", "down", 618], ["k", "down", 778], [",", "down", 871]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 122], ["h", "down", 222], ["n", "down", 365], ["m", "down", 434], ["j", "down", 478], ["k", "down", 494], ["i", "down", 558], ["k", "down", 742], ["m", "down", 818], [",", "down", 822]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 75], ["h", "down", 170], ["n", "down", 242], ["m", "down", 338], ["k", "down", 402], ["i", "down", 462], ["k", "down", 618], ["m", "down", 694], [",", "down", 698]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 83], ["h", "down", 198], ["j", "down", 202], ["n", "down", 274], ["m", "down", 358], ["k", "down", 422], ["i", "down", 494], ["k", "down", 654], [",", "down", 734]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 93], ["j", "down", 173], ["h", "down", 188], ["n", "down", 245], ["m", "down", 345], ["j", "down", 425], ["k", "down", 438], ["i", "down", 481], ["k", "down", 641], [",", "down", 741]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 62], ["h", "down", 190], ["n", "down", 290], ["m", "down", 378], ["k", "down", 446], ["i", "down", 514], ["k", "down", 670], ["m", "down", 758], [",", "down", 762]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 126], ["h", "down", 214], ["n", "down", 306], ["m", "down", 362], ["k", "down", 440], ["i", "down", 464], ["k", "down", 620], [",", "down", 720]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 82], ["h", "down", 214], ["n", "down", 286], ["m", "down", 414], ["k", "down", 474], ["i", "down", 567], ["k", "down", 710], [",", "down", 802]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 98], ["h", "down", 222], ["n", "down", 322], ["j", "down", 426], ["k", "down", 458], ["i", "down", 530], ["k", "down", 706], [",", "down", 799]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 86], ["h", "down", 202], ["n", "down", 274], ["m", "down", 334], ["k", "down", 416], ["i", "down", 464], ["k", "down", 640], [",", "down", 729]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 104], ["j", "down", 168], ["n", "down", 268], ["m", "down", 301], ["k", "down", 404], ["i", "down", 469], ["k", "down", 652], [",", "down", 717]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 134], ["j", "down", 210], ["h", "down", 225], ["n", "down", 286], ["m", "down", 370], ["j", "down", 430], ["k", "down", 443], ["i", "down", 490], ["k", "down", 658], [",", "down", 746]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 130], ["j", "down", 231], ["h", "down", 243], ["n", "down", 294], ["j", "down", 438], ["k", "down", 478], ["i", "down", 522], ["k", "down", 726], [",", "down", 818]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 138], ["j", "down", 218], ["h", "down", 231], ["n", "down", 286], ["m", "down", 370], ["k", "down", 454], ["i", "down", 518], ["k", "down", 690], [",", "down", 774]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 122], ["j", "down", 206], ["h", "down", 219], ["n", "down", 278], ["m", "down", 354], ["k", "down", 430], ["i", "down", 506], ["k", "down", 682], [",", "down", 762]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 130], ["j", "down", 194], ["h", "down", 207], ["n", "down", 262], ["m", "down", 358], ["j", "down", 414], ["k", "down", 426], ["i", "down", 478], ["k", "down", 642], [",", "down", 735]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 134], ["h", "down", 250], ["n", "down", 330], ["m", "down", 463], ["j", "down", 494], ["k", "down", 518], ["i", "down", 599], ["k", "down", 778], [",", "down", 862]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 78], ["j", "down", 166], ["h", "down", 198], ["n", "down", 230], ["m", "down", 334], ["j", "down", 383], ["k", "down", 398], ["i", "down", 454], ["k", "down", 631], ["m", "down", 702], [",", "down", 738]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 102], ["j", "down", 167], ["n", "down", 226], ["m", "down", 319], ["k", "down", 395], ["i", "down", 471], ["k", "down", 655], [",", "down", 727]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 83], ["h", "down", 150], ["n", "down", 242], ["m", "down", 330], ["j", "down", 355], ["k", "down", 378], ["i", "down", 418], ["k", "down", 594], [",", "down", 691]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 94], ["h", "down", 186], ["j", "down", 197], ["n", "down", 250], ["m", "down", 358], ["k", "down", 434], ["i", "down", 483], ["k", "down", 634], [",", "down", 718]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 121], ["j", "down", 202], ["h", "down", 218], ["n", "down", 264], ["m", "down", 358], ["k", "down", 454], ["i", "down", 497], ["k", "down", 697], [",", "down", 794]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 97], ["j", "down", 149], ["n", "down", 254], ["m", "down", 293], ["j", "down", 370], ["k", "down", 397], ["i", "down", 429], ["k", "down", 617], [",", "down", 710]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 117], ["h", "down", 193], ["j", "down", 210], ["n", "down", 250], ["m", "down", 357], ["j", "down", 413], ["k", "down", 426], ["i", "down", 473], ["k", "down", 641], [",", "down", 726]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 114], ["h", "down", 194], ["j", "down", 198], ["n", "down", 258], ["m", "down", 366], ["k", "down", 430], ["i", "down", 498], ["k", "down", 662], [",", "down", 762]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 94], ["j", "down", 163], ["h", "down", 175], ["n", "down", 218], ["m", "down", 338], ["k", "down", 394], ["i", "down", 462], ["k", "down", 626], [",", "down", 718]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 106], ["h", "down", 178], ["j", "down", 182], ["n", "down", 242], ["m", "down", 338], ["k", "down", 398], ["i", "down", 462], ["k", "down", 642], [",", "down", 726]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 110], ["h", "down", 207], ["j", "down", 220], ["n", "down", 278], ["m", "down", 398], ["j", "down", 454], ["k", "down", 467], ["i", "down", 530], ["k", "down", 686], ["m", "down", 782], [",", "down", 786]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 85], ["j", "down", 154], ["h", "down", 167], ["n", "down", 217], ["m", "down", 317], ["k", "down", 391], ["i", "down", 444], ["k", "down", 629], [",", "down", 720]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 110], ["j", "down", 174], ["n", "down", 250], ["m", "down", 335], ["k", "down", 422], ["i", "down", 494], ["k", "down", 658], [",", "down", 738]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 110], ["h", "down", 206], ["n", "down", 282], ["m", "down", 358], ["k", "down", 446], ["i", "down", 506], ["k", "down", 694], [",", "down", 783]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 126], ["h", "down", 230], ["j", "down", 234], ["n", "down", 299], ["m", "down", 394], ["j", "down", 462], ["k", "down", 494], ["i", "down", 530], ["k", "down", 722], ["m", "down", 798], [",", "down", 802]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 130], ["j", "down", 199], ["n", "down", 282], ["m", "down", 350], ["k", "down", 442], ["i", "down", 514], ["k", "down", 706], [",", "down", 802]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 118], ["j", "down", 171], ["n", "down", 242], ["m", "down", 314], ["k", "down", 386], ["i", "down", 438], ["k", "down", 618], [",", "down", 706], ["m", "down", 718]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 122], ["j", "down", 190], ["n", "down", 250], ["m", "down", 330], ["k", "down", 426], ["i", "down", 486], ["k", "down", 646], [",", "down", 726]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 130], ["j", "down", 187], ["h", "down", 202], ["n", "down", 247], ["m", "down", 334], ["k", "down", 411], ["i", "down", 491], ["k", "down", 654], [",", "down", 738]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 114], ["j", "down", 179], ["h", "down", 191], ["n", "down", 234], ["m", "down", 350], ["j", "down", 410], ["k", "down", 423], ["i", "down", 459], ["k", "down", 630], [",", "down", 734]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 102], ["h", "down", 202], ["j", "down", 207], ["n", "down", 258], ["m", "down", 338], ["k", "down", 406], ["i", "down", 470], ["k", "down", 638], [",", "down", 722]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 122], ["j", "down", 206], ["h", "down", 221], ["n", "down", 275], ["m", "down", 379], ["k", "down", 462], ["i", "down", 531], ["k", "down", 702], ["m", "down", 790], [",", "down", 794]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 86], ["j", "down", 146], ["n", "down", 214], ["m", "down", 302], ["k", "down", 370], ["i", "down", 434], ["k", "down", 610], [",", "down", 699], ["m", "down", 711]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 106], ["j", "down", 182], ["h", "down", 206], ["n", "down", 234], ["m", "down", 334], ["k", "down", 414], ["i", "down", 474], ["k", "down", 638], [",", "down", 714]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 86], ["j", "down", 170], ["h", "down", 182], ["n", "down", 230], ["m", "down", 294], ["k", "down", 378], ["i", "down", 434], ["k", "down", 606], [",", "down", 710]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 126], ["j", "down", 166], ["n", "down", 242], ["m", "down", 294], ["k", "down", 398], ["i", "down", 458], ["k", "down", 614], [",", "down", 686]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 102], ["h", "down", 210], ["n", "down", 294], ["m", "down", 407], ["j", "down", 438], ["k", "down", 458], ["i", "down", 514], ["k", "down", 670], ["m", "down", 738], [",", "down", 754]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 94], ["j", "down", 186], ["h", "down", 200], ["n", "down", 242], ["m", "down", 354], ["k", "down", 422], ["i", "down", 478], ["k", "down", 630], [",", "down", 722]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 114], ["j", "down", 166], ["n", "down", 234], ["m", "down", 310], ["k", "down", 410], ["i", "down", 482], ["k", "down", 626], [",", "down", 710]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 102], ["j", "down", 198], ["n", "down", 279], ["m", "down", 310], ["k", "down", 430], ["i", "down", 494], ["k", "down", 650], ["m", "down", 727], [",", "down", 731]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 94], ["j", "down", 178], ["h", "down", 191], ["n", "down", 238], ["m", "down", 322], ["j", "down", 402], ["k", "down", 415], ["i", "down", 462], ["k", "down", 634], [",", "down", 706]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 78], ["j", "down", 134], ["n", "down", 198], ["m", "down", 290], ["k", "down", 366], ["i", "down", 418], ["k", "down", 578], [",", "down", 666]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 70], ["h", "down", 142], ["j", "down", 146], ["n", "down", 199], ["m", "down", 290], ["k", "down", 354], ["i", "down", 414], ["k", "down", 566], [",", "down", 634]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 110], ["j", "down", 182], ["h", "down", 195], ["n", "down", 242], ["m", "down", 338], ["j", "down", 406], ["k", "down", 426], ["i", "down", 462], ["k", "down", 630], [",", "down", 714]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 102], ["j", "down", 150], ["n", "down", 214], ["m", "down", 298], ["k", "down", 374], ["i", "down", 458], ["k", "down", 606], ["m", "down", 678], [",", "down", 691]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 120], ["j", "down", 201], ["n", "down", 257], ["m", "down", 345], ["k", "down", 440], ["i", "down", 488], ["k", "down", 640], [",", "down", 724]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 94], ["j", "down", 167], ["n", "down", 222], ["m", "down", 330], ["k", "down", 394], ["i", "down", 454], ["k", "down", 618], [",", "down", 702]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 102], ["j", "down", 138], ["h", "down", 178], ["n", "down", 222], ["m", "down", 294], ["k", "down", 382], ["i", "down", 430], ["k", "down", 606], [",", "down", 694]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 75], ["j", "down", 130], ["n", "down", 194], ["m", "down", 270], ["k", "down", 350], ["i", "down", 402], ["k", "down", 550], [",", "down", 642]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 106], ["j", "down", 170], ["h", "down", 198], ["n", "down", 239], ["m", "down", 350], ["j", "down", 431], ["i", "down", 458], ["k", "down", 638], [",", "down", 723]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 86], ["j", "down", 146], ["n", "down", 210], ["m", "down", 318], ["j", "down", 338], ["k", "down", 362], ["i", "down", 406], ["k", "down", 550], [",", "down", 642], ["m", "down", 655]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 78], ["h", "down", 178], ["n", "down", 234], ["m", "down", 346], ["j", "down", 386], ["k", "down", 399], ["i", "down", 443], ["k", "down", 582], [",", "down", 674]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 78], ["j", "down", 130], ["h", "down", 150], ["n", "down", 194], ["m", "down", 282], ["k", "down", 366], ["i", "down", 442], ["k", "down", 562], ["m", "down", 638], [",", "down", 650]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 86], ["j", "down", 158], ["h", "down", 171], ["n", "down", 218], ["m", "down", 326], ["k", "down", 402], ["i", "down", 462], ["k", "down", 598], [",", "down", 702]]}
+{"kana": "a", "events": [["i", "down", 0], ["u", "down", 114], ["j", "down", 198], ["h", "down", 210], ["n", "down", 251], ["m", "down", 342], ["k", "down", 422], ["i", "down", 482], ["k", "down", 618], [",", "down", 694]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 76], ["n", "down", 155], ["j", "down", 334], ["i", "down", 386], ["k", "down", 435], ["m", "down", 535], ["n", "down", 595]]}
+{"kana": "b", "events": [["u", "down", 0], ["h", "down", 109], ["n", "down", 193], ["j", "down", 341], ["k", "down", 412], ["m", "down", 535], ["n", "down", 592]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 90], ["n", "down", 166], ["j", "down", 326], ["m", "down", 514], ["n", "down", 542]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 106], ["n", "down", 186], ["j", "down", 349], ["k", "down", 406], ["m", "down", 538], ["n", "down", 582]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 98], ["n", "down", 174], ["j", "down", 333], ["k", "down", 386], ["m", "down", 522], ["n", "down", 562]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 102], ["n", "down", 170], ["j", "down", 346], ["k", "down", 402], ["m", "down", 534], ["n", "down", 594]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 78], ["n", "down", 154], ["j", "down", 349], ["k", "down", 438], ["m", "down", 558], ["n", "down", 662]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 82], ["n", "down", 166], ["j", "down", 350], ["k", "down", 398], ["m", "down", 558], ["n", "down", 594]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 90], ["n", "down", 174], ["j", "down", 342], ["k", "down", 426], ["m", "down", 603]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 90], ["n", "down", 162], ["j", "down", 341], ["k", "down", 406], [",", "down", 545], ["m", "down", 560], ["n", "down", 634]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 106], ["n", "down", 178], ["j", "down", 353], ["k", "down", 409], ["m", "down", 573], ["n", "down", 637]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 119], ["n", "down", 186], ["j", "down", 378], ["k", "down", 434], ["m", "down", 582], ["n", "down", 635]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 86], ["n", "down", 151], ["j", "down", 366], ["k", "down", 410], ["m", "down", 567], ["n", "down", 622]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 78], ["n", "down", 158], ["j", "down", 370], ["k", "down", 398], ["m", "down", 542], ["n", "down", 574]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 98], ["n", "down", 170], ["j", "down", 378], ["k", "down", 464], ["m", "down", 608], ["n", "down", 644]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 82], ["n", "down", 158], ["j", "down", 334], ["k", "down", 410], ["m", "down", 566], ["n", "down", 630]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 110], ["n", "down", 182], ["j", "down", 362], ["k", "down", 471], ["m", "down", 582], ["n", "down", 614]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 98], ["n", "down", 162], ["j", "down", 354], ["k", "down", 453], ["m", "down", 589], ["n", "down", 621]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 110], ["n", "down", 166], ["j", "down", 326], ["k", "down", 390], ["m", "down", 539], ["n", "down", 590]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 90], ["n", "down", 154], ["j", "down", 330], ["k", "down", 398], ["m", "down", 526], ["n", "down", 594]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 93], ["n", "down", 153], ["j", "down", 325], ["k", "down", 397], ["m", "down", 521], ["n", "down", 549]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 90], ["n", "down", 162], ["j", "down", 345], ["k", "down", 398], ["m", "down", 533], ["n", "down", 610]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 98], ["n", "down", 162], ["j", "down", 322], ["k", "down", 386], ["m", "down", 539], ["n", "down", 578]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 83], ["n", "down", 158], ["j", "down", 310], ["k", "down", 390], ["m", "down", 526], ["n", "down", 555]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 98], ["n", "down", 171], ["j", "down", 360], ["i", "down", 419], ["k", "down", 467], ["m", "down", 559], ["n", "down", 583]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 94], ["n", "down", 154], ["j", "down", 346], ["k", "down", 426], ["m", "down", 566], ["n", "down", 586]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 90], ["n", "down", 154], ["j", "down", 330], ["k", "down", 418], ["m", "down", 566], ["n", "down", 582]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 100], ["n", "down", 160], ["j", "down", 324], ["k", "down", 424], ["m", "down", 544], ["n", "down", 573]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 82], ["n", "down", 146], ["j", "down", 306], ["k", "down", 374], ["m", "down", 522], ["n", "down", 554]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 98], ["n", "down", 162], ["j", "down", 338], ["k", "down", 428], ["m", "down", 548], ["n", "down", 584]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 73], ["n", "down", 141], ["j", "down", 320], ["k", "down", 384], ["m", "down", 521], ["n", "down", 538]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 92], ["n", "down", 148], ["j", "down", 308], ["k", "down", 368], ["m", "down", 504], ["n", "down", 520]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 94], ["n", "down", 158], ["j", "down", 318], ["k", "down", 419], ["m", "down", 515], ["n", "down", 539]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 102], ["n", "down", 166], ["j", "down", 322], ["k", "down", 390], ["m", "down", 526], ["n", "down", 542]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 122], ["n", "down", 186], ["j", "down", 358], ["k", "down", 406], ["m", "down", 530], ["n", "down", 546]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 74], ["n", "down", 150], ["h", "down", 306], ["j", "down", 310], ["k", "down", 394], ["m", "down", 530], ["n", "down", 546]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 114], ["n", "down", 198], ["j", "down", 422], ["k", "down", 486], ["m", "down", 626], ["n", "down", 654]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 118], ["n", "down", 190], ["j", "down", 338], ["k", "down", 443], ["m", "down", 544], ["n", "down", 576]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 90], ["n", "down", 162], ["j", "down", 306], ["k", "down", 382], ["m", "down", 518], ["n", "down", 538]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 102], ["n", "down", 170], ["j", "down", 314], ["k", "down", 362], ["m", "down", 502], ["n", "down", 554]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 122], ["n", "down", 187], ["j", "down", 354], ["k", "down", 398], ["m", "down", 526], ["n", "down", 606]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 88], ["n", "down", 156], ["j", "down", 320], ["k", "down", 384], [",", "down", 532], ["m", "down", 568], ["n", "down", 696]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 66], ["n", "down", 145], ["j", "down", 274], ["k", "down", 333], ["m", "down", 470], ["n", "down", 502]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 86], ["n", "down", 182], ["j", "down", 325], ["k", "down", 373], ["m", "down", 505], ["n", "down", 537]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 122], ["n", "down", 187], ["j", "down", 354], ["k", "down", 414], ["m", "down", 530], ["n", "down", 562]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 98], ["n", "down", 158], ["j", "down", 306], ["k", "down", 366], ["m", "down", 502], ["n", "down", 530]]}
+{"kana": "b", "events": [["u", "down", 0], ["j", "down", 94], ["n", "down", 154], ["j", "down", 342], ["k", "down", 370], ["m", "down", 562], ["n", "down", 591]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 82], ["n", "down", 142], ["j", "down", 338], ["k", "down", 382], ["m", "down", 530], ["n", "down", 700]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 74], ["n", "down", 150], ["j", "down", 298], ["k", "down", 354], ["m", "down", 510], ["n", "down", 546]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 150], ["n", "down", 222], ["j", "down", 369], ["k", "down", 429], ["m", "down", 578], ["n", "down", 610]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 78], ["n", "down", 150], ["j", "down", 309], ["k", "down", 382], ["j", "down", 494], ["m", "down", 506], ["n", "down", 520]]}
+{"kana": "b", "events": [["u", "down", 0], ["j", "down", 70], ["n", "down", 122], ["j", "down", 306], ["k", "down", 334], ["l", "down", 406], ["m", "down", 494], ["n", "down", 534]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 70], ["n", "down", 138], ["j", "down", 294], ["k", "down", 358], ["m", "down", 486], ["n", "down", 527]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 103], ["n", "down", 171], ["j", "down", 382], ["k", "down", 434], ["m", "down", 538], ["n", "down", 578]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 78], ["n", "down", 154], ["j", "down", 342], ["k", "down", 398], ["m", "down", 502], ["n", "down", 538]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 142], ["g", "down", 154], ["b", "down", 210], ["h", "down", 398], ["j", "down", 438], ["n", "down", 606], ["b", "down", 666]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 41], ["b", "down", 113], ["h", "down", 302], ["j", "down", 341], ["n", "down", 481], ["b", "down", 521]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 82], ["b", "down", 150], ["h", "down", 367], ["j", "down", 410], ["n", "down", 542], ["b", "down", 650]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 38], ["b", "down", 98], ["h", "down", 278], ["j", "down", 342], ["n", "down", 470], ["b", "down", 494]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 86], ["b", "down", 158], ["h", "down", 330], ["j", "down", 386], ["n", "down", 518], ["b", "down", 551]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 98], ["b", "down", 170], ["h", "down", 334], ["j", "down", 398], ["n", "down", 538], ["b", "down", 570]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 126], ["b", "down", 186], ["h", "down", 364], ["j", "down", 430], ["n", "down", 570], ["b", "down", 610]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 110], ["b", "down", 174], ["h", "down", 342], ["j", "down", 394], ["n", "down", 562], ["b", "down", 602]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 94], ["b", "down", 162], ["h", "down", 326], ["j", "down", 378], ["n", "down", 534], ["b", "down", 570]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 102], ["b", "down", 162], ["h", "down", 326], ["j", "down", 394], ["n", "down", 554], ["b", "down", 602]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 93], ["b", "down", 157], ["h", "down", 324], ["j", "down", 397], ["n", "down", 528], ["b", "down", 601]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 102], ["b", "down", 166], ["h", "down", 346], ["j", "down", 442], ["n", "down", 546], ["b", "down", 578]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 114], ["b", "down", 178], ["h", "down", 318], ["j", "down", 382], ["n", "down", 554], ["b", "down", 594]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 122], ["b", "down", 190], ["h", "down", 361], ["j", "down", 422], ["n", "down", 566], ["b", "down", 626]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 99], ["b", "down", 158], ["h", "down", 330], ["j", "down", 383], ["n", "down", 546], ["b", "down", 582]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 134], ["b", "down", 198], ["h", "down", 361], ["j", "down", 481], ["n", "down", 625], ["b", "down", 653]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 98], ["b", "down", 166], ["h", "down", 346], ["j", "down", 398], ["n", "down", 562], ["b", "down", 622]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 114], ["b", "down", 170], ["h", "down", 363], ["j", "down", 418], ["n", "down", 566], ["b", "down", 626]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 105], ["b", "down", 165], ["h", "down", 397], ["j", "down", 449], ["n", "down", 609]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 94], ["b", "down", 162], ["h", "down", 330], ["j", "down", 407], ["n", "down", 546], ["b", "down", 562]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 98], ["b", "down", 170], ["g", "down", 331], ["h", "down", 343], ["j", "down", 429], ["n", "down", 565], ["b", "down", 597]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 82], ["b", "down", 154], ["h", "down", 334], ["j", "down", 386], ["n", "down", 538], ["b", "down", 562]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 106], ["b", "down", 174], ["h", "down", 354], ["j", "down", 414], ["n", "down", 566], ["b", "down", 614]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 94], ["b", "down", 154], ["h", "down", 338], ["j", "down", 398], ["n", "down", 538], ["b", "down", 554]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 87], ["b", "down", 146], ["h", "down", 334], ["j", "down", 390], ["n", "down", 542], ["b", "down", 574]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 126], ["b", "down", 191], ["h", "down", 352], ["j", "down", 460], ["n", "down", 577], ["b", "down", 596]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 90], ["b", "down", 158], ["h", "down", 314], ["j", "down", 398], ["n", "down", 542], ["b", "down", 572]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 94], ["b", "down", 154], ["h", "down", 330], ["j", "down", 402], ["n", "down", 542], ["b", "down", 582]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 110], ["b", "down", 178], ["h", "down", 333], ["j", "down", 430], ["n", "down", 570], ["b", "down", 598]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 85], ["b", "down", 149], ["h", "down", 316], ["j", "down", 385], ["n", "down", 508], ["b", "down", 528]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 98], ["b", "down", 158], ["h", "down", 326], ["j", "down", 382], ["n", "down", 530], ["b", "down", 578]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 102], ["b", "down", 170], ["h", "down", 393], ["j", "down", 434], ["n", "down", 602], ["b", "down", 642]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 102], ["n", "down", 182], ["j", "down", 382], ["m", "down", 578], ["n", "down", 618]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 74], ["n", "down", 142], ["j", "down", 442], ["m", "down", 654], ["n", "down", 746]]}
+{"kana": "b", "events": [["y", "down", 0], ["h", "down", 78], ["n", "down", 146], ["j", "down", 334], ["m", "down", 510], ["n", "down", 530]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 124], ["b", "down", 192], ["h", "down", 368], ["j", "down", 456], ["n", "down", 557], ["b", "down", 588]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 85], ["b", "down", 145], ["h", "down", 305], ["j", "down", 365], ["n", "down", 509], ["b", "down", 573]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 106], ["b", "down", 174], ["h", "down", 329], ["j", "down", 390], ["n", "down", 534], ["b", "down", 554]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 97], ["b", "down", 157], ["h", "down", 329], ["j", "down", 433], ["h", "down", 525], ["n", "down", 539], ["b", "down", 553]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 90], ["b", "down", 162], ["h", "down", 326], ["j", "down", 485], ["b", "down", 555]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 94], ["b", "down", 154], ["h", "down", 318], ["j", "down", 378], ["n", "down", 530], ["b", "down", 562]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 93], ["b", "down", 154], ["h", "down", 325], ["j", "down", 426], ["n", "down", 522], ["b", "down", 571]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 62], ["b", "down", 130], ["h", "down", 330], ["j", "down", 398], ["n", "down", 570], ["b", "down", 588]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 90], ["b", "down", 150], ["h", "down", 350], ["j", "down", 386], ["n", "down", 562], ["b", "down", 598]]}
+{"kana": "b", "events": [["t", "down", 0], ["g", "down", 78], ["b", "down", 138], ["h", "down", 338], ["j", "down", 390], ["n", "down", 538], ["b", "down", 578]]}
+{"kana": "c", "events": [["i", "down", 0], ["u", "down", 108], ["h", "down", 212], ["j", "down", 224], ["n", "down", 272], ["m", "down", 324], [",", "down", 404]]}
+{"kana": "c", "events": [["i", "down", 0], ["u", "down", 70], ["h", "down", 166], ["n", "down", 226], ["m", "down", 294]]}
+{"kana": "c", "events": [["i", "down", 0], ["u", "down", 54], ["h", "down", 146], ["n", "down", 202], ["m", "down", 282]]}
+{"kana": "c", "events": [["i", "down", 0], ["u", "down", 82], ["h", "down", 222], ["n", "down", 294], ["m", "down", 362], ["k", "down", 438]]}
+{"kana": "c", "events": [["i", "down", 0], ["u", "down", 70], ["h", "down", 186], ["n", "down", 250], ["m", "down", 318]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 92], ["g", "down", 229], ["h", "down", 234], ["b", "down", 288], ["n", "down", 332]]}{"kana": "c", "events": [["u", "down", 0], ["y", "down", 88], ["h", "down", 192], ["g", "down", 204], ["b", "down", 260], ["n", "down", 292], ["m", "down", 380]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 86], ["g", "down", 202], ["b", "down", 274], ["n", "down", 330]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 82], ["g", "down", 190], ["b", "down", 262], ["n", "down", 330]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 75], ["g", "down", 187], ["b", "down", 242], ["n", "down", 314], ["m", "down", 406]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 66], ["g", "down", 215], ["b", "down", 282], ["n", "down", 362]]}
+{"kana": "c", "events": [["y", "down", 0], ["g", "down", 138], ["b", "down", 218], ["n", "down", 286]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 62], ["g", "down", 182], ["b", "down", 286], ["n", "down", 330]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 82], ["g", "down", 230], ["h", "down", 242], ["b", "down", 302], ["n", "down", 362]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 63], ["g", "down", 203], ["b", "down", 279], ["n", "down", 323]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 74], ["g", "down", 186], ["b", "down", 266], ["n", "down", 334]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 62], ["g", "down", 211], ["b", "down", 278], ["n", "down", 362]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 42], ["g", "down", 150], ["b", "down", 238], ["n", "down", 323]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 66], ["h", "down", 170], ["g", "down", 182], ["b", "down", 242], ["n", "down", 306]]}
+{"kana": "c", "events": [["i", "down", 0], ["u", "down", 43], ["h", "down", 139], ["n", "down", 219], ["m", "down", 251]]}
+{"kana": "c", "events": [["i", "down", 0], ["u", "down", 78], ["h", "down", 218], ["n", "down", 286], ["m", "down", 322]]}
+{"kana": "c", "events": [["i", "down", 0], ["u", "down", 86], ["h", "down", 226], ["n", "down", 314], ["m", "down", 370], ["k", "down", 430]]}
+{"kana": "c", "events": [["i", "down", 0], ["u", "down", 70], ["h", "down", 226], ["n", "down", 306], ["m", "down", 362], [",", "down", 458]]}
+{"kana": "c", "events": [["i", "down", 0], ["u", "down", 54], ["y", "down", 174], ["h", "down", 230], ["n", "down", 345], ["m", "down", 446]]}
+{"kana": "c", "events": [["i", "down", 0], ["u", "down", 70], ["h", "down", 217], ["n", "down", 290], ["m", "down", 370]]}
+{"kana": "c", "events": [["i", "down", 0], ["u", "down", 54], ["h", "down", 186], ["n", "down", 269], ["m", "down", 334]]}
+{"kana": "c", "events": [["i", "down", 0], ["u", "down", 81], ["h", "down", 192], ["n", "down", 284], ["m", "down", 336]]}
+{"kana": "c", "events": [["i", "down", 0], ["u", "down", 74], ["h", "down", 250], ["j", "down", 286], ["m", "down", 391], ["k", "down", 466]]}
+{"kana": "c", "events": [["i", "down", 0], ["u", "down", 64], ["h", "down", 168], ["n", "down", 256], ["m", "down", 312]]}
+{"kana": "c", "events": [["i", "down", 0], ["u", "down", 42], ["h", "down", 158], ["n", "down", 242], ["m", "down", 302]]}
+{"kana": "c", "events": [["i", "down", 0], ["u", "down", 66], ["h", "down", 198], ["n", "down", 294], ["m", "down", 326]]}
+{"kana": "c", "events": [["i", "down", 0], ["u", "down", 186], ["j", "down", 342], ["h", "down", 354], ["n", "down", 426], ["m", "down", 482]]}
+{"kana": "c", "events": [["i", "down", 0], ["u", "down", 74], ["h", "down", 197], ["n", "down", 277], ["m", "down", 349]]}
+{"kana": "c", "events": [["i", "down", 0], ["u", "down", 62], ["h", "down", 174], ["n", "down", 258], ["m", "down", 326]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 65], ["t", "down", 137], ["g", "down", 168], ["b", "down", 253], ["n", "down", 293], ["m", "down", 361]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 46], ["g", "down", 166], ["b", "down", 274], ["n", "down", 358]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 45], ["g", "down", 149], ["h", "down", 153], ["b", "down", 205], ["n", "down", 258], ["m", "down", 322]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 70], ["g", "down", 178], ["b", "down", 258], ["n", "down", 314]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 51], ["g", "down", 170], ["b", "down", 282], ["n", "down", 354], ["m", "down", 514]]}
+{"kana": "c", "events": [["y", "down", 0], ["t", "down", 94], ["g", "down", 122], ["b", "down", 218], ["n", "down", 278]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 82], ["g", "down", 186], ["b", "down", 270], ["n", "down", 342]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 70], ["g", "down", 218], ["b", "down", 298], ["n", "down", 342], ["m", "down", 458]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 78], ["g", "down", 222], ["h", "down", 274], ["b", "down", 290], ["n", "down", 318], ["m", "down", 414]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 77], ["g", "down", 161], ["b", "down", 225], ["n", "down", 257], ["m", "down", 301]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 58], ["g", "down", 134], ["b", "down", 202], ["n", "down", 258], ["m", "down", 327]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 94], ["g", "down", 218], ["h", "down", 222], ["b", "down", 278], ["n", "down", 326], ["m", "down", 398]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 78], ["h", "down", 190], ["g", "down", 210], ["b", "down", 282], ["n", "down", 295]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 66], ["g", "down", 178], ["b", "down", 258], ["n", "down", 302], ["m", "down", 402]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 78], ["g", "down", 194], ["b", "down", 278], ["n", "down", 306], ["m", "down", 386]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 74], ["g", "down", 174], ["b", "down", 254], ["n", "down", 282]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 74], ["g", "down", 181], ["b", "down", 246], ["n", "down", 290], ["m", "down", 341]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 69], ["g", "down", 170], ["b", "down", 242], ["n", "down", 298], ["m", "down", 370]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 90], ["g", "down", 226], ["h", "down", 230], ["b", "down", 278], ["n", "down", 327], ["m", "down", 394]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 86], ["g", "down", 194], ["b", "down", 282], ["n", "down", 314], ["j", "down", 410]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 86], ["g", "down", 198], ["h", "down", 202], ["b", "down", 250], ["n", "down", 326], ["m", "down", 398]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 98], ["g", "down", 230], ["b", "down", 310], ["n", "down", 362]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 72], ["g", "down", 188], ["b", "down", 260], ["n", "down", 300], ["m", "down", 392]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 66], ["g", "down", 170], ["b", "down", 246], ["n", "down", 294], ["m", "down", 382], ["j", "down", 404]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 66], ["g", "down", 174], ["b", "down", 242], ["n", "down", 302], ["m", "down", 382]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 78], ["g", "down", 186], ["b", "down", 274], ["n", "down", 342], ["m", "down", 442]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 78], ["g", "down", 186], ["b", "down", 266], ["n", "down", 314]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 62], ["g", "down", 182], ["h", "down", 186], ["n", "down", 274], ["m", "down", 354]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 94], ["g", "down", 186], ["b", "down", 254], ["n", "down", 298], ["m", "down", 386]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 86], ["g", "down", 150], ["b", "down", 234], ["n", "down", 290], ["m", "down", 382]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 62], ["g", "down", 162], ["b", "down", 250], ["n", "down", 299], ["m", "down", 378]]}
+{"kana": "c", "events": [["y", "down", 0], ["g", "down", 95], ["b", "down", 187], ["n", "down", 254], ["m", "down", 338]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 79], ["g", "down", 183], ["b", "down", 267], ["n", "down", 338]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 70], ["g", "down", 162], ["b", "down", 246], ["n", "down", 302], ["m", "down", 410]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 74], ["g", "down", 206], ["b", "down", 275], ["n", "down", 326], ["m", "down", 406]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 66], ["g", "down", 190], ["b", "down", 258], ["n", "down", 298], ["m", "down", 378]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 86], ["g", "down", 182], ["b", "down", 242], ["n", "down", 299], ["m", "down", 382]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 58], ["g", "down", 150], ["b", "down", 226], ["n", "down", 286], ["m", "down", 386]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 78], ["g", "down", 190], ["b", "down", 258], ["n", "down", 306], ["m", "down", 382]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 91], ["g", "down", 174], ["b", "down", 274], ["n", "down", 366], ["m", "down", 458]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 82], ["g", "down", 162], ["b", "down", 230], ["n", "down", 270], ["m", "down", 354]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 74], ["g", "down", 170], ["b", "down", 266], ["n", "down", 306], ["m", "down", 411]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 92], ["h", "down", 208], ["n", "down", 312], ["m", "down", 401]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 66], ["g", "down", 158], ["b", "down", 226], ["n", "down", 282], ["m", "down", 378]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 70], ["g", "down", 190], ["b", "down", 274], ["n", "down", 327], ["m", "down", 410]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 46], ["g", "down", 150], ["h", "down", 162], ["b", "down", 218], ["n", "down", 266], ["m", "down", 334]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 98], ["g", "down", 202], ["h", "down", 206], ["b", "down", 274], ["n", "down", 314], ["m", "down", 430]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 90], ["g", "down", 194], ["b", "down", 290], ["n", "down", 342], ["m", "down", 442]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 66], ["g", "down", 166], ["b", "down", 238], ["n", "down", 298], ["m", "down", 378]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 62], ["g", "down", 182], ["b", "down", 246], ["n", "down", 310], ["m", "down", 382]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 58], ["g", "down", 162], ["b", "down", 234], ["n", "down", 282], ["m", "down", 366]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 86], ["h", "down", 174], ["b", "down", 274], ["n", "down", 290], ["m", "down", 394]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 98], ["g", "down", 206], ["b", "down", 302], ["n", "down", 354], ["m", "down", 438]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 58], ["g", "down", 186], ["b", "down", 258], ["n", "down", 310], ["m", "down", 402]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 62], ["g", "down", 190], ["b", "down", 270], ["n", "down", 322], ["m", "down", 398]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 54], ["g", "down", 138], ["b", "down", 230], ["n", "down", 310], ["m", "down", 378]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 75], ["g", "down", 162], ["b", "down", 234], ["n", "down", 282]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 86], ["h", "down", 182], ["n", "down", 286], ["m", "down", 370]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 81], ["g", "down", 173], ["b", "down", 261], ["n", "down", 325]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 72], ["g", "down", 184], ["b", "down", 300], ["n", "down", 336], ["m", "down", 428]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 78], ["g", "down", 206], ["b", "down", 278], ["n", "down", 330], ["m", "down", 414]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 50], ["g", "down", 177], ["b", "down", 274], ["n", "down", 330], ["m", "down", 410]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 98], ["g", "down", 216], ["b", "down", 306], ["n", "down", 394], ["m", "down", 474]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 42], ["g", "down", 146], ["h", "down", 159], ["b", "down", 202], ["n", "down", 254], ["m", "down", 313]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 66], ["g", "down", 206], ["h", "down", 210], ["b", "down", 294], ["n", "down", 354], ["m", "down", 442]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 58], ["g", "down", 186], ["b", "down", 278], ["n", "down", 330], ["m", "down", 410]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 50], ["g", "down", 146], ["b", "down", 234], ["n", "down", 298], ["m", "down", 370]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 54], ["g", "down", 173], ["h", "down", 190], ["b", "down", 253], ["n", "down", 301], ["m", "down", 382]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 94], ["h", "down", 202], ["g", "down", 215], ["b", "down", 259], ["n", "down", 322], ["m", "down", 390]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 82], ["g", "down", 222], ["b", "down", 298], ["n", "down", 358], ["m", "down", 434]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 78], ["h", "down", 191], ["g", "down", 203], ["b", "down", 282], ["n", "down", 300]]}
+{"kana": "c", "events": [["u", "down", 0], ["y", "down", 94], ["h", "down", 206], ["g", "down", 223], ["b", "down", 310], ["n", "down", 326], ["m", "down", 426]]}
+{"kana": "d", "events": [["h", "down", 0], ["g", "down", 81], ["b", "down", 124], ["n", "down", 236], ["j", "down", 345], ["u", "down", 376], ["j", "down", 556], ["n", "down", 613], ["m", "down", 641]]}
+{"kana": "d", "events": [["j", "down", 0], ["h", "down", 34], ["b", "down", 154], ["n", "down", 246], ["j", "down", 338], ["u", "down", 392], ["j", "down", 560], ["m", "down", 640], ["n", "down", 654]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 114], ["n", "down", 222], ["j", "down", 334], ["u", "down", 386], ["j", "down", 586], ["m", "down", 666], ["n", "down", 671]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 126], ["n", "down", 226], ["j", "down", 327], ["u", "down", 375], ["j", "down", 586], ["h", "down", 600], ["n", "down", 674], ["m", "down", 686]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 130], ["n", "down", 210], ["j", "down", 297], ["u", "down", 342], ["j", "down", 546], ["m", "down", 638]]}
+{"kana": "d", "events": [["j", "down", 0], ["h", "down", 30], ["b", "down", 154], ["n", "down", 254], ["j", "down", 354], ["u", "down", 414], ["j", "down", 622], ["n", "down", 698], ["m", "down", 712]]}
+{"kana": "d", "events": [["j", "down", 0], ["h", "down", 26], ["g", "down", 130], ["b", "down", 182], ["n", "down", 274], ["j", "down", 362], ["u", "down", 398], ["j", "down", 598], ["n", "down", 662], ["m", "down", 706]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 118], ["n", "down", 214], ["j", "down", 318], ["u", "down", 366], ["j", "down", 562], ["m", "down", 639]]}
+{"kana": "d", "events": [["j", "down", 0], ["h", "down", 26], ["b", "down", 142], ["n", "down", 246], ["j", "down", 338], ["u", "down", 386], ["j", "down", 586], ["h", "down", 600], ["n", "down", 650], ["m", "down", 678]]}
+{"kana": "d", "events": [["h", "down", 0], ["g", "down", 82], ["b", "down", 121], ["n", "down", 221], ["j", "down", 301], ["u", "down", 353], ["j", "down", 526], ["m", "down", 596], ["n", "down", 600]]}
+{"kana": "d", "events": [["h", "down", 0], ["g", "down", 83], ["b", "down", 119], ["n", "down", 214], ["j", "down", 302], ["u", "down", 338], ["j", "down", 527], ["m", "down", 626]]}
+{"kana": "d", "events": [["h", "down", 0], ["g", "down", 96], ["b", "down", 148], ["n", "down", 228], ["j", "down", 320], ["u", "down", 356], ["j", "down", 536], ["m", "down", 608]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 126], ["n", "down", 218], ["j", "down", 297], ["u", "down", 341], ["j", "down", 506], ["n", "down", 574], ["m", "down", 586]]}
+{"kana": "d", "events": [["h", "down", 0], ["g", "down", 112], ["b", "down", 184], ["n", "down", 276], ["j", "down", 352], ["u", "down", 378], ["j", "down", 556], ["m", "down", 648]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 170], ["n", "down", 278], ["j", "down", 338], ["u", "down", 382], ["j", "down", 558], ["m", "down", 642], ["n", "down", 654]]}
+{"kana": "d", "events": [["h", "down", 0], ["g", "down", 130], ["b", "down", 179], ["n", "down", 250], ["j", "down", 318], ["u", "down", 354], ["j", "down", 534], ["m", "down", 630]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 154], ["n", "down", 234], ["h", "down", 310], ["j", "down", 322], ["u", "down", 354], ["j", "down", 558], ["n", "down", 646], ["m", "down", 658]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 170], ["n", "down", 226], ["j", "down", 302], ["u", "down", 362], ["j", "down", 538], ["m", "down", 626]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 149], ["n", "down", 237], ["j", "down", 313], ["u", "down", 368], ["j", "down", 565], ["m", "down", 621]]}
+{"kana": "d", "events": [["j", "down", 0], ["h", "down", 46], ["b", "down", 198], ["n", "down", 290], ["j", "down", 358], ["u", "down", 414], ["j", "down", 582], ["m", "down", 650]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 182], ["n", "down", 238], ["j", "down", 363], ["u", "down", 411], ["j", "down", 594], ["m", "down", 671], ["n", "down", 676]]}
+{"kana": "d", "events": [["j", "down", 0], ["h", "down", 62], ["b", "down", 214], ["n", "down", 294], ["j", "down", 365], ["u", "down", 414], ["j", "down", 590], ["n", "down", 654], ["m", "down", 668]]}
+{"kana": "d", "events": [["j", "down", 0], ["h", "down", 62], ["b", "down", 171], ["n", "down", 270], ["j", "down", 334], ["u", "down", 386], ["j", "down", 574], ["n", "down", 642], ["m", "down", 655]]}
+{"kana": "d", "events": [["j", "down", 0], ["h", "down", 42], ["b", "down", 166], ["n", "down", 222], ["j", "down", 326], ["u", "down", 366], ["j", "down", 554], ["m", "down", 646]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 162], ["n", "down", 234], ["u", "down", 366], ["j", "down", 594], ["m", "down", 690]]}
+{"kana": "d", "events": [["j", "down", 0], ["h", "down", 34], ["b", "down", 218], ["n", "down", 286], ["j", "down", 386], ["u", "down", 426], ["j", "down", 626], ["m", "down", 718]]}
+{"kana": "d", "events": [["j", "down", 0], ["h", "down", 46], ["g", "down", 166], ["b", "down", 198], ["n", "down", 286], ["j", "down", 366], ["u", "down", 414], ["j", "down", 602], ["n", "down", 667], ["m", "down", 692]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 201], ["n", "down", 265], ["j", "down", 353], ["u", "down", 397], ["j", "down", 601], ["m", "down", 673]]}
+{"kana": "d", "events": [["h", "down", 0], ["g", "down", 82], ["b", "down", 123], ["n", "down", 238], ["j", "down", 318], ["u", "down", 350], ["j", "down", 530], ["n", "down", 610], ["m", "down", 622]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 158], ["n", "down", 234], ["j", "down", 302], ["u", "down", 358], ["j", "down", 526], ["m", "down", 606]]}
+{"kana": "d", "events": [["j", "down", 0], ["h", "down", 27], ["b", "down", 174], ["n", "down", 222], ["j", "down", 326], ["u", "down", 385], ["j", "down", 581], ["m", "down", 658]]}
+{"kana": "d", "events": [["j", "down", 0], ["h", "down", 49], ["b", "down", 205], ["n", "down", 297], ["u", "down", 408], ["j", "down", 608], ["m", "down", 716]]}
+{"kana": "d", "events": [["j", "down", 0], ["h", "down", 50], ["b", "down", 210], ["n", "down", 294], ["u", "down", 420], ["j", "down", 612], ["n", "down", 673], ["m", "down", 698]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 142], ["n", "down", 239], ["h", "down", 342], ["j", "down", 356], ["u", "down", 382], ["j", "down", 610], ["h", "down", 625]]}
+{"kana": "d", "events": [["j", "down", 0], ["h", "down", 50], ["b", "down", 182], ["n", "down", 270], ["j", "down", 350], ["u", "down", 416], ["j", "down", 584], ["n", "down", 640], ["m", "down", 664]]}
+{"kana": "d", "events": [["j", "down", 0], ["h", "down", 35], ["b", "down", 146], ["n", "down", 226], ["j", "down", 302], ["u", "down", 354], ["j", "down", 558], ["m", "down", 634]]}
+{"kana": "d", "events": [["h", "down", 0], ["g", "down", 130], ["b", "down", 150], ["n", "down", 254], ["j", "down", 346], ["u", "down", 437], ["j", "down", 569], ["m", "down", 653]]}
+{"kana": "d", "events": [["j", "down", 0], ["h", "down", 54], ["b", "down", 222], ["n", "down", 322], ["j", "down", 392], ["u", "down", 456], ["j", "down", 648], ["m", "down", 736]]}
+{"kana": "d", "events": [["h", "down", 0], ["g", "down", 98], ["b", "down", 150], ["n", "down", 242], ["j", "down", 320], ["u", "down", 371], ["j", "down", 548], ["m", "down", 619]]}
+{"kana": "d", "events": [["h", "down", 0], ["g", "down", 130], ["b", "down", 163], ["n", "down", 254], ["j", "down", 332], ["u", "down", 372], ["j", "down", 536], ["m", "down", 612]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 129], ["n", "down", 233], ["j", "down", 309], ["u", "down", 342], ["j", "down", 525], ["m", "down", 598], ["n", "down", 610]]}
+{"kana": "d", "events": [["j", "down", 0], ["h", "down", 35], ["b", "down", 158], ["n", "down", 254], ["j", "down", 333], ["u", "down", 373], ["j", "down", 549], ["m", "down", 633], ["n", "down", 650]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 154], ["n", "down", 246], ["j", "down", 336], ["u", "down", 364], ["j", "down", 544], ["m", "down", 652]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 134], ["n", "down", 246], ["j", "down", 326], ["u", "down", 386], ["j", "down", 574], ["m", "down", 646]]}
+{"kana": "d", "events": [["h", "down", 0], ["g", "down", 102], ["b", "down", 154], ["n", "down", 266], ["j", "down", 346], ["u", "down", 394], ["j", "down", 570], ["n", "down", 630], ["m", "down", 662]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 138], ["n", "down", 258], ["u", "down", 357], ["j", "down", 525], ["n", "down", 590], ["m", "down", 609]]}
+{"kana": "d", "events": [["h", "down", 0], ["g", "down", 130], ["b", "down", 162], ["n", "down", 286], ["u", "down", 411], ["j", "down", 619], ["m", "down", 695]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 114], ["n", "down", 214], ["j", "down", 306], ["u", "down", 362], ["j", "down", 530], ["m", "down", 610]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 162], ["n", "down", 278], ["j", "down", 370], ["u", "down", 406], ["j", "down", 598], ["m", "down", 674]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 186], ["n", "down", 298], ["j", "down", 378], ["u", "down", 454], ["j", "down", 614], ["m", "down", 694]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 146], ["n", "down", 218], ["j", "down", 302], ["u", "down", 346], ["j", "down", 510], ["m", "down", 570]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 126], ["n", "down", 214], ["j", "down", 302], ["u", "down", 362], ["j", "down", 522], ["n", "down", 586], ["m", "down", 606]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 125], ["n", "down", 158], ["j", "down", 289], ["u", "down", 338], ["j", "down", 538], ["m", "down", 614]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 166], ["n", "down", 278], ["u", "down", 444], ["j", "down", 664], ["m", "down", 749]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 126], ["n", "down", 230], ["j", "down", 298], ["u", "down", 350], ["j", "down", 527], ["m", "down", 598]]}
+{"kana": "d", "events": [["h", "down", 0], ["g", "down", 114], ["b", "down", 142], ["n", "down", 258], ["j", "down", 314], ["u", "down", 366], ["j", "down", 543], ["m", "down", 622]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 178], ["n", "down", 302], ["j", "down", 364], ["u", "down", 404], ["j", "down", 600], ["m", "down", 672]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 146], ["n", "down", 238], ["j", "down", 346], ["u", "down", 394], ["j", "down", 566], ["m", "down", 642]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 138], ["n", "down", 226], ["j", "down", 314], ["u", "down", 362], ["j", "down", 562], ["h", "down", 574], ["n", "down", 642], ["m", "down", 658]]}
+{"kana": "d", "events": [["h", "down", 0], ["g", "down", 114], ["b", "down", 150], ["n", "down", 274], ["u", "down", 372], ["j", "down", 576], ["n", "down", 660], ["m", "down", 672]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 156], ["n", "down", 262], ["j", "down", 333], ["u", "down", 369], ["j", "down", 557], ["m", "down", 641]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 110], ["n", "down", 206], ["j", "down", 290], ["u", "down", 346], ["j", "down", 522], ["m", "down", 586]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 142], ["n", "down", 250], ["j", "down", 336], ["u", "down", 394], ["j", "down", 566], ["m", "down", 654]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 98], ["n", "down", 182], ["j", "down", 262], ["u", "down", 314], ["j", "down", 510], ["m", "down", 574]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 122], ["n", "down", 218], ["j", "down", 298], ["u", "down", 354], ["j", "down", 534], ["m", "down", 602]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 138], ["n", "down", 239], ["j", "down", 322], ["u", "down", 410], ["j", "down", 574], ["m", "down", 650], ["n", "down", 663]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 158], ["n", "down", 227], ["j", "down", 322], ["u", "down", 366], ["j", "down", 550], ["m", "down", 627]]}
+{"kana": "d", "events": [["h", "down", 0], ["g", "down", 98], ["b", "down", 138], ["n", "down", 258], ["j", "down", 321], ["u", "down", 369], ["j", "down", 537], ["n", "down", 629], ["m", "down", 642]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 122], ["n", "down", 211], ["j", "down", 279], ["u", "down", 314], ["j", "down", 474], ["m", "down", 542]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 150], ["n", "down", 230], ["j", "down", 302], ["u", "down", 350], ["j", "down", 534], ["m", "down", 614]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 146], ["n", "down", 246], ["j", "down", 318], ["u", "down", 367], ["j", "down", 578], ["m", "down", 646]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 142], ["n", "down", 214], ["j", "down", 298], ["u", "down", 354], ["j", "down", 530], ["m", "down", 610]]}
+{"kana": "d", "events": [["h", "down", 0], ["g", "down", 98], ["b", "down", 154], ["n", "down", 258], ["j", "down", 322], ["u", "down", 366], ["j", "down", 534], ["m", "down", 598]]}
+{"kana": "d", "events": [["h", "down", 0], ["g", "down", 86], ["b", "down", 174], ["n", "down", 302], ["j", "down", 358], ["u", "down", 394], ["j", "down", 574], ["m", "down", 654], ["n", "down", 659]]}
+{"kana": "d", "events": [["h", "down", 0], ["g", "down", 94], ["b", "down", 138], ["n", "down", 274], ["h", "down", 322], ["u", "down", 365], ["j", "down", 533], ["m", "down", 605]]}
+{"kana": "d", "events": [["h", "down", 0], ["g", "down", 126], ["b", "down", 146], ["n", "down", 258], ["j", "down", 334], ["u", "down", 370], ["j", "down", 546], ["m", "down", 618]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 123], ["n", "down", 210], ["j", "down", 294], ["u", "down", 338], ["j", "down", 494], ["m", "down", 562]]}
+{"kana": "d", "events": [["h", "down", 0], ["g", "down", 113], ["b", "down", 145], ["n", "down", 249], ["j", "down", 316], ["u", "down", 366], ["j", "down", 518], ["m", "down", 594]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 162], ["n", "down", 274], ["j", "down", 346], ["u", "down", 394], ["j", "down", 586], ["m", "down", 659]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 94], ["n", "down", 186], ["j", "down", 278], ["u", "down", 330], ["j", "down", 518], ["m", "down", 606]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 82], ["n", "down", 182], ["j", "down", 294], ["u", "down", 338], ["j", "down", 534], ["m", "down", 623]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 154], ["n", "down", 238], ["j", "down", 326], ["u", "down", 378], ["j", "down", 554], ["m", "down", 626]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 130], ["n", "down", 226], ["j", "down", 302], ["u", "down", 346], ["j", "down", 538], ["m", "down", 614]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 134], ["n", "down", 246], ["j", "down", 310], ["u", "down", 358], ["j", "down", 542], ["n", "down", 618], ["m", "down", 631]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 122], ["n", "down", 202], ["j", "down", 281], ["u", "down", 313], ["j", "down", 485], ["m", "down", 557]]}
+{"kana": "d", "events": [["h", "down", 0], ["g", "down", 94], ["b", "down", 134], ["n", "down", 258], ["h", "down", 302], ["j", "down", 316], ["u", "down", 359], ["j", "down", 542], ["n", "down", 606], ["m", "down", 622]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 106], ["n", "down", 166], ["j", "down", 254], ["u", "down", 302], ["j", "down", 462], ["m", "down", 534]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 158], ["n", "down", 242], ["j", "down", 310], ["u", "down", 354], ["j", "down", 522], ["m", "down", 594]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 158], ["n", "down", 238], ["j", "down", 306], ["u", "down", 358], ["j", "down", 514], ["m", "down", 571], ["n", "down", 575]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 158], ["n", "down", 242], ["j", "down", 310], ["u", "down", 362], ["j", "down", 530], ["m", "down", 602]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 139], ["n", "down", 214], ["u", "down", 316], ["j", "down", 484], ["m", "down", 580]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 122], ["n", "down", 218], ["j", "down", 308], ["u", "down", 332], ["j", "down", 528], ["m", "down", 612], ["n", "down", 625]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 142], ["n", "down", 222], ["j", "down", 302], ["u", "down", 350], ["j", "down", 514], ["m", "down", 574]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 118], ["n", "down", 170], ["j", "down", 278], ["u", "down", 326], ["j", "down", 482], ["m", "down", 574]]}
+{"kana": "d", "events": [["j", "down", 0], ["h", "down", 34], ["b", "down", 186], ["n", "down", 190], ["j", "down", 338], ["u", "down", 386], ["j", "down", 570], ["n", "down", 638], ["m", "down", 662]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 118], ["n", "down", 190], ["j", "down", 270], ["u", "down", 338], ["j", "down", 502], ["m", "down", 582], ["n", "down", 586]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 150], ["n", "down", 230], ["j", "down", 294], ["u", "down", 346], ["j", "down", 506], ["m", "down", 566]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 138], ["n", "down", 222], ["j", "down", 306], ["u", "down", 355], ["j", "down", 506], ["m", "down", 578]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 142], ["n", "down", 222], ["j", "down", 306], ["u", "down", 362], ["j", "down", 551], ["m", "down", 658]]}
+{"kana": "d", "events": [["h", "down", 0], ["b", "down", 134], ["n", "down", 218], ["j", "down", 314], ["u", "down", 354], ["j", "down", 526], ["m", "down", 598]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 78], ["k", "down", 150], ["i", "down", 266], ["u", "down", 314], ["h", "down", 426], ["n", "down", 506], ["m", "down", 566], [",", "down", 642]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 86], ["k", "down", 138], ["i", "down", 250], ["u", "down", 321], ["h", "down", 433], ["n", "down", 513], ["m", "down", 585], [",", "down", 665]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 86], ["k", "down", 162], ["i", "down", 286], ["u", "down", 330], ["y", "down", 434], ["h", "down", 458], ["n", "down", 534], ["m", "down", 614], [",", "down", 702]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 106], ["k", "down", 174], ["i", "down", 282], ["u", "down", 358], ["h", "down", 478], ["n", "down", 554], ["m", "down", 638], [",", "down", 726]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 74], ["k", "down", 174], ["i", "down", 230], ["u", "down", 314], ["y", "down", 402], ["h", "down", 450], ["n", "down", 535], ["m", "down", 615], [",", "down", 682]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 4], ["k", "down", 86], ["i", "down", 218], ["u", "down", 314], ["y", "down", 414], ["h", "down", 435], ["n", "down", 510], ["m", "down", 590], [",", "down", 674]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 82], ["k", "down", 218], ["i", "down", 306], ["u", "down", 382], ["h", "down", 522], ["n", "down", 590], ["m", "down", 666], [",", "down", 730]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 82], ["k", "down", 150], ["i", "down", 282], ["u", "down", 370], ["y", "down", 470], ["h", "down", 490], ["n", "down", 566], ["m", "down", 638], [",", "down", 706]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 70], ["k", "down", 138], ["i", "down", 250], ["u", "down", 326], ["h", "down", 442], ["n", "down", 514], ["m", "down", 606], [",", "down", 675]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 106], ["k", "down", 186], ["i", "down", 302], ["u", "down", 342], ["y", "down", 430], ["h", "down", 466], ["n", "down", 554], ["m", "down", 642], [",", "down", 730]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 74], ["k", "down", 134], ["i", "down", 250], ["u", "down", 359], ["h", "down", 494], ["n", "down", 578], ["m", "down", 658], [",", "down", 730]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 90], ["k", "down", 150], ["i", "down", 282], ["u", "down", 326], ["h", "down", 482], ["n", "down", 562], ["m", "down", 658], [",", "down", 742]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 62], ["k", "down", 146], ["i", "down", 246], ["u", "down", 330], ["h", "down", 466], ["n", "down", 554], ["m", "down", 626], [",", "down", 710]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 86], ["k", "down", 158], ["i", "down", 267], ["u", "down", 334], ["h", "down", 474], ["n", "down", 574], ["m", "down", 662], [",", "down", 766]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 94], ["k", "down", 178], ["i", "down", 254], ["u", "down", 327], ["y", "down", 411], ["h", "down", 471], ["n", "down", 562], ["m", "down", 646], [",", "down", 722]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 86], ["k", "down", 174], ["i", "down", 238], ["u", "down", 322], ["h", "down", 454], ["n", "down", 546], ["m", "down", 622], [",", "down", 694]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 59], ["k", "down", 135], ["i", "down", 263], ["u", "down", 346], ["h", "down", 486], ["n", "down", 582], ["m", "down", 678], [",", "down", 810]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 86], ["k", "down", 166], ["i", "down", 266], ["u", "down", 334], ["y", "down", 442], ["h", "down", 455], ["n", "down", 555], ["m", "down", 626], [",", "down", 718]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 82], ["k", "down", 150], ["i", "down", 278], ["u", "down", 346], ["y", "down", 458], ["h", "down", 470], ["n", "down", 550], ["m", "down", 658]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 70], ["k", "down", 130], ["i", "down", 258], ["u", "down", 326], ["h", "down", 442], ["n", "down", 518], ["m", "down", 610], [",", "down", 694]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 78], ["k", "down", 147], ["i", "down", 269], ["u", "down", 334], ["y", "down", 394], ["h", "down", 461], ["n", "down", 550], ["m", "down", 630], [",", "down", 706]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 74], ["k", "down", 135], ["i", "down", 274], ["u", "down", 354], ["h", "down", 498], ["n", "down", 578], ["m", "down", 654], [",", "down", 730]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 74], ["k", "down", 150], ["i", "down", 278], ["u", "down", 375], ["h", "down", 514], ["n", "down", 610], ["m", "down", 674], [",", "down", 746]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 90], ["k", "down", 150], ["i", "down", 294], ["u", "down", 386], ["y", "down", 498], ["h", "down", 554], ["n", "down", 630], ["m", "down", 694], [",", "down", 767]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 85], ["k", "down", 153], ["i", "down", 309], ["u", "down", 393], ["y", "down", 477], ["h", "down", 541], ["n", "down", 633], ["m", "down", 709], [",", "down", 793]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 106], ["k", "down", 174], ["i", "down", 342], ["u", "down", 410], ["h", "down", 567], ["n", "down", 662], ["m", "down", 762], [",", "down", 875]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 99], ["k", "down", 154], ["i", "down", 278], ["u", "down", 318], ["y", "down", 427], ["h", "down", 462], ["n", "down", 554], ["m", "down", 630], [",", "down", 695]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 79], ["k", "down", 158], ["i", "down", 294], ["u", "down", 382], ["h", "down", 522], ["n", "down", 626], ["m", "down", 694], [",", "down", 770]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 74], ["k", "down", 146], ["i", "down", 237], ["u", "down", 322], ["y", "down", 438], ["h", "down", 474], ["n", "down", 574], ["m", "down", 654], [",", "down", 777]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 82], ["k", "down", 150], ["i", "down", 234], ["u", "down", 282], ["y", "down", 382], ["h", "down", 430], ["n", "down", 542], ["m", "down", 634], [",", "down", 706]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 86], ["k", "down", 142], ["i", "down", 290], ["u", "down", 366], ["y", "down", 442], ["h", "down", 506], ["n", "down", 606], ["m", "down", 707], [",", "down", 786]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 86], ["k", "down", 146], ["i", "down", 286], ["u", "down", 342], ["h", "down", 470], ["n", "down", 570], ["m", "down", 690], [",", "down", 778]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 110], ["k", "down", 170], ["i", "down", 362], ["u", "down", 446], ["h", "down", 590], ["n", "down", 670], ["m", "down", 782], [",", "down", 862]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 94], ["k", "down", 162], ["i", "down", 314], ["u", "down", 386], ["h", "down", 522], ["n", "down", 598], ["m", "down", 670], [",", "down", 738]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 73], ["k", "down", 133], ["i", "down", 258], ["u", "down", 350], ["h", "down", 489], ["j", "down", 503], ["n", "down", 557], ["m", "down", 650], [",", "down", 773]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 66], ["k", "down", 130], ["i", "down", 253], ["u", "down", 330], ["y", "down", 422], ["h", "down", 449], ["n", "down", 569], ["m", "down", 654], [",", "down", 738]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 91], ["k", "down", 150], ["i", "down", 298], ["u", "down", 378], ["h", "down", 522], ["n", "down", 606], ["m", "down", 710], [",", "down", 798]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 86], ["k", "down", 146], ["i", "down", 302], ["u", "down", 386], ["h", "down", 518], ["n", "down", 602], ["m", "down", 682], [",", "down", 763]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 114], ["k", "down", 162], ["i", "down", 296], ["u", "down", 364], ["h", "down", 508], ["n", "down", 580], ["m", "down", 660], [",", "down", 748]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 94], ["k", "down", 162], ["i", "down", 270], ["u", "down", 362], ["h", "down", 474], ["n", "down", 562], ["m", "down", 622], [",", "down", 710]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 90], ["k", "down", 158], ["i", "down", 294], ["u", "down", 382], ["h", "down", 540], ["n", "down", 598], ["m", "down", 682], [",", "down", 758]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 74], ["k", "down", 142], ["i", "down", 282], ["u", "down", 370], ["h", "down", 507], ["n", "down", 570], ["m", "down", 670], [",", "down", 743]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 102], ["k", "down", 170], ["i", "down", 290], ["u", "down", 366], ["h", "down", 494], ["n", "down", 594], ["m", "down", 670], [",", "down", 762]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 90], ["k", "down", 162], ["i", "down", 270], ["u", "down", 330], ["h", "down", 442], ["n", "down", 542], ["m", "down", 642], [",", "down", 734]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 77], ["k", "down", 133], ["i", "down", 264], ["u", "down", 291], ["h", "down", 428], ["n", "down", 524], ["m", "down", 620]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 62], ["k", "down", 158], ["i", "down", 254], ["u", "down", 306], ["h", "down", 418], ["n", "down", 534], ["m", "down", 602], [",", "down", 678]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 78], ["k", "down", 158], ["i", "down", 282], ["u", "down", 330], ["h", "down", 478], ["n", "down", 570], ["m", "down", 666], [",", "down", 758]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 34], ["k", "down", 110], ["i", "down", 232], ["u", "down", 312], ["h", "down", 444], ["n", "down", 556], ["m", "down", 632], [",", "down", 716]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 74], ["k", "down", 154], ["i", "down", 254], ["u", "down", 342], ["h", "down", 498], ["n", "down", 590], ["m", "down", 662], [",", "down", 738]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 74], ["k", "down", 138], ["i", "down", 270], ["u", "down", 334], ["y", "down", 426], ["h", "down", 442], ["n", "down", 567], ["m", "down", 654], [",", "down", 742]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 96], ["k", "down", 180], ["i", "down", 264], ["u", "down", 341], ["h", "down", 456], ["n", "down", 560], ["m", "down", 644], [",", "down", 744]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 86], ["k", "down", 182], ["i", "down", 358], ["u", "down", 438], ["h", "down", 554], ["n", "down", 642], ["m", "down", 742], [",", "down", 814]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 86], ["k", "down", 154], ["i", "down", 254], ["u", "down", 334], ["y", "down", 410], ["h", "down", 479], ["n", "down", 554], ["m", "down", 634], [",", "down", 714]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 90], ["k", "down", 182], ["i", "down", 258], ["u", "down", 335], ["y", "down", 422], ["h", "down", 466], ["n", "down", 574], ["m", "down", 654], [",", "down", 730]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 102], ["k", "down", 170], ["i", "down", 286], ["u", "down", 358], ["h", "down", 490], ["n", "down", 582], ["m", "down", 674], [",", "down", 754]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 46], ["k", "down", 130], ["i", "down", 221], ["u", "down", 269], ["h", "down", 421], ["n", "down", 518], ["m", "down", 613], [",", "down", 689]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 90], ["k", "down", 166], ["i", "down", 286], ["u", "down", 350], ["y", "down", 454], ["h", "down", 486], ["n", "down", 590], ["m", "down", 662], [",", "down", 722]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 74], ["k", "down", 150], ["i", "down", 258], ["u", "down", 306], ["y", "down", 394], ["h", "down", 450], ["n", "down", 550], ["m", "down", 642], [",", "down", 730]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 78], ["k", "down", 158], ["i", "down", 250], ["u", "down", 326], ["y", "down", 406], ["h", "down", 426], ["n", "down", 546], ["m", "down", 626], [",", "down", 706]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 69], ["k", "down", 142], ["i", "down", 253], ["u", "down", 322], ["y", "down", 410], ["h", "down", 438], ["n", "down", 546], ["m", "down", 621], [",", "down", 681]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 111], ["k", "down", 170], ["i", "down", 318], ["u", "down", 374], ["y", "down", 445], ["h", "down", 478], ["n", "down", 578], ["m", "down", 681], [",", "down", 769]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 102], ["k", "down", 166], ["i", "down", 298], ["u", "down", 377], ["y", "down", 498], ["h", "down", 518], ["n", "down", 618], ["m", "down", 694], [",", "down", 770]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 83], ["k", "down", 131], ["i", "down", 266], ["u", "down", 303], ["h", "down", 439], ["n", "down", 527], ["m", "down", 579], [",", "down", 639]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 86], ["k", "down", 146], ["i", "down", 298], ["u", "down", 314], ["y", "down", 394], ["h", "down", 462], ["n", "down", 558], ["m", "down", 638], [",", "down", 714]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 102], ["k", "down", 163], ["i", "down", 290], ["u", "down", 330], ["y", "down", 478], ["h", "down", 492], ["n", "down", 574], ["m", "down", 666], [",", "down", 739]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 86], ["k", "down", 142], ["i", "down", 262], ["u", "down", 314], ["h", "down", 462], ["n", "down", 566], ["m", "down", 667], [",", "down", 734]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 110], ["k", "down", 191], ["i", "down", 294], ["u", "down", 338], ["y", "down", 430], ["h", "down", 482], ["n", "down", 566], ["m", "down", 626]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 94], ["k", "down", 190], ["i", "down", 262], ["u", "down", 318], ["y", "down", 390], ["h", "down", 462], ["n", "down", 546], ["m", "down", 614]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 67], ["k", "down", 122], ["i", "down", 250], ["u", "down", 318], ["h", "down", 474], ["n", "down", 558], ["m", "down", 630], [",", "down", 730]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 74], ["k", "down", 134], ["i", "down", 258], ["u", "down", 310], ["y", "down", 406], ["h", "down", 450], ["n", "down", 550], ["m", "down", 646], [",", "down", 718]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 81], ["k", "down", 137], ["i", "down", 257], ["u", "down", 333], ["y", "down", 429], ["h", "down", 458], ["n", "down", 541], ["m", "down", 625], [",", "down", 713]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 86], ["k", "down", 142], ["i", "down", 258], ["u", "down", 338], ["y", "down", 406], ["h", "down", 483], ["n", "down", 570], ["m", "down", 638], [",", "down", 714]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 74], ["k", "down", 138], ["i", "down", 234], ["u", "down", 315], ["y", "down", 386], ["h", "down", 438], ["n", "down", 530], ["m", "down", 598], [",", "down", 674]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 98], ["k", "down", 150], ["i", "down", 262], ["u", "down", 326], ["y", "down", 434], ["h", "down", 478], ["n", "down", 582], ["m", "down", 662], [",", "down", 742]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 82], ["k", "down", 142], ["i", "down", 286], ["u", "down", 350], ["y", "down", 430], ["h", "down", 507], ["n", "down", 595], ["m", "down", 702], [",", "down", 786]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 78], ["k", "down", 138], ["i", "down", 274], ["u", "down", 366], ["h", "down", 502], ["n", "down", 594], ["m", "down", 686], [",", "down", 762]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 90], ["k", "down", 146], ["i", "down", 278], ["u", "down", 322], ["h", "down", 462], ["n", "down", 550], ["m", "down", 634], [",", "down", 710]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 86], ["k", "down", 138], ["i", "down", 262], ["u", "down", 334], ["y", "down", 454], ["h", "down", 478], ["n", "down", 578], ["m", "down", 650], [",", "down", 742]]}
+{"kana": "e", "events": [["j", "down", 0], ["h", "down", 4], ["k", "down", 82], ["i", "down", 158], ["u", "down", 290], ["h", "down", 418], ["n", "down", 490], ["m", "down", 578], [",", "down", 662]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 78], ["k", "down", 142], ["i", "down", 266], ["u", "down", 326], ["y", "down", 398], ["h", "down", 458], ["n", "down", 550], ["m", "down", 634]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 82], ["k", "down", 143], ["i", "down", 266], ["u", "down", 338], ["y", "down", 454], ["h", "down", 482], ["n", "down", 558], ["m", "down", 643], [",", "down", 718]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 90], ["k", "down", 166], ["i", "down", 266], ["u", "down", 362], ["y", "down", 454], ["h", "down", 498], ["n", "down", 598], ["m", "down", 663], [",", "down", 746]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 50], ["k", "down", 123], ["i", "down", 262], ["u", "down", 342], ["h", "down", 474], ["n", "down", 546], ["m", "down", 622], [",", "down", 698]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 102], ["k", "down", 174], ["i", "down", 294], ["u", "down", 362], ["y", "down", 442], ["h", "down", 518], ["n", "down", 618], ["m", "down", 706], [",", "down", 794]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 90], ["k", "down", 142], ["i", "down", 262], ["u", "down", 330], ["h", "down", 466], ["n", "down", 566], ["m", "down", 670], [",", "down", 770]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 78], ["k", "down", 138], ["i", "down", 258], ["u", "down", 310], ["h", "down", 458], ["n", "down", 562], ["m", "down", 623], [",", "down", 718]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 74], ["k", "down", 150], ["i", "down", 286], ["u", "down", 362], ["y", "down", 474], ["h", "down", 498], ["n", "down", 610], ["m", "down", 702], [",", "down", 798]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 110], ["k", "down", 170], ["i", "down", 310], ["u", "down", 378], ["y", "down", 466], ["h", "down", 511], ["n", "down", 606], ["m", "down", 702], [",", "down", 802]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 74], ["k", "down", 162], ["i", "down", 298], ["u", "down", 370], ["h", "down", 510], ["n", "down", 602], ["m", "down", 686], [",", "down", 762]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 102], ["k", "down", 158], ["i", "down", 318], ["u", "down", 375], ["y", "down", 446], ["h", "down", 522], ["n", "down", 610], ["m", "down", 698], [",", "down", 810]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 86], ["k", "down", 158], ["i", "down", 322], ["u", "down", 394], ["y", "down", 518], ["h", "down", 562], ["n", "down", 664], ["m", "down", 742], [",", "down", 810]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 106], ["k", "down", 166], ["i", "down", 322], ["u", "down", 395], ["y", "down", 458], ["h", "down", 522], ["n", "down", 614], ["m", "down", 698], [",", "down", 778]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 81], ["k", "down", 149], ["i", "down", 285], ["u", "down", 340], ["h", "down", 484], ["n", "down", 557], ["m", "down", 629], [",", "down", 689]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 58], ["k", "down", 134], ["i", "down", 270], ["u", "down", 374], ["y", "down", 458], ["h", "down", 514], ["n", "down", 598], ["m", "down", 658], [",", "down", 726]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 102], ["k", "down", 167], ["i", "down", 282], ["u", "down", 326], ["h", "down", 478], ["n", "down", 582], ["m", "down", 670], [",", "down", 750]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 86], ["k", "down", 154], ["i", "down", 306], ["u", "down", 390], ["y", "down", 458], ["h", "down", 522], ["n", "down", 614], ["m", "down", 674], [",", "down", 751]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 82], ["k", "down", 150], ["i", "down", 310], ["u", "down", 362], ["y", "down", 470], ["h", "down", 490], ["n", "down", 594], ["m", "down", 686], [",", "down", 770]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 86], ["k", "down", 158], ["i", "down", 278], ["u", "down", 382], ["h", "down", 530], ["n", "down", 610], ["m", "down", 670], [",", "down", 750]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 91], ["k", "down", 159], ["i", "down", 294], ["u", "down", 359], ["h", "down", 487], ["n", "down", 563], ["m", "down", 631], [",", "down", 691]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 87], ["k", "down", 139], ["i", "down", 307], ["u", "down", 339], ["h", "down", 491], ["n", "down", 547], ["m", "down", 627], [",", "down", 696]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 86], ["k", "down", 143], ["i", "down", 266], ["u", "down", 347], ["y", "down", 422], ["h", "down", 470], ["n", "down", 562], ["m", "down", 614], [",", "down", 691]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 86], ["k", "down", 146], ["i", "down", 266], ["u", "down", 334], ["y", "down", 462], ["h", "down", 494], ["n", "down", 598], ["m", "down", 670]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 94], ["k", "down", 151], ["i", "down", 274], ["u", "down", 346], ["y", "down", 406], ["h", "down", 478], ["n", "down", 570], ["m", "down", 658], [",", "down", 734]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 102], ["k", "down", 162], ["i", "down", 298], ["u", "down", 378], ["y", "down", 474], ["h", "down", 534], ["n", "down", 630], ["m", "down", 694]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 110], ["k", "down", 178], ["i", "down", 306], ["u", "down", 374], ["y", "down", 482], ["h", "down", 514], ["n", "down", 614], ["m", "down", 674], [",", "down", 758]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 74], ["k", "down", 146], ["i", "down", 330], ["u", "down", 363], ["y", "down", 494], ["h", "down", 542], ["n", "down", 642], ["m", "down", 730], [",", "down", 795]]}
+{"kana": "e", "events": [["h", "down", 0], ["j", "down", 114], ["k", "down", 186], ["i", "down", 330], ["u", "down", 406], ["y", "down", 495], ["h", "down", 594], ["n", "down", 695], ["m", "down", 770], [",", "down", 862]]}{"kana": "f", "events": [["i", "down", 0], ["u", "down", 134], ["j", "down", 266], ["m", "down", 357], ["h", "down", 640], ["j", "down", 704], ["k", "down", 764]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 93], ["j", "down", 213], ["m", "down", 273]]}
+{"kana": "f", "events": [["h", "down", 0], ["j", "down", 56], ["k", "down", 111]]}{"kana": "f", "events": [["i", "down", 0], ["u", "down", 114], ["j", "down", 210], ["m", "down", 262], ["h", "down", 508], ["j", "down", 564], ["k", "down", 612]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 109], ["j", "down", 221], ["m", "down", 285], ["n", "down", 290], ["h", "down", 521], ["j", "down", 581], ["k", "down", 637]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 86], ["j", "down", 230], ["n", "down", 294], ["m", "down", 308], ["h", "down", 541], ["j", "down", 605], ["k", "down", 657]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 70], ["j", "down", 218], ["m", "down", 298], ["h", "down", 569], ["j", "down", 641]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 82], ["j", "down", 226], ["m", "down", 302], ["h", "down", 557], ["j", "down", 629], ["k", "down", 681]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 86], ["j", "down", 230], ["m", "down", 286]]}
+{"kana": "f", "events": [["h", "down", 0], ["j", "down", 65], ["k", "down", 108]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 146], ["h", "down", 290], ["j", "down", 314], ["n", "down", 350], ["m", "down", 386], ["h", "down", 636], ["j", "down", 712], ["k", "down", 760]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 102], ["u", "down", 158], ["j", "down", 286], ["m", "down", 362], ["n", "down", 367], ["h", "down", 589], ["j", "down", 649], ["k", "down", 689]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 78], ["j", "down", 206], ["m", "down", 276], ["h", "down", 508], ["j", "down", 584], ["k", "down", 648]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 66], ["j", "down", 206], ["n", "down", 274], ["m", "down", 286], ["h", "down", 528], ["j", "down", 596], ["k", "down", 640]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 122], ["j", "down", 287], ["m", "down", 347], ["h", "down", 604], ["j", "down", 672], ["k", "down", 716]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 106], ["j", "down", 238], ["m", "down", 294], ["h", "down", 556], ["j", "down", 604], ["k", "down", 644]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 82], ["j", "down", 206], ["m", "down", 262], ["h", "down", 501], ["j", "down", 577], ["k", "down", 617]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 82], ["j", "down", 226], ["m", "down", 290], ["n", "down", 302], ["h", "down", 566], ["j", "down", 622], ["k", "down", 674]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 54], ["j", "down", 194], ["m", "down", 250], ["n", "down", 254], ["h", "down", 535], ["j", "down", 615], ["k", "down", 659]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 58], ["j", "down", 198], ["m", "down", 262], ["h", "down", 508], ["j", "down", 576], ["k", "down", 616]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 57], ["j", "down", 189], ["m", "down", 265], ["n", "down", 269], ["h", "down", 547], ["j", "down", 607], ["k", "down", 655]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 54], ["j", "down", 225], ["h", "down", 238], ["n", "down", 293], ["m", "down", 306], ["h", "down", 531], ["j", "down", 603], ["k", "down", 659]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 94], ["j", "down", 218], ["m", "down", 270], ["h", "down", 527], ["j", "down", 583], ["k", "down", 627]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 118], ["u", "down", 134], ["j", "down", 274], ["m", "down", 334], ["n", "down", 348], ["h", "down", 579], ["j", "down", 635], ["k", "down", 683]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 62], ["u", "down", 138], ["j", "down", 246], ["m", "down", 327], ["n", "down", 331], ["h", "down", 551], ["j", "down", 607], ["k", "down", 655]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 66], ["u", "down", 162], ["j", "down", 290], ["n", "down", 362], ["m", "down", 374], ["h", "down", 595], ["j", "down", 664], ["k", "down", 708]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 106], ["j", "down", 226], ["m", "down", 291], ["n", "down", 295], ["h", "down", 525], ["j", "down", 581], ["k", "down", 625]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 110], ["j", "down", 213], ["m", "down", 269], ["n", "down", 291], ["h", "down", 461], ["j", "down", 533]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 106], ["j", "down", 214], ["m", "down", 266], ["h", "down", 509], ["j", "down", 578], ["k", "down", 622]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 105], ["j", "down", 221], ["m", "down", 273], ["h", "down", 507], ["j", "down", 571], ["k", "down", 615]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 90], ["j", "down", 218], ["m", "down", 270], ["h", "down", 518], ["j", "down", 582], ["k", "down", 626]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 97], ["j", "down", 213], ["m", "down", 265], ["h", "down", 519], ["j", "down", 579], ["k", "down", 631]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 76], ["j", "down", 216], ["n", "down", 268], ["m", "down", 285], ["h", "down", 493], ["j", "down", 578], ["k", "down", 629]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 60], ["u", "down", 180], ["j", "down", 248], ["m", "down", 292], ["h", "down", 537], ["j", "down", 598], ["k", "down", 645]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 152], ["j", "down", 209], ["m", "down", 261], ["h", "down", 491], ["j", "down", 540], ["k", "down", 587]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 82], ["u", "down", 154], ["j", "down", 278], ["n", "down", 334], ["m", "down", 346], ["h", "down", 569], ["j", "down", 629], ["k", "down", 669]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 62], ["u", "down", 142], ["j", "down", 246], ["m", "down", 310], ["n", "down", 314], ["h", "down", 547], ["j", "down", 603], ["k", "down", 655]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 30], ["u", "down", 114], ["j", "down", 222], ["m", "down", 278], ["h", "down", 504], ["j", "down", 568], ["k", "down", 620]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 45], ["u", "down", 106], ["j", "down", 217], ["m", "down", 270], ["h", "down", 499], ["j", "down", 560], ["k", "down", 611]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 111], ["u", "down", 131], ["j", "down", 263], ["m", "down", 327], ["h", "down", 569], ["j", "down", 629], ["k", "down", 698]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 102], ["u", "down", 194], ["j", "down", 318], ["m", "down", 382], ["h", "down", 602], ["j", "down", 654], ["k", "down", 702]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 96], ["u", "down", 188], ["j", "down", 288], ["m", "down", 344], ["h", "down", 552], ["j", "down", 604], ["k", "down", 652]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 94], ["u", "down", 158], ["j", "down", 270], ["m", "down", 327], ["h", "down", 559], ["j", "down", 615], ["k", "down", 663]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 57], ["u", "down", 130], ["j", "down", 257], ["m", "down", 309], ["n", "down", 322], ["h", "down", 550], ["j", "down", 620], ["k", "down", 674]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 67], ["u", "down", 119], ["j", "down", 231], ["m", "down", 295], ["h", "down", 543], ["j", "down", 599], ["k", "down", 648]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 58], ["u", "down", 134], ["j", "down", 260], ["m", "down", 307], ["h", "down", 550], ["j", "down", 618]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 56], ["u", "down", 152], ["j", "down", 280], ["m", "down", 356], ["h", "down", 588], ["j", "down", 641], ["k", "down", 684]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 54], ["u", "down", 118], ["j", "down", 233], ["m", "down", 290], ["h", "down", 517], ["j", "down", 581], ["k", "down", 625]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 89], ["u", "down", 145], ["j", "down", 261], ["m", "down", 321], ["h", "down", 559], ["j", "down", 615], ["k", "down", 663]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 50], ["u", "down", 122], ["j", "down", 226], ["m", "down", 286], ["h", "down", 537], ["j", "down", 585], ["k", "down", 625]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 70], ["u", "down", 166], ["j", "down", 234], ["m", "down", 298], ["h", "down", 530], ["j", "down", 582], ["k", "down", 630]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 66], ["u", "down", 134], ["j", "down", 222], ["m", "down", 278], ["h", "down", 515], ["j", "down", 583], ["k", "down", 623]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 62], ["u", "down", 114], ["j", "down", 242], ["m", "down", 306], ["h", "down", 553], ["j", "down", 609], ["k", "down", 653]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 42], ["u", "down", 98], ["j", "down", 214], ["m", "down", 278], ["n", "down", 290], ["h", "down", 539], ["j", "down", 607], ["k", "down", 659]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 54], ["u", "down", 110], ["j", "down", 214], ["m", "down", 282], ["h", "down", 509], ["j", "down", 549], ["k", "down", 605]]}
+{"kana": "f", "events": [["j", "down", 0], ["u", "down", 109], ["j", "down", 273], ["n", "down", 337], ["m", "down", 350], ["h", "down", 594], ["j", "down", 662], ["k", "down", 726]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 37], ["j", "down", 165], ["m", "down", 237], ["n", "down", 241], ["h", "down", 482], ["j", "down", 538], ["k", "down", 590]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 86], ["u", "down", 146], ["j", "down", 266], ["m", "down", 327], ["n", "down", 331], ["h", "down", 595], ["j", "down", 667], ["k", "down", 715]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 36], ["u", "down", 124], ["j", "down", 224], ["m", "down", 284], ["h", "down", 547], ["j", "down", 595], ["k", "down", 655]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 32], ["u", "down", 154], ["j", "down", 244], ["m", "down", 309], ["h", "down", 558], ["j", "down", 626], ["k", "down", 678]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 31], ["u", "down", 115], ["j", "down", 239], ["m", "down", 303], ["n", "down", 307], ["h", "down", 543], ["j", "down", 607], ["k", "down", 663]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 66], ["u", "down", 146], ["j", "down", 238], ["m", "down", 298], ["h", "down", 569], ["j", "down", 625], ["k", "down", 669]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 45], ["u", "down", 109], ["j", "down", 237], ["m", "down", 301], ["h", "down", 572], ["j", "down", 640], ["k", "down", 692]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 54], ["u", "down", 110], ["j", "down", 206], ["m", "down", 270], ["h", "down", 538], ["j", "down", 606], ["k", "down", 658]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 66], ["j", "down", 162], ["m", "down", 226], ["n", "down", 239], ["h", "down", 484], ["j", "down", 552], ["k", "down", 604]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 42], ["u", "down", 118], ["j", "down", 230], ["m", "down", 290], ["n", "down", 302], ["h", "down", 527], ["j", "down", 591], ["k", "down", 639]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 70], ["u", "down", 126], ["j", "down", 222], ["m", "down", 290], ["h", "down", 530], ["j", "down", 586], ["k", "down", 642]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 78], ["u", "down", 114], ["j", "down", 234], ["m", "down", 302], ["h", "down", 549], ["j", "down", 613], ["k", "down", 665]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 62], ["u", "down", 98], ["j", "down", 202], ["m", "down", 274], ["h", "down", 519], ["j", "down", 587], ["k", "down", 651]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 78], ["u", "down", 122], ["j", "down", 242], ["m", "down", 304], ["h", "down", 554], ["j", "down", 622], ["k", "down", 678]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 70], ["u", "down", 118], ["j", "down", 214], ["m", "down", 278], ["h", "down", 535], ["j", "down", 587], ["k", "down", 631]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 70], ["u", "down", 110], ["j", "down", 210], ["m", "down", 266], ["h", "down", 525], ["j", "down", 581], ["k", "down", 637]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 96], ["u", "down", 133], ["j", "down", 236], ["m", "down", 301], ["n", "down", 305], ["h", "down", 551], ["j", "down", 615], ["k", "down", 664]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 82], ["u", "down", 154], ["j", "down", 258], ["m", "down", 322], ["h", "down", 561], ["j", "down", 625], ["k", "down", 673]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 98], ["u", "down", 138], ["j", "down", 230], ["m", "down", 286], ["h", "down", 527], ["j", "down", 571], ["k", "down", 620]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 74], ["u", "down", 126], ["j", "down", 214], ["m", "down", 282], ["h", "down", 524], ["j", "down", 596], ["k", "down", 652]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 48], ["u", "down", 92], ["j", "down", 192], ["m", "down", 264], ["h", "down", 500], ["j", "down", 568], ["k", "down", 620]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 70], ["u", "down", 118], ["j", "down", 206], ["m", "down", 271], ["h", "down", 516], ["j", "down", 568], ["k", "down", 636]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 58], ["j", "down", 154], ["m", "down", 222], ["h", "down", 479], ["j", "down", 527], ["k", "down", 579]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 80], ["u", "down", 120], ["j", "down", 212], ["m", "down", 272], ["h", "down", 506], ["j", "down", 546], ["k", "down", 606]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 50], ["u", "down", 98], ["j", "down", 206], ["m", "down", 270], ["h", "down", 511], ["j", "down", 579], ["k", "down", 631]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 76], ["u", "down", 112], ["j", "down", 224], ["m", "down", 288], ["h", "down", 507], ["j", "down", 563], ["k", "down", 619]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 81], ["u", "down", 111], ["j", "down", 205], ["m", "down", 277], ["h", "down", 498], ["j", "down", 566], ["k", "down", 630]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 42], ["u", "down", 94], ["j", "down", 186], ["m", "down", 262], ["h", "down", 494], ["j", "down", 559], ["k", "down", 610]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 50], ["j", "down", 138], ["m", "down", 210], ["h", "down", 442], ["j", "down", 502], ["k", "down", 558]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 52], ["u", "down", 88], ["j", "down", 172], ["m", "down", 240], ["h", "down", 452], ["j", "down", 508], ["k", "down", 568]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 66], ["u", "down", 118], ["j", "down", 190], ["m", "down", 266], ["h", "down", 517], ["j", "down", 573], ["k", "down", 625]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 50], ["u", "down", 94], ["j", "down", 178], ["m", "down", 250], ["h", "down", 494], ["j", "down", 542], ["k", "down", 594]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 58], ["u", "down", 90], ["j", "down", 170], ["m", "down", 242], ["h", "down", 475], ["j", "down", 531], ["k", "down", 583]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 39], ["u", "down", 71], ["j", "down", 167], ["m", "down", 239], ["n", "down", 251], ["h", "down", 471], ["j", "down", 523], ["k", "down", 587]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 44], ["u", "down", 80], ["j", "down", 180], ["m", "down", 248], ["h", "down", 488], ["j", "down", 540], ["k", "down", 592]]}
+{"kana": "f", "events": [["i", "down", 0], ["u", "down", 34], ["j", "down", 138], ["m", "down", 210], ["h", "down", 439], ["j", "down", 483], ["k", "down", 535]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 54], ["u", "down", 126], ["j", "down", 222], ["m", "down", 298], ["n", "down", 302], ["h", "down", 519], ["j", "down", 551], ["k", "down", 635]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 66], ["u", "down", 114], ["j", "down", 202], ["m", "down", 266], ["h", "down", 515], ["j", "down", 566], ["k", "down", 618]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 58], ["u", "down", 106], ["j", "down", 195], ["m", "down", 262], ["h", "down", 489], ["j", "down", 541], ["k", "down", 589]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 82], ["u", "down", 134], ["j", "down", 218], ["m", "down", 290], ["h", "down", 537], ["j", "down", 577], ["k", "down", 633]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 110], ["u", "down", 162], ["j", "down", 286], ["m", "down", 346], ["h", "down", 594], ["j", "down", 646], ["k", "down", 703]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 74], ["u", "down", 114], ["j", "down", 206], ["m", "down", 266], ["n", "down", 279], ["h", "down", 516], ["j", "down", 572], ["k", "down", 625]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 90], ["u", "down", 130], ["j", "down", 214], ["m", "down", 286], ["h", "down", 534], ["j", "down", 570], ["k", "down", 638]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 58], ["u", "down", 126], ["j", "down", 234], ["m", "down", 294], ["h", "down", 547], ["j", "down", 611], ["k", "down", 660]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 70], ["u", "down", 126], ["j", "down", 222], ["m", "down", 298], ["h", "down", 541], ["j", "down", 589], ["k", "down", 645]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 80], ["u", "down", 140], ["j", "down", 216], ["m", "down", 276], ["h", "down", 535], ["j", "down", 575], ["k", "down", 627]]}
+{"kana": "f", "events": [["k", "down", 0], ["i", "down", 66], ["u", "down", 110], ["j", "down", 202], ["m", "down", 270], ["h", "down", 510], ["j", "down", 574], ["k", "down", 626]]}
