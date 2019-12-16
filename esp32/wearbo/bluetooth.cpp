@@ -1,7 +1,6 @@
 #include "bluetooth.hpp"
 #include "Arduino.h"
 
-// BleKeyboard bleKeyboard;
 
 void send_ble(String output)
 {

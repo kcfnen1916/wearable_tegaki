@@ -1,7 +1,5 @@
 #include "bluetooth.hpp"
-// #include "config.hpp"
 #include "flick.hpp"
-// #include "wifi.hpp"
 #include "hand_writing.hpp"
 #include <M5StickC.h>
 
@@ -145,29 +143,16 @@ void setup()
     }
     Serial.println("MPR121 found!");
 
-    Serial.println(ges_lst[1].m_output);
-    // Serial.println(wearbo.m_key_lst[0]);
-
-    // Ge9sture test[2] = {zero, one};
-
-    // wearbo.m_ges_lst[10] = {zero, one, two, three, four, five, six, seven, eight, nine};
     M5.begin();
     bleKeyboard.begin();
 
     Wire.begin(32, 33);
 
     pinMode(vib_pin, OUTPUT);
-
-    // connectWiFi();
-    // setup_client();
-
-    // xTaskCreatePinnedToCore(task_main, "Task_main", 4096, NULL, 1, NULL, 0);
-    // xTaskCreatePinnedToCore(task_recv, "Task_recv", 4096, NULL, 2, NULL, 1);
 }
 
 void loop()
 {
-    // wearbo.main();
     output = "";
     wearbo.m_input_data = "";
     // m_input_time = "";
@@ -176,7 +161,6 @@ void loop()
     // dacWrite(vib_pin, 100);
     if (wearbo.m_mode == 1 || wearbo.m_mode == 2) {
         for (auto g : ges_lst) {
-            // Serial.println("serch");
             if (wearbo.m_mode == g.m_mode || g.m_mode == 0) {
                 output = g.judge_gesture(wearbo.m_input_data);
                 if (output != "NOT") {
@@ -194,7 +178,7 @@ void loop()
         } else if (output == "CHANGE_MODE3") {
             wearbo.change_mode(3);
         } else {
-            if (wearbo.m_ulst == 1) {
+            if (wearbo.m_ulst == 1 && output.length() == 1) {
                 send_ble(low2up(output.charAt(0)));
             } else {
                 send_ble(output);
@@ -256,10 +240,7 @@ void loop()
                         if (min > dist[0][i]) {
                             min = dist[0][i];
                             min_index = dist[1][i];
-                            // if (!found) {
-                            //     Serial.println("c");
                             found = true;
-                            // }
                         } else if (min == dist[0][i]) {
                             if (hw_lst[dist[1][i]].m_via != "-" && wearbo.m_input_data.indexOf(hw_lst[dist[1][i]].m_via) != -1 && wearbo.m_input_data.indexOf(hw_lst[min_index].m_via) == -1) {
                                 min_index = dist[1][i];
@@ -271,7 +252,6 @@ void loop()
                     output = "=";
                 }
             }
-            // Serial.println(output);
             if (wearbo.m_ulst == 1) {
                 send_ble(low2up(output.charAt(0)));
             } else {
