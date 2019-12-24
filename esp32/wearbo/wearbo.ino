@@ -187,7 +187,7 @@ void loop()
     } else if (wearbo.m_mode == 3) {
         if (wearbo.m_input_data.charAt(0) == 'd' || wearbo.m_input_data.charAt(0) == 's' || wearbo.m_input_data.charAt(0) == 'c') {
             for (auto g : ges_lst) {
-                if (wearbo.m_mode == g.m_mode || g.m_mode == 0) {
+                if (g.m_mode == 1 || g.m_mode == 0) {
                     output = g.judge_gesture(wearbo.m_input_data);
                     if (output != "NOT") {
                         break;
