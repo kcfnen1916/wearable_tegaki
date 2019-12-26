@@ -87,7 +87,7 @@ Gesture eight = Gesture("n", 1, "8", 2);
 Gesture nine = Gesture("m", 1, "9", 2);
 
 HandWriting a_hw = HandWriting("a", 11, "u", "m", "j");
-HandWriting x_hw = HandWriting("x", 6, "t", "b", "m");
+HandWriting x_hw = HandWriting("x", 7, "t", "b", "m");
 HandWriting b_hw = HandWriting("b", 7, "t", "b", "n");
 HandWriting c_hw = HandWriting("c", 7, "u", "m", "g");
 HandWriting d_hw = HandWriting("d", 8, "j", "m");
@@ -96,7 +96,7 @@ HandWriting e_hw = HandWriting("e", 10, "g", "m", "b");
 HandWriting f_hw = HandWriting("f", 7, "u", "j");
 HandWriting g_hw = HandWriting("g", 8, "u", "n");
 HandWriting g_hw2 = HandWriting("g", 8, "y", "b");
-// HandWriting h_hw = HandWriting("h", 6, "t", "n");
+HandWriting h_hw = HandWriting("h", 6, "t", "n");
 HandWriting h_hw2 = HandWriting("h", 6, "y", "m");
 HandWriting i_hw = HandWriting("i", 3, "h", "y");
 HandWriting i_hw2 = HandWriting("i", 3, "g", "t");
@@ -104,7 +104,8 @@ HandWriting i_hw3 = HandWriting("i", 3, "j", "u");
 HandWriting j_hw = HandWriting("j", 4, "h", "y", "b");
 HandWriting j_hw2 = HandWriting("j", 4, "j", "u", "n");
 HandWriting k_hw = HandWriting("k", 6, "t", "n");
-HandWriting p_hw2 = HandWriting("p", 7, "y", "n", "u");
+HandWriting k_hw2 = HandWriting("k", 6, "y", "m");
+HandWriting p_hw2 = HandWriting("p", 8, "y", "h", "u");
 HandWriting b_hw2 = HandWriting("b", 7, "y", "n", "m");
 HandWriting q_hw2 = HandWriting("q", 7, "y", "n", "t");
 HandWriting l_hw = HandWriting("l", 3, "y", "n");
@@ -114,7 +115,7 @@ HandWriting m_hw = HandWriting("m", 13, "t", "m");
 HandWriting z_hw = HandWriting("z", 7, "t", "m", "h");
 HandWriting n_hw = HandWriting("n", 9, "t", "m", "y");
 HandWriting o_hw = HandWriting("o", 9, "y", "y");
-HandWriting p_hw = HandWriting("p", 7, "t", "b", "y");
+HandWriting p_hw = HandWriting("p", 8, "t", "g", "y");
 HandWriting q_hw = HandWriting("q", 7, "u", "m", "j");
 HandWriting r_hw = HandWriting("r", 7, "t", "u", "y");
 HandWriting s_hw = HandWriting("s", 9, "u", "b");
@@ -122,10 +123,10 @@ HandWriting t_hw = HandWriting("t", 7, "g", "m");
 HandWriting u_hw = HandWriting("u", 9, "t", "m", "n");
 HandWriting v_hw = HandWriting("v", 7, "t", "u", "n");
 HandWriting w_hw = HandWriting("w", 10, "t", "u");
-HandWriting y_hw = HandWriting("y", 5, "t", "b");
+HandWriting y_hw = HandWriting("y", 6, "t", "b");
 
 Gesture ges_lst[61] = {right, left, enter, mode_10, mode_11, mode_20, mode_21, mode_30, mode_31, b, c, d, f, g, h, j, k, l, n, o, p, q, s, t, u, v, x, y, z, hyphen, slash, sharp, colon, brcr, quot, dubquot, comma, question, exclam, spc, delet, a, e, i, m, r, w, at, brcl, period, chuplow, zero, one, two, three, four, five, six, seven, eight, nine};
-HandWriting hw_lst[36] = {a_hw, x_hw, b_hw, c_hw, d_hw, d_hw2, e_hw, f_hw, g_hw, g_hw2, /*h_hw,*/ h_hw2, i_hw, i_hw2, i_hw3, j_hw, j_hw2, k_hw, p_hw2, b_hw2, q_hw2, l_hw, l_hw2, l_hw3, m_hw, z_hw, n_hw, o_hw, p_hw, q_hw, r_hw, s_hw, t_hw, u_hw, v_hw, w_hw, y_hw};
+HandWriting hw_lst[38] = {a_hw, x_hw, b_hw, c_hw, d_hw, d_hw2, e_hw, f_hw, g_hw, g_hw2, h_hw, h_hw2, i_hw, i_hw2, i_hw3, j_hw, j_hw2, k_hw, k_hw2, p_hw2, b_hw2, q_hw2, l_hw, l_hw2, l_hw3, m_hw, z_hw, n_hw, o_hw, p_hw, q_hw, r_hw, s_hw, t_hw, u_hw, v_hw, w_hw, y_hw};
 
 int vib_pin = 26;
 
@@ -187,7 +188,7 @@ void loop()
     } else if (wearbo.m_mode == 3) {
         if (wearbo.m_input_data.charAt(0) == 'd' || wearbo.m_input_data.charAt(0) == 's' || wearbo.m_input_data.charAt(0) == 'c') {
             for (auto g : ges_lst) {
-                if (wearbo.m_mode == g.m_mode || g.m_mode == 0) {
+                if (g.m_mode == 1 || g.m_mode == 0) {
                     output = g.judge_gesture(wearbo.m_input_data);
                     if (output != "NOT") {
                         break;
@@ -217,6 +218,40 @@ void loop()
                     }
                 }
                 Serial.println(output);
+                if (output == "hk") {
+                    if (wearbo.m_input_data.indexOf("b") != -1) {
+                        String check_part = wearbo.m_input_data.substring(wearbo.m_input_data.indexOf("b") + 1);
+                        if (check_part.indexOf("g") != -1 && check_part.indexOf("g") < check_part.indexOf("h")) {
+                            output = "h";
+                        } else {
+                            output = "k";
+                        }
+                    } else {
+                        String check_part = wearbo.m_input_data.substring(wearbo.m_input_data.indexOf("n") + 1);
+                        if (check_part.indexOf("h") != -1 && check_part.indexOf("h") < check_part.indexOf("j")) {
+                            output = "h";
+                        } else {
+                            output = "k";
+                        }
+                    }
+                }
+                if (output == "xbly") {
+                    if (wearbo.m_input_data.indexOf("m") != -1) {
+                        output = "xb";
+                    }
+                    if (wearbo.m_input_data.indexOf("u") != -1) {
+                        output = "xy";
+                    } else {
+                        output = "bl";
+                    }
+                }
+                if (output == "mznu") {
+                    if (wearbo.m_input_data.charAt(1) == 'y') {
+                        output = "z";
+                    } else {
+                        output = "mnu";
+                    }
+                }
                 if (output.length() > 1) {
                     int dist[2][10] = {{-1, -1, -1, -1, -1, -1, -1, -1, -1, -1}, {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1}};
                     int i = 0;
