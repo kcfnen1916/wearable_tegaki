@@ -73,7 +73,7 @@ void Wearbo::record()
     unsigned long rec_time = 0;
     unsigned long ep_time_from_last = 0;
     unsigned long now_ = 0;
-    int wait_seconds = 300;
+    int wait_seconds = 500;
     Serial.println("recoding...");
     while (true) {
         currtouched = m_cap.touched();
