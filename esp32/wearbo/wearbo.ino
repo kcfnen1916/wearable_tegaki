@@ -89,7 +89,7 @@ Gesture nine = Gesture("m", 1, "9", 2);
 
 HandWriting a_hw = HandWriting("a", "u_y_t_g_b_n_j_u_j_m");
 HandWriting x_hw = HandWriting("x", "t_h_m_u_h_b");
-HandWriting b_hw = HandWriting("b", "t_g_b_g_h_b");
+HandWriting b_hw = HandWriting("b", "t_g_b_h_b");
 HandWriting c_hw = HandWriting("c", "u_y_t_g_b_n_m");
 HandWriting d_hw = HandWriting("d", "j_h_n_m_j_u_j_m");
 HandWriting d_hw2 = HandWriting("d", "h_g_b_n_h_y_h_n");
@@ -106,7 +106,7 @@ HandWriting j_hw = HandWriting("j", "h_n_b_y");
 HandWriting k_hw = HandWriting("k", "t_g_b_h_g_n");
 HandWriting k_hw2 = HandWriting("k","y_h_n_j_h_m");
 HandWriting p_hw2 = HandWriting("p","y_h_n_y_u_j_h");
-HandWriting b_hw2 = HandWriting("b", "y_g_b_g_h_n_b");
+HandWriting b_hw2 = HandWriting("b", "y_h_n_j_n");
 HandWriting q_hw2 = HandWriting("q","y_t_g_h_y_h_n");
 HandWriting l_hw = HandWriting("l","y_h_n");
 HandWriting l_hw2 = HandWriting("l","t_g_b");
@@ -142,21 +142,21 @@ void setup()
     Serial.begin(115200);
     Serial.println("Starting wearbo");
 
-    //wearbo.m_cap = Adafruit_MPR121();
+    wearbo.m_cap = Adafruit_MPR121();
 
-    // if (!wearbo.m_cap.begin(0x5A)) {
-    //     Serial.println("MPR121 not found, check wiring?");
-    //     while (1)
-    //         ;
-    // }
-    // Serial.println("MPR121 found!");
+    if (!wearbo.m_cap.begin(0x5A)) {
+        Serial.println("MPR121 not found, check wiring?");
+        while (1)
+            ;
+    }
+    Serial.println("MPR121 found!");
 
     M5.begin();
-    //bleKeyboard.begin();
+    bleKeyboard.begin();
 
-    // Wire.begin(32, 33);
+    Wire.begin(32, 33);
 
-    // pinMode(vib_pin, OUTPUT);
+    pinMode(vib_pin, OUTPUT);
 }
 
 
@@ -224,8 +224,7 @@ void loop()
                 //levenshtein_distance((String)wearbo.m_input_data, pattern)の最小値を求める
                 for (auto hw : hw_lst) {
                     int dist_tmp = levenshtein_distance((String)wearbo.m_input_data, hw.m_pattern);
-                    //Serial.println("dist_tmp");
-                    Serial.println(hw.m_output);
+                    Serial.println("dist_tmp");
                     Serial.println(dist_tmp);
                     if (dist_tmp < dist_min){
                         dist_min = dist_tmp;

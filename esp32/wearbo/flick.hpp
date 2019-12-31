@@ -1,7 +1,7 @@
 #ifndef INCLUDE_GUARD_FLICK_HPP
 #define INCLUDE_GUARD_FLICK_HPP
 
-//#include "Adafruit_MPR121.h"
+#include "Adafruit_MPR121.h"
 #include "Arduino.h"
 #include "bluetooth.hpp"
 #include <Wire.h>
@@ -62,7 +62,7 @@ public:
     void change_ulst();
     String m_key_lst[12] = {"-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"};
 
-    //Adafruit_MPR121 m_cap;
+    Adafruit_MPR121 m_cap;
 
     int m_key_num;
     int m_mode;  //0 : 共通;　1 : 英字フリック入力モード; 2 : 数字フリック入力モード;	3 : 手書き入力モード;
