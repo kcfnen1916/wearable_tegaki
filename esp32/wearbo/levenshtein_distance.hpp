@@ -1,6 +1,7 @@
-#ifndef INCLUDE_GUARD_FLICK_HPP
-#define INCLUDE_GUARD_FLICK_HPP
+#ifndef INCLUDE_GUARD_LEVENSHTEIN_DISTANCE_HPP
+#define INCLUDE_GUARD_LEVENSHTEIN_DISTANCE_HPP
 #include "Arduino.h"
+
 int min(int a, int b);
 int levenshtein_distance(String a, String b);
-#endif  // INCLUDE_GUARD_HAND_WRITING_HPP
+#endif  // INCLUDE_GUARD_LEVENSHTEIN_DISTANCE_HPP
