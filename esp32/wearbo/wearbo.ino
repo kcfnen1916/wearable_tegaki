@@ -238,6 +238,8 @@ void loop()
                 if (output == "xbly") {
                     if (wearbo.m_input_data.indexOf("m") != -1) {
                         output = "xb";
+                    } else {
+                        output = "yl";
                     }
                     if (wearbo.m_input_data.indexOf("u") != -1) {
                         output = "xy";
