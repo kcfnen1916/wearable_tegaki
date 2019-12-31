@@ -142,21 +142,21 @@ void setup()
     Serial.begin(115200);
     Serial.println("Starting wearbo");
 
-    wearbo.m_cap = Adafruit_MPR121();
+    //wearbo.m_cap = Adafruit_MPR121();
 
-    if (!wearbo.m_cap.begin(0x5A)) {
-        Serial.println("MPR121 not found, check wiring?");
-        while (1)
-            ;
-    }
-    Serial.println("MPR121 found!");
+    // if (!wearbo.m_cap.begin(0x5A)) {
+    //     Serial.println("MPR121 not found, check wiring?");
+    //     while (1)
+    //         ;
+    // }
+    // Serial.println("MPR121 found!");
 
     M5.begin();
-    bleKeyboard.begin();
+    //bleKeyboard.begin();
 
-    Wire.begin(32, 33);
+    // Wire.begin(32, 33);
 
-    pinMode(vib_pin, OUTPUT);
+    // pinMode(vib_pin, OUTPUT);
 }
 
 
