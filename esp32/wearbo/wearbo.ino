@@ -89,7 +89,7 @@ Gesture nine = Gesture("m", 1, "9", 2);
 
 HandWriting a_hw = HandWriting("a", "u_y_t_g_b_n_j_u_j_m");
 HandWriting x_hw = HandWriting("x", "t_h_m_u_h_b");
-HandWriting b_hw = HandWriting("b", "t_g_b_g_h_n_b");
+HandWriting b_hw = HandWriting("b", "t_g_b_g_h_b");
 HandWriting c_hw = HandWriting("c", "u_y_t_g_b_n_m");
 HandWriting d_hw = HandWriting("d", "j_h_n_m_j_u_j_m");
 HandWriting d_hw2 = HandWriting("d", "h_g_b_n_h_y_h_n");
@@ -224,7 +224,8 @@ void loop()
                 //levenshtein_distance((String)wearbo.m_input_data, pattern)の最小値を求める
                 for (auto hw : hw_lst) {
                     int dist_tmp = levenshtein_distance((String)wearbo.m_input_data, hw.m_pattern);
-                    Serial.println("dist_tmp");
+                    //Serial.println("dist_tmp");
+                    Serial.println(hw.m_output);
                     Serial.println(dist_tmp);
                     if (dist_tmp < dist_min){
                         dist_min = dist_tmp;

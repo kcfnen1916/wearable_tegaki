@@ -132,7 +132,7 @@ void Wearbo::record()
     unsigned long now_ = 0;
     int wait_seconds = 500;
     Serial.println("recoding now...");
-    m_input_data = "u_y_t_g_b_n_m_j_u_j_m";
+    m_input_data = "t_g_b_h_g_b_n";
 }
 
 
