@@ -220,23 +220,24 @@ void loop()
                 output = "";
             } else {
                 Serial.println("HANDWRITING");
-                int dist_min = 100;
+                float dt_min = 100;
                 //1shtein_distance((String)wearbo.m_input_data, pattern)の最小値を求める
                 for (auto hw : hw_lst) {
-                    int dist_tmp = levenshtein_distance((String)wearbo.m_input_data, hw.m_pattern, 0);
+                    int dist_tmp = levenshtein_distance((String)wearbo.m_input_data, hw.m_pattern);
                     //levenstein距離を正規化
-                    int n =  (String)wearbo.m_input_data.length();
+                    int n =  ((String)wearbo.m_input_data).length();
                     int m =  hw.m_pattern.length();
+                    float dt = 0;
                     if (n>m){
-                        dist_tmp = dist_tmp/n;
+                        dt = (float)dist_tmp/n;
                     }
                     else{
-                        dist_tmp = dist_tmp/m;
+                        dt = (float)dist_tmp/m;
                     }
                     Serial.println("dist_tmp"+hw.m_output);
-                    Serial.println(dist_tmp);
-                    if (dist_tmp < dist_min){
-                        dist_min = dist_tmp;
+                    Serial.println(dt);
+                    if (dt < dt_min){
+                        dt_min = dt;
                         output = hw.m_output;
                     }
                 }

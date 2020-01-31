@@ -3,5 +3,5 @@
 #include "Arduino.h"
 
 int min(int a, int b);
-int levenshtein_distance(String a, String b, int index);
+int levenshtein_distance(String a, String b);
 #endif  // INCLUDE_GUARD_LEVENSHTEIN_DISTANCE_HPP
