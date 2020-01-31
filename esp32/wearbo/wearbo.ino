@@ -177,7 +177,7 @@ void loop()
                 }
             }
         }
-        //Serial.println(output);
+        Serial.println(output);
         if (output == "CHANGE_ULST") {
             wearbo.change_ulst();
         } else if (output == "CHANGE_MODE1") {
@@ -203,7 +203,7 @@ void loop()
                     }
                 }
             }
-            //Serial.println(output);
+            Serial.println(output);
             if (output == "CHANGE_ULST") {
                 wearbo.change_ulst();
             } else if (output == "CHANGE_MODE1") {
@@ -221,17 +221,25 @@ void loop()
             } else {
                 Serial.println("HANDWRITING");
                 int dist_min = 100;
-                //levenshtein_distance((String)wearbo.m_input_data, pattern)の最小値を求める
+                //1shtein_distance((String)wearbo.m_input_data, pattern)の最小値を求める
                 for (auto hw : hw_lst) {
-                    int dist_tmp = levenshtein_distance((String)wearbo.m_input_data, hw.m_pattern);
-                    Serial.println("dist_tmp");
+                    int dist_tmp = levenshtein_distance((String)wearbo.m_input_data, hw.m_pattern, 0);
+                    //levenstein距離を正規化
+                    int n =  (String)wearbo.m_input_data.length();
+                    int m =  hw.m_pattern.length();
+                    if (n>m){
+                        dist_tmp = dist_tmp/n;
+                    }
+                    else{
+                        dist_tmp = dist_tmp/m;
+                    }
+                    Serial.println("dist_tmp"+hw.m_output);
                     Serial.println(dist_tmp);
                     if (dist_tmp < dist_min){
                         dist_min = dist_tmp;
                         output = hw.m_output;
                     }
                 }
-
                 // for (auto hw : hw_lst) {
                 //     if (hw.m_begin == (String)wearbo.m_input_data.charAt(0) && hw.m_end == (String)wearbo.m_input_data.charAt(wearbo.m_input_data.length() - 1)) {
                 //         output.concat(hw.m_output);
@@ -310,9 +318,11 @@ void loop()
             if (wearbo.m_ulst == 1) {
                 Serial.println("output");
                 Serial.println(low2up(output.charAt(0)));
+                send_ble(low2up(output.charAt(0)));
             } else {
                 Serial.println("output");
                 Serial.println(output);
+                send_ble(output);
             }
         }
     }
