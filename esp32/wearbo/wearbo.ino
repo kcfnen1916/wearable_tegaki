@@ -94,6 +94,7 @@ HandWriting b_hw2 = HandWriting("b", "t_g_b_g_h_n_b");
 HandWriting b_hw3 = HandWriting("b", "y_h_n_j_n");
 HandWriting b_hw4 = HandWriting("b", "y_h_n_h_j_m_n");
 HandWriting b_hw5 = HandWriting("b", "t_g_b_h_j_m_n_b");
+HandWriting b_hw6 = HandWriting("b", "y_h_n_j_n");
 HandWriting c_hw = HandWriting("c", "u_y_t_g_b_n_m");
 HandWriting d_hw = HandWriting("d", "j_h_n_m_j_u_j_m");
 HandWriting d_hw2 = HandWriting("d", "h_g_b_n_h_y_h_n");
@@ -114,19 +115,24 @@ HandWriting j_hw = HandWriting("j", "h_n_b_y");
 HandWriting j_hw2 = HandWriting("j", "h_n_b_g_y");
 HandWriting k_hw = HandWriting("k", "t_g_b_h_g_n");
 HandWriting k_hw2 = HandWriting("k","y_h_n_j_h_m");
-HandWriting p_hw2 = HandWriting("p","y_h_n_y_u_j_h");
-HandWriting b_hw6 = HandWriting("b", "y_h_n_j_n");
-HandWriting q_hw2 = HandWriting("q","y_t_g_h_y_h_n");
 HandWriting l_hw = HandWriting("l","y_h_n");
 HandWriting l_hw2 = HandWriting("l","t_g_b");
 HandWriting l_hw3 = HandWriting("l", "u_j_m");
+//HandWriting l_hw4 = HandWriting("l", "b_h_y_h_m");//これはあとで消すかも
 HandWriting m_hw = HandWriting("m","t_g_b_g_y_h_n_h_u_j_m");
-HandWriting z_hw = HandWriting("z", "t_y_u_h_b_n_m");
 HandWriting n_hw = HandWriting("n", "t_g_b_g_y_u_j_m");
 HandWriting o_hw = HandWriting("o", "y_t_g_b_n_m_j_u_y");
 HandWriting p_hw = HandWriting("p", "t_g_b_t_y_h_g");
+HandWriting p_hw2 = HandWriting("p", "t_y_h_g_t_g_b");
+HandWriting p_hw3 = HandWriting("p", "y_u_j_h_y_h_n");
+HandWriting p_hw4 = HandWriting("p", "y_h_n_y_u_j_h");
+HandWriting p_hw5 = HandWriting("p", "t_y_u_j_h_g_t_g_b");
+HandWriting p_hw6 = HandWriting("p", "t_g_b_t_y_u_j_h_g");
 HandWriting q_hw = HandWriting("q", "u_y_h_j_u_j_m");
+HandWriting q_hw2 = HandWriting("q", "y_t_g_h_y_h_n");
+HandWriting q_hw3 = HandWriting("q", "u_y_t_g_h_j_u_j_m");
 HandWriting r_hw = HandWriting("r", "t_g_b_g_y_u");
+HandWriting r_hw2 = HandWriting("r", "t_g_b_g_h_u");
 HandWriting s_hw = HandWriting("s", "u_y_t_g_h_j_m_n_b");
 HandWriting t_hw = HandWriting("t", "g_h_j_y_h_n_m");
 HandWriting u_hw = HandWriting("u", "t_g_b_n_j_u_j_m");
@@ -134,10 +140,11 @@ HandWriting v_hw = HandWriting("v", "t_g_n_j_u");
 HandWriting w_hw = HandWriting("w", "t_g_b_h_y_h_m_j_u");
 HandWriting x_hw = HandWriting("x", "t_h_m_u_h_b");
 HandWriting y_hw = HandWriting("y", "t_h_u_h_b");
+HandWriting z_hw = HandWriting("z", "t_y_u_h_b_n_m");
+
 
 Gesture ges_lst[61] = {right, left, enter, mode_10, mode_11, mode_20, mode_21, mode_30, mode_31, b, c, d, f, g, h, j, k, l, n, o, p, q, s, t, u, v, x, y, z, hyphen, slash, sharp, colon, brcr, quot, dubquot, comma, question, exclam, spc, delet, a, e, i, m, r, w, at, brcl, period, chuplow, zero, one, two, three, four, five, six, seven, eight, nine};
-HandWriting hw_lst[37] = {a_hw, x_hw, b_hw, c_hw, d_hw, d_hw2, e_hw, f_hw, g_hw, g_hw2, h_hw, h_hw2, i_hw, i_hw2, i_hw3, j_hw, k_hw, k_hw2, p_hw2, b_hw2, q_hw2, l_hw, l_hw2, l_hw3, m_hw, z_hw, n_hw, o_hw, p_hw, q_hw, r_hw, s_hw, t_hw, u_hw, v_hw, w_hw, y_hw};
-
+HandWriting hw_lst[53] = {a_hw, a_hw2, b_hw, b_hw2, b_hw3, b_hw4, b_hw5, b_hw6, c_hw, d_hw, d_hw2, d_hw3, d_hw4, d_hw5, e_hw, e_hw2, f_hw, g_hw, g_hw2, h_hw, h_hw2, i_hw, i_hw2, i_hw3, j_hw, j_hw2, k_hw, k_hw2, l_hw, l_hw2, l_hw3, m_hw, n_hw, o_hw, p_hw, p_hw2, p_hw3, p_hw4,p_hw5,p_hw6, q_hw, q_hw2, q_hw3, r_hw, r_hw2, s_hw, t_hw, u_hw, v_hw, w_hw, x_hw, y_hw, z_hw};
 int vib_pin = 26;
 
 // void setup()
@@ -208,6 +215,8 @@ void loop()
             for (auto g : ges_lst) {
                 if (g.m_mode == 1 || g.m_mode == 0) {
                     output = g.judge_gesture(wearbo.m_input_data);
+                    Serial.println("ここ");
+                    Serial.println(output);
                     if (output != "NOT") {
                         break;
                     }

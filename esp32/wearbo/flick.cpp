@@ -1,6 +1,5 @@
 #include "flick.hpp"
 
-
 Key::Key(int pin, String name, String hwc, Wearbo& wearbo, bool unique_key)
 {
     m_pin = pin;
@@ -9,7 +8,6 @@ Key::Key(int pin, String name, String hwc, Wearbo& wearbo, bool unique_key)
     m_unique_key = unique_key;
     wearbo.m_key_lst[pin] = hwc;
 }
-
 
 bool Key::operator!=(const Key& r) const
 {
@@ -51,7 +49,7 @@ String Gesture::judge_gesture(String input_data)
 Wearbo::Wearbo(int key_num)
 {
     m_key_num = key_num;
-    m_mode = 3;
+    m_mode = 2;
     m_ulst = 0;
     m_lasttouched = 0;
     m_currtouched = 0;
@@ -99,7 +97,6 @@ void Wearbo::record()
                 }
             }
         }
-
         now_ = millis();
         ep_time_from_last = now_ - last_now;
         if (abs(ep_time_from_last) > wait_seconds && start_time != last_now) {
@@ -107,6 +104,7 @@ void Wearbo::record()
         }
         lasttouched = currtouched;
     }
+    Serial.println(m_input_data);
 }
 
 
