@@ -48,11 +48,10 @@ String Gesture::judge_gesture(String input_data)
     }
 }
 
-
 Wearbo::Wearbo(int key_num)
 {
     m_key_num = key_num;
-    m_mode = 2;
+    m_mode = 3;
     m_ulst = 0;
     m_lasttouched = 0;
     m_currtouched = 0;
@@ -72,8 +71,8 @@ void Wearbo::record()
     unsigned long rec_time = 0;
     unsigned long ep_time_from_last = 0;
     unsigned long now_ = 0;
-    int wait_seconds = 500;
-    Serial.println("recoding...");
+    int wait_seconds = 300;
+    //Serial.println("recoding...");
     while (true) {
         currtouched = m_cap.touched();
         if (rec == 0) {
@@ -88,8 +87,13 @@ void Wearbo::record()
                 if ((String)m_input_data.charAt(m_input_data.length() - 1) != m_key_lst[i]) {
                     if ((m_key_lst[i] != "d") && (m_key_lst[i] != "c") && (m_key_lst[i] != "s")){
                         m_input_data.concat(m_key_lst[i]);
-                        if (m_input_data.length() == 1 && (m_key_lst[i] == "d" || m_key_lst[i] == "s" || m_key_lst[i] == "c")) {
-                            m_unique = true;
+                        if (m_input_data.length() == 1){
+                            if (m_key_lst[i] == "d" || m_key_lst[i] == "s" || m_key_lst[i] == "c"){
+                                m_unique = true;
+                            }
+                            else{
+                                break;
+                            }
                         }
                     }
                 }
@@ -103,7 +107,6 @@ void Wearbo::record()
         }
         lasttouched = currtouched;
     }
-    Serial.println(m_input_data);
 }
 
 

@@ -88,12 +88,20 @@ Gesture eight = Gesture("n", 1, "8", 2);
 Gesture nine = Gesture("m", 1, "9", 2);
 
 HandWriting a_hw = HandWriting("a", "u_y_t_g_b_n_j_u_j_m");
-HandWriting x_hw = HandWriting("x", "t_h_m_u_h_b");
+HandWriting a_hw2 = HandWriting("a", "j_y_g_n_j_m");
 HandWriting b_hw = HandWriting("b", "t_g_b_h_b");
+HandWriting b_hw2 = HandWriting("b", "t_g_b_g_h_n_b");
+HandWriting b_hw3 = HandWriting("b", "y_h_n_j_n");
+HandWriting b_hw4 = HandWriting("b", "y_h_n_h_j_m_n");
+HandWriting b_hw5 = HandWriting("b", "t_g_b_h_j_m_n_b");
 HandWriting c_hw = HandWriting("c", "u_y_t_g_b_n_m");
 HandWriting d_hw = HandWriting("d", "j_h_n_m_j_u_j_m");
 HandWriting d_hw2 = HandWriting("d", "h_g_b_n_h_y_h_n");
+HandWriting d_hw3 = HandWriting("d", "m_h_n_m_j_u_j_m");
+HandWriting d_hw4 = HandWriting("d", "b_f_v_b_g_t_g_b");
+HandWriting d_hw5 = HandWriting("d", "m_h_g_b_n_m_j_u_j_m");
 HandWriting e_hw = HandWriting("e","g_h_j_u_y_t_g_b_n_m");
+HandWriting e_hw2 = HandWriting("e","g_h_j_y_g_b_n_m");
 HandWriting f_hw = HandWriting("f","u_y_h_n_g_h_j");
 HandWriting g_hw = HandWriting("g","u_y_h_j_u_j_m_n");
 HandWriting g_hw2 = HandWriting("g","y_t_g_h_y_h_n_b");
@@ -103,10 +111,11 @@ HandWriting i_hw = HandWriting("i", "h_n_y");
 HandWriting i_hw2 = HandWriting("i", "g_b_t");
 HandWriting i_hw3 = HandWriting("i", "j_m_u");
 HandWriting j_hw = HandWriting("j", "h_n_b_y");
+HandWriting j_hw2 = HandWriting("j", "h_n_b_g_y");
 HandWriting k_hw = HandWriting("k", "t_g_b_h_g_n");
 HandWriting k_hw2 = HandWriting("k","y_h_n_j_h_m");
 HandWriting p_hw2 = HandWriting("p","y_h_n_y_u_j_h");
-HandWriting b_hw2 = HandWriting("b", "y_h_n_j_n");
+HandWriting b_hw6 = HandWriting("b", "y_h_n_j_n");
 HandWriting q_hw2 = HandWriting("q","y_t_g_h_y_h_n");
 HandWriting l_hw = HandWriting("l","y_h_n");
 HandWriting l_hw2 = HandWriting("l","t_g_b");
@@ -123,6 +132,7 @@ HandWriting t_hw = HandWriting("t", "g_h_j_y_h_n_m");
 HandWriting u_hw = HandWriting("u", "t_g_b_n_j_u_j_m");
 HandWriting v_hw = HandWriting("v", "t_g_n_j_u");
 HandWriting w_hw = HandWriting("w", "t_g_b_h_y_h_m_j_u");
+HandWriting x_hw = HandWriting("x", "t_h_m_u_h_b");
 HandWriting y_hw = HandWriting("y", "t_h_u_h_b");
 
 Gesture ges_lst[61] = {right, left, enter, mode_10, mode_11, mode_20, mode_21, mode_30, mode_31, b, c, d, f, g, h, j, k, l, n, o, p, q, s, t, u, v, x, y, z, hyphen, slash, sharp, colon, brcr, quot, dubquot, comma, question, exclam, spc, delet, a, e, i, m, r, w, at, brcl, period, chuplow, zero, one, two, three, four, five, six, seven, eight, nine};
@@ -216,31 +226,43 @@ void loop()
                 send_ble(output);
             }
         } else {
-            if (wearbo.m_input_data.length() == 0) {
+            if (wearbo.m_input_data.length() <= 1) {
                 output = "";
             } else {
                 Serial.println("HANDWRITING");
                 float dt_min = 100;
                 //1shtein_distance((String)wearbo.m_input_data, pattern)の最小値を求める
+                int len_n =  ((String)wearbo.m_input_data).length();
                 for (auto hw : hw_lst) {
+                    Serial.println((String)wearbo.m_input_data);
                     int dist_tmp = levenshtein_distance((String)wearbo.m_input_data, hw.m_pattern);
                     //levenstein距離を正規化
-                    int n =  ((String)wearbo.m_input_data).length();
-                    int m =  hw.m_pattern.length();
+                    int len_m =  hw.m_pattern.length();
                     float dt = 0;
-                    if (n>m){
-                        dt = (float)dist_tmp/n;
+                    if (len_n>len_m){
+                        dt = (float)dist_tmp/len_n;
                     }
                     else{
-                        dt = (float)dist_tmp/m;
+                        dt = (float)dist_tmp/len_m;
                     }
-                    Serial.println("dist_tmp"+hw.m_output);
+                    Serial.println("dist_tmp  "+hw.m_output);
                     Serial.println(dt);
                     if (dt < dt_min){
                         dt_min = dt;
                         output = hw.m_output;
                     }
                 }
+                extern int i_FLAG;
+                extern int y_FLAG;
+                if ((y_FLAG == 1)&&(output == "y")){
+                    output = "x";
+                }
+                if ((i_FLAG == 1)&&(output == "i")){
+                    output = "j";
+                }
+
+                i_FLAG = 0;
+                y_FLAG = 0;
                 // for (auto hw : hw_lst) {
                 //     if (hw.m_begin == (String)wearbo.m_input_data.charAt(0) && hw.m_end == (String)wearbo.m_input_data.charAt(wearbo.m_input_data.length() - 1)) {
                 //         output.concat(hw.m_output);
@@ -315,16 +337,19 @@ void loop()
                 // } else if (output.length() == 0) {
                 //     output = "=";
                 // }
-            }
-            if (wearbo.m_ulst == 1) {
-                Serial.println("output");
-                Serial.println(low2up(output.charAt(0)));
-                send_ble(low2up(output.charAt(0)));
-            } else {
                 Serial.println("output");
                 Serial.println(output);
                 send_ble(output);
             }
+            // if (wearbo.m_ulst == 1) {
+            //     Serial.println("output");
+            //     Serial.println(low2up(output.charAt(0)));
+            //     send_ble(low2up(output.charAt(0)));
+            // } else {
+            //     Serial.println("output");
+            //     Serial.println(output);
+            //     send_ble(output);
+            // }
         }
     }
     // delay(80);

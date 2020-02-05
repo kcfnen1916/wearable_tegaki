@@ -1,6 +1,9 @@
 #include "levenshtein_distance.hpp"
 #include "Arduino.h"
 
+int i_FLAG = 0;
+int y_FLAG = 0;
+
 int min(int a, int b){
     if (a > b){
         return b;
@@ -24,13 +27,19 @@ int levenshtein_distance(String a, String b)
     for(int i=1;i<n+1;i++){
         for (int j=1;j<m+1;j++){
             int cost;
+            if (a.charAt(i-1) == ((String)"b").charAt(0)){
+                i_FLAG = 1;
+            }
+            if (a.charAt(i-1) == ((String)"m").charAt(0)){
+                y_FLAG = 1;
+            }
             if (a.charAt(i-1) == b.charAt(j-1))
             {
                 cost = 0;
             }
             else{
                 if (i==1&&j==1){
-                    cost = 5;
+                    cost = 2;
                 }
                 else{
                     cost = 1;
