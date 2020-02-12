@@ -1,4 +1,3 @@
-#include <Wire.h>
 #include "Adafruit_MPR121.h"
 
 #ifndef _BV
@@ -53,9 +52,9 @@ void loop() {
     // it if *is* touched and *wasnt* touched before, send the keyname!
     if ((currtouched & _BV(i)) && !(lasttouched & _BV(i)) ) {
       pressed_key = key[i];
-      if (last_pressed_key != pressed_key && pressed_key != '0'){
-        Serial.print(pressed_key);
-      }
+      //if (last_pressed_key != pressed_key && pressed_key != '0'){
+      Serial.print(pressed_key);
+      //}
     }
   }
 

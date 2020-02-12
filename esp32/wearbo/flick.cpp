@@ -49,7 +49,7 @@ String Gesture::judge_gesture(String input_data)
 Wearbo::Wearbo(int key_num)
 {
     m_key_num = key_num;
-    m_mode = 2;
+    m_mode = 3;
     m_ulst = 0;
     m_lasttouched = 0;
     m_currtouched = 0;
@@ -121,34 +121,3 @@ void Wearbo::change_ulst()
         m_ulst = 1;
     }
 }
-
-
-// void Wearbo::record()
-// {
-//     uint16_t lasttouched = 0;
-//     uint16_t currtouched = 0;
-//     int rec = 0;
-//     unsigned long start_time = 0;
-//     unsigned long last_now = 0;
-//     unsigned long rec_time = 0;
-//     unsigned long ep_time_from_last = 0;
-//     unsigned long now_ = 0;
-//     int wait_seconds = 500;
-//     Serial.println("recoding now...");
-//     m_input_data = "u_y_t_g_b_n_m_j_u_j_m";
-// }
-
-
-// void Wearbo::change_mode(int next_mode)
-// {
-//     m_mode = next_mode;
-// }
-
-// void Wearbo::change_ulst()
-// {
-//     if (m_ulst == 1) {
-//         m_ulst = 0;
-//     } else {
-//         m_ulst = 1;
-//     }
-// }

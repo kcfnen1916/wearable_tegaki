@@ -147,13 +147,6 @@ Gesture ges_lst[61] = {right, left, enter, mode_10, mode_11, mode_20, mode_21, m
 HandWriting hw_lst[53] = {a_hw, a_hw2, b_hw, b_hw2, b_hw3, b_hw4, b_hw5, b_hw6, c_hw, d_hw, d_hw2, d_hw3, d_hw4, d_hw5, e_hw, e_hw2, f_hw, g_hw, g_hw2, h_hw, h_hw2, i_hw, i_hw2, i_hw3, j_hw, j_hw2, k_hw, k_hw2, l_hw, l_hw2, l_hw3, m_hw, n_hw, o_hw, p_hw, p_hw2, p_hw3, p_hw4,p_hw5,p_hw6, q_hw, q_hw2, q_hw3, r_hw, r_hw2, s_hw, t_hw, u_hw, v_hw, w_hw, x_hw, y_hw, z_hw};
 int vib_pin = 26;
 
-// void setup()
-// {
-//     Serial.begin(115200);
-//     Serial.println("Starting wearbo");
-
-//     M5.begin();
-// }
 void setup()
 {
     Serial.begin(115200);
@@ -175,7 +168,6 @@ void setup()
 
     pinMode(vib_pin, OUTPUT);
 }
-
 
 void loop()
 {
@@ -215,8 +207,6 @@ void loop()
             for (auto g : ges_lst) {
                 if (g.m_mode == 1 || g.m_mode == 0) {
                     output = g.judge_gesture(wearbo.m_input_data);
-                    Serial.println("ここ");
-                    Serial.println(output);
                     if (output != "NOT") {
                         break;
                     }
@@ -254,8 +244,8 @@ void loop()
                     else{
                         dt = (float)dist_tmp/len_m;
                     }
-                    Serial.println("dist_tmp  "+hw.m_output);
-                    Serial.println(dt);
+                    //Serial.println("dist_tmp  "+hw.m_output);
+                    //Serial.println(dt);
                     if (dt < dt_min){
                         dt_min = dt;
                         output = hw.m_output;
@@ -350,15 +340,15 @@ void loop()
                 Serial.println(output);
                 send_ble(output);
             }
-            // if (wearbo.m_ulst == 1) {
-            //     Serial.println("output");
-            //     Serial.println(low2up(output.charAt(0)));
-            //     send_ble(low2up(output.charAt(0)));
-            // } else {
-            //     Serial.println("output");
-            //     Serial.println(output);
-            //     send_ble(output);
-            // }
+            if (wearbo.m_ulst == 1) {
+                Serial.println("output");
+                Serial.println(low2up(output.charAt(0)));
+                send_ble(low2up(output.charAt(0)));
+            } else {
+                Serial.println("output");
+                Serial.println(output);
+                send_ble(output);
+            }
         }
     }
     // delay(80);
