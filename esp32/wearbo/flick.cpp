@@ -83,14 +83,17 @@ void Wearbo::record()
                 last_now = millis();
                 rec_time = (last_now - start_time) * 1000;
                 if ((String)m_input_data.charAt(m_input_data.length() - 1) != m_key_lst[i]) {
-                    if ((m_key_lst[i] != "d") && (m_key_lst[i] != "c") && (m_key_lst[i] != "s")){
+                    if (m_input_data.length() < 1) {
+                        if (m_key_lst[i] == "d" || m_key_lst[i] == "s" || m_key_lst[i] == "c") {
+                            m_unique = true;
+                        }
                         m_input_data.concat(m_key_lst[i]);
-                        if (m_input_data.length() == 1){
-                            if (m_key_lst[i] == "d" || m_key_lst[i] == "s" || m_key_lst[i] == "c"){
-                                m_unique = true;
-                            }
-                            else{
-                                break;
+                    } else {
+                        if (m_unique) {
+                            m_input_data.concat(m_key_lst[i]);
+                        } else {
+                            if ((m_key_lst[i] != "d") && (m_key_lst[i] != "c") && (m_key_lst[i] != "s")) {
+                                m_input_data.concat(m_key_lst[i]);
                             }
                         }
                     }
