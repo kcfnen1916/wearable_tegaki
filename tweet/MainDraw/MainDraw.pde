@@ -9,6 +9,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import processing.serial.*;
+import ddf.minim.*;
+
+Minim minim;
+AudioSample roller;
+AudioSample foot;
+AudioPlayer player; 
 
 WebDriver driver;
 Serial myport;
@@ -58,6 +64,8 @@ void setup(){
   font = createFont("Arial",text_size);
   //フォントを指定
   textFont(font);
+  minim = new Minim(this);
+  player = minim.loadFile("a.mp3");
 }
 
 void draw(){
@@ -87,6 +95,11 @@ void draw(){
       descent = textDescent();
       textHeight = ascent + descent; 
       textPosY = int(height-textHeight)/2 - 10;
+      //roller = minim.loadSample(x.substring(0,1)+".wav", 2048);
+      //roller.trigger();
+      player.play();
+      minim = new Minim(this);
+      player = minim.loadFile("a.mp3");
     }
     text(x, int(width/2), textPosY);
     

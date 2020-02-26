@@ -1,6 +1,6 @@
 void login_twitter(){
   driver.get("https://twitter.com");
-  delay(1000); //1秒くらい待機
+  delay(1500); //1秒くらい待機
   driver.findElement(By.linkText("ログイン")).click();
   delay(1000); //1秒くらい待機
   driver.switchTo().activeElement().sendKeys(TwiId); //アクティブな要素に文字列を送る
