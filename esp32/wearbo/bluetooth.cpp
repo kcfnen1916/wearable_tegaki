@@ -13,6 +13,8 @@ void send_ble(String output)
         bleKeyboard.write(KEY_LEFT_ARROW);
     } else if (output == "RIGHT") {
         bleKeyboard.write(KEY_RIGHT_ARROW);
+    } else if (output == "SPACE"){
+       bleKeyboard.print(" ");
     } else {
         bleKeyboard.print(output);
     }

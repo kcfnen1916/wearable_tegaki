@@ -88,6 +88,7 @@ void Wearbo::record()
                             m_unique = true;
                         }
                         m_input_data.concat(m_key_lst[i]);
+                        Serial.println(m_key_lst[i]+"1");
                     } else {
                         if (m_unique) {
                             m_input_data.concat(m_key_lst[i]);
@@ -96,10 +97,13 @@ void Wearbo::record()
                                 m_input_data.concat(m_key_lst[i]);
                             }
                         }
+                        //m_input_data.concat(m_key_lst[i]);
+                        Serial.println(m_key_lst[i]+"1");
                     }
                 }
             }
         }
+        //Serial.println(m_input_data);
         now_ = millis();
         ep_time_from_last = now_ - last_now;
         if (abs(ep_time_from_last) > wait_seconds && start_time != last_now) {
@@ -107,7 +111,7 @@ void Wearbo::record()
         }
         lasttouched = currtouched;
     }
-    Serial.println(m_input_data);
+    //Serial.println(m_input_data);
 }
 
 

@@ -115,10 +115,11 @@ HandWriting j_hw = HandWriting("j", "h_n_b_y");
 HandWriting j_hw2 = HandWriting("j", "h_n_b_g_y");
 HandWriting k_hw = HandWriting("k", "t_g_b_h_g_n");
 HandWriting k_hw2 = HandWriting("k","y_h_n_j_h_m");
+HandWriting k_hw3 = HandWriting("k","t_g_b_u_g_m");
 HandWriting l_hw = HandWriting("l","y_h_n");
 HandWriting l_hw2 = HandWriting("l","t_g_b");
 HandWriting l_hw3 = HandWriting("l", "u_j_m");
-//HandWriting l_hw4 = HandWriting("l", "b_h_y_h_m");//これはあとで消すかも
+HandWriting l_hw4 = HandWriting("l", "b_h_y_h_m");//これはあとで消すかも
 HandWriting m_hw = HandWriting("m","t_g_b_g_y_h_n_h_u_j_m");
 HandWriting n_hw = HandWriting("n", "t_g_b_g_y_u_j_m");
 HandWriting o_hw = HandWriting("o", "y_t_g_b_n_m_j_u_y");
@@ -142,9 +143,8 @@ HandWriting x_hw = HandWriting("x", "t_h_m_u_h_b");
 HandWriting y_hw = HandWriting("y", "t_h_u_h_b");
 HandWriting z_hw = HandWriting("z", "t_y_u_h_b_n_m");
 
-
 Gesture ges_lst[61] = {right, left, enter, mode_10, mode_11, mode_20, mode_21, mode_30, mode_31, b, c, d, f, g, h, j, k, l, n, o, p, q, s, t, u, v, x, y, z, hyphen, slash, sharp, colon, brcr, quot, dubquot, comma, question, exclam, spc, delet, a, e, i, m, r, w, at, brcl, period, chuplow, zero, one, two, three, four, five, six, seven, eight, nine};
-HandWriting hw_lst[53] = {a_hw, a_hw2, b_hw, b_hw2, b_hw3, b_hw4, b_hw5, b_hw6, c_hw, d_hw, d_hw2, d_hw3, d_hw4, d_hw5, e_hw, e_hw2, f_hw, g_hw, g_hw2, h_hw, h_hw2, i_hw, i_hw2, i_hw3, j_hw, j_hw2, k_hw, k_hw2, l_hw, l_hw2, l_hw3, m_hw, n_hw, o_hw, p_hw, p_hw2, p_hw3, p_hw4,p_hw5,p_hw6, q_hw, q_hw2, q_hw3, r_hw, r_hw2, s_hw, t_hw, u_hw, v_hw, w_hw, x_hw, y_hw, z_hw};
+HandWriting hw_lst[55] = {a_hw, a_hw2, b_hw, b_hw2, b_hw3, b_hw4, b_hw5, b_hw6, c_hw, d_hw, d_hw2, d_hw3, d_hw4, d_hw5, e_hw, e_hw2, f_hw, g_hw, g_hw2, h_hw, h_hw2, i_hw, i_hw2, i_hw3, j_hw, j_hw2, k_hw, k_hw2, k_hw3, l_hw, l_hw2, l_hw3, l_hw4, m_hw, n_hw, o_hw, p_hw, p_hw2, p_hw3, p_hw4,p_hw5,p_hw6, q_hw, q_hw2, q_hw3, r_hw, r_hw2, s_hw, t_hw, u_hw, v_hw, w_hw, x_hw, y_hw, z_hw};
 int vib_pin = 26;
 
 void setup()
@@ -186,7 +186,7 @@ void loop()
                 }
             }
         }
-        Serial.println(output);
+        //Serial.println(output);
         if (output == "CHANGE_ULST") {
             wearbo.change_ulst();
         } else if (output == "CHANGE_MODE1") {
@@ -203,7 +203,8 @@ void loop()
             }
         }
     } else if (wearbo.m_mode == 3) {
-        if (wearbo.m_input_data.charAt(0) == 'd' || wearbo.m_input_data.charAt(0) == 's' || wearbo.m_input_data.charAt(0) == 'c') {
+        if (wearbo.m_input_data.charAt(0) == 'd' || wearbo.m_input_data.charAt(0) == 'c') {
+          //Serial.println(wearbo.m_input_data);
             for (auto g : ges_lst) {
                 if (g.m_mode == 1 || g.m_mode == 0) {
                     output = g.judge_gesture(wearbo.m_input_data);
@@ -212,7 +213,7 @@ void loop()
                     }
                 }
             }
-            Serial.println(output);
+            //Serial.println(output);
             if (output == "CHANGE_ULST") {
                 wearbo.change_ulst();
             } else if (output == "CHANGE_MODE1") {
@@ -228,12 +229,12 @@ void loop()
             if (wearbo.m_input_data.length() <= 1) {
                 output = "";
             } else {
-                Serial.println("HANDWRITING");
+                //Serial.println("HANDWRITING");
                 float dt_min = 100;
                 //1shtein_distance((String)wearbo.m_input_data, pattern)の最小値を求める
                 int len_n =  ((String)wearbo.m_input_data).length();
                 for (auto hw : hw_lst) {
-                    Serial.println((String)wearbo.m_input_data);
+                    //Serial.println((String)wearbo.m_input_data);
                     int dist_tmp = levenshtein_distance((String)wearbo.m_input_data, hw.m_pattern);
                     //levenstein距離を正規化
                     int len_m =  hw.m_pattern.length();
@@ -262,93 +263,26 @@ void loop()
 
                 i_FLAG = 0;
                 y_FLAG = 0;
-                // for (auto hw : hw_lst) {
-                //     if (hw.m_begin == (String)wearbo.m_input_data.charAt(0) && hw.m_end == (String)wearbo.m_input_data.charAt(wearbo.m_input_data.length() - 1)) {
-                //         output.concat(hw.m_output);
-                //     }
-                // }
-                // Serial.println(output);
-                // if (output == "hk") {
-                //     if (wearbo.m_input_data.indexOf("b") != -1) {
-                //         String check_part = wearbo.m_input_data.substring(wearbo.m_input_data.indexOf("b") + 1);
-                //         if (check_part.indexOf("g") != -1 && check_part.indexOf("g") < check_part.indexOf("h")) {
-                //             output = "h";
-                //         } else {
-                //             output = "k";
-                //         }
-                //     } else {
-                //         String check_part = wearbo.m_input_data.substring(wearbo.m_input_data.indexOf("n") + 1);
-                //         if (check_part.indexOf("h") != -1 && check_part.indexOf("h") < check_part.indexOf("j")) {
-                //             output = "h";
-                //         } else {
-                //             output = "k";
-                //         }
-                //     }
-                // }
-                // if (output == "xbly") {
-                //     if (wearbo.m_input_data.indexOf("m") != -1) {
-                //         output = "xb";
-                //     }
-                //     if (wearbo.m_input_data.indexOf("u") != -1) {
-                //         output = "xy";
-                //     } else {
-                //         output = "bl";
-                //     }
-                // }
-                // if (output == "mznu") {
-                //     if (wearbo.m_input_data.charAt(1) == 'y') {
-                //         output = "z";
-                //     } else {
-                //         output = "mnu";
-                //     }
-                // }
-                // if (output.length() > 1) {
-                //     int dist[2][10] = {{-1, -1, -1, -1, -1, -1, -1, -1, -1, -1}, {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1}};
-                //     int i = 0;
-                //     int index = 0;
-                //     for (auto hw : hw_lst) {
-                //         if (output.indexOf(hw.m_output) != -1 && hw.m_begin == (String)wearbo.m_input_data.charAt(0) && hw.m_end == (String)wearbo.m_input_data.charAt(wearbo.m_input_data.length() - 1)) {
-                //             dist[0][i] = abs((int)wearbo.m_input_data.length() - (int)hw.m_length);
-                //             dist[1][i] = index;
-                //             i++;
-                //         }
-                //         index++;
-                //     }
-                //     int min = 100;
-                //     int min_index = -1;
-                //     bool found = false;
-                //     Serial.println("For start");
-                //     for (i = 0; i < 10; i++) {
-                //         if (dist[0][i] == -1) {
-                //             break;
-                //         }
-                //         if (min > dist[0][i]) {
-                //             min = dist[0][i];
-                //             min_index = dist[1][i];
-                //             found = true;
-                //         } else if (min == dist[0][i]) {
-                //             if (hw_lst[dist[1][i]].m_via != "-" && wearbo.m_input_data.indexOf(hw_lst[dist[1][i]].m_via) != -1 && wearbo.m_input_data.indexOf(hw_lst[min_index].m_via) == -1) {
-                //                 min_index = dist[1][i];
-                //             }
-                //         }
-                //     }
-                //     output = hw_lst[min_index].m_output;
-                // } else if (output.length() == 0) {
-                //     output = "=";
-                // }
-                Serial.println("output");
-                Serial.println(output);
-                send_ble(output);
+
+     
+            }
+            if (wearbo.m_input_data.charAt(0) == 's'){
+              output = "SPACE";
+              //Serial.print(output);
             }
             if (wearbo.m_ulst == 1) {
-                Serial.println("output");
-                Serial.println(low2up(output.charAt(0)));
-                send_ble(low2up(output.charAt(0)));
+                //Serial.println(low2up(output.charAt(0)));
+                if (output != "SPACE"){
+                  send_ble(low2up(output.charAt(0)));
+                }
+                else{
+                  send_ble(output);
+                }
             } else {
-                Serial.println("output");
-                Serial.println(output);
+                //Serial.println(output);
                 send_ble(output);
             }
+            //Serial.println(output);
         }
     }
     // delay(80);

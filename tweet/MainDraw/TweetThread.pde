@@ -23,15 +23,14 @@ void start_twitter(){
 
 void write_tweet(String tweet){
   if (tweet.length() <= 4){
-      driver.switchTo().activeElement().sendKeys(tweet.substring(0,1));
+    driver.switchTo().activeElement().sendKeys(tweet.substring(0,1));
   }
-
-  else if ((tweet.length() >= 5) && (tweet.length() <= 7)){
+  else if ((tweet.length() >= 5) && (tweet.length() <= 8)){
     if (tweet.substring(0,5).equals("ENTER")){
        driver.switchTo().activeElement().sendKeys(Keys.ENTER);
     }
   }
-  else if (tweet.length() >= 8){
+  else if (tweet.length() >= 9){
     if (tweet.substring(0,9).equals("BACKSPACE")){
       driver.switchTo().activeElement().sendKeys(Keys.BACK_SPACE);
     }

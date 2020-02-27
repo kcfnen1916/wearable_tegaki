@@ -1,6 +1,6 @@
 /* autoTweet Ver:0.1 */
 
-// PROFILE_PATH, putDriverはPC依存
+// PROFILE_PATH, putDriverはPC依存, size()の中身はディスプレイ依存, port_idはマイコン依存
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -25,7 +25,7 @@ int d=0; //現在のカーソルのx位置
 int now_enter=0; //現在の行
 int x_space=3;
 int y_space=30;
-String port_id = "/dev/cu.usbserial-BD561307B6";
+String port_id = "/dev/cu.usbserial-6152C00AB6";
 int text_size=200;
 
 String TwiId = "@wearbo_sxsw";   //TwitterID
@@ -41,8 +41,13 @@ float textHeight;
 int textPosY;
 boolean tweetbottun = false;
 
+void settings(){
+  size(740,900); // これはディスプレイによって数字を変えたほうがいい
+}
+
 void setup(){
-  size(740,displayHeight);
+  print(displayHeight);
+  print(displayWidth);
   //driver setup
   System.setProperty("webdriver.chrome.driver", putDriver);
   ChromeOptions options = new ChromeOptions();
@@ -66,127 +71,51 @@ void setup(){
   textFont(font);
   minim = new Minim(this);
   player = minim.loadFile("a.mp3");
+  String[] args = {"SecondApplet"};   
+  SecondApplet sa = new SecondApplet();
+  PApplet.runSketch(args, sa);
 }
 
 void draw(){
   c = 1;
+  print(x);
   if(myport.available()>0){
     background(color(230, 230, 230, 255));
     x = myport.readString();
-    write_tweet(x);
-    if (x.length() >= 8){
-      textSize(height*0.20);
-      ascent = textAscent();
-      descent = textDescent();
-      textHeight = ascent + descent; 
-      textPosY = int(height-textHeight)/2;
-      x = "DELETE";
-    }
-    else if (x.length() >= 5){
-      textSize(height*0.20);
-      ascent = textAscent();
-      descent = textDescent();
-      textHeight = ascent + descent; 
-      textPosY = int(height-textHeight)/2;
+    if (x.charAt(1) == "1".charAt(0)){
+      //何もしない(もう一個のウィンドウで処理)
     }
     else{
-      textSize(height*0.5);
-      ascent = textAscent();
-      descent = textDescent();
-      textHeight = ascent + descent; 
-      textPosY = int(height-textHeight)/2 - 10;
-      //roller = minim.loadSample(x.substring(0,1)+".wav", 2048);
-      //roller.trigger();
-      player.play();
-      minim = new Minim(this);
-      player = minim.loadFile("a.mp3");
+      write_tweet(x);
+      if (x.length() >= 8){
+        textSize(height*0.20);
+        ascent = textAscent();
+        descent = textDescent();
+        textHeight = ascent + descent; 
+        textPosY = int(height-textHeight)/2;
+        x = "DELETE";
+      }
+      else if (x.length() >= 5){
+        textSize(height*0.20);
+        ascent = textAscent();
+        descent = textDescent();
+        textHeight = ascent + descent; 
+        textPosY = int(height-textHeight)/2;
+      }
+      else {
+        textSize(height*0.5);
+        ascent = textAscent();
+        descent = textDescent();
+        textHeight = ascent + descent; 
+        textPosY = int(height-textHeight)/2 - 10;
+        //roller = minim.loadSample(x.substring(0,1)+".wav", 2048);
+        //roller.trigger();
+        player.play();
+        minim = new Minim(this);
+        player = minim.loadFile("a.mp3");
+      }
+      text(x, int(width/2), textPosY);
     }
-    text(x, int(width/2), textPosY);
-    
-  //  if(x.length()>=5 && x.substring(0,5).equals("ENTER")){
-  //    println("enterin");
-  //    enter++;
-  //    now_enter++;
-  //    for(int i=enter;i>now_enter;i--){
-  //      now[i]=now[i-1];
-  //    }
-  //    println(d);
-  //    now[now_enter]=now[now_enter-1].substring(d);
-  //    now[now_enter-1]=now[now_enter-1].substring(0,d);
-  //    d=0;
-  //  }
-  //  else if(x.length()>=9 && x.substring(0,9).equals("BACKSPACE")){
-  //    println("delete");
-  //    if(now[now_enter]=="" && now_enter>0){
-  //      println("delete1");
-  //      enter--;
-  //      now_enter--;
-  //      d=now[now_enter].length();
-  //      for(int i=enter;i>now_enter;i--){
-  //        now[i]=now[i+1];
-  //      }
-  //      now[enter+1]="";
-  //    }
-  //    else if(now[now_enter]=="" && now_enter==0){
-  //      println("deletein");
-  //    }
-  //    else{
-  //      if(d==0 && now_enter>0){
-  //        println("buri");
-  //        enter--;
-  //        now_enter--;
-  //        d=now[now_enter].length();
-  //        now[now_enter]+=now[now_enter+1];
-  //        for(int i=enter;i>now_enter;i--){
-  //          now[i]=now[i+1];
-  //        }
-  //        now[enter+1]="";
-  //      }
-  //      else{
-  //        if(d!=0){
-  //          now[now_enter]=now[now_enter].substring(0,d-1)+now[now_enter].substring(d);
-  //          d--;
-  //        }
-  //      }
-  //    }
-  //  }
-  //  else if(x.length()>4 && x.substring(0,4).equals("LEFT")){
-  //    if(d>0) d--;
-  //    else if(d==0 && now_enter>0){
-  //      now_enter--;
-  //      d=now[now_enter].length();
-  //    }
-  //  }
-  //  else if(x.length()>5 && x.substring(0,5).equals("RIGHT")){
-  //    if(d<now[now_enter].length()) d++;
-  //    else if(d==now[now_enter].length() && now_enter!=enter){
-  //      now_enter++;
-  //      d=0;
-  //    }
-  //  }
-  //  else if(x.length()==3){
-  //    x=x.substring(0,1);
-  //    println("hello");
-  //    now[now_enter]=insert(now[now_enter],x,d);
-  //    //d+=x.length(); 
-  //    d++;
-  //  }
-  //  println("input:"+x);
-  //  //background(0);
-    
-  //  for(int i=0;i<=enter;i++){
-  //    if(i==now_enter){
-  //       if(d==now[i].length()) text(now[i]+'|',x_space,y_space*(i+1));
-  //       else{
-  //         //text(now[i].substring(0,d)+'_'+now[i].substring(d),x_space,y_space*(i+1));
-  //         text(now[i],x_space,y_space*(i+1));
-  //         text('|',textWidth(now[i].substring(0,d)),y_space*(i+1));
-  //         println("now:"+now_enter);
-  //         println("d:"+d);
-  //       }
-  //    }
-  //    else text(now[i],3,30*(i+1));
-  //  }
   }
   if (tweetbottun){
     background(color(230, 230, 230, 255));
@@ -204,5 +133,36 @@ void keyPressed() {
   if (key == ENTER) {
       tweetbottun = true;
       send_tweet();
+      start_twitter();
     }
+}
+
+//ここに2こめのディスプレイの処理をかく
+public class SecondApplet extends PApplet {
+  void settings() {
+    size(740,450);
+  }
+  void setup(){
+    // 文字指定
+    textSize(24);
+    textAlign(LEFT,TOP);
+  }
+  float subTextX = 0;
+  void draw() {
+    // 適当なものを表示してみる
+    background(color(230, 230, 230, 255));
+    fill(0);
+    //rect(60, 80, int(height/6), int(height/6)*5);
+    //rect(90, 80, int(height/6), int(height/6));
+    //rect(90, 40, int(height/6), int(height/6));
+    //rect(90, 120, int(height/6), int(height/6));
+    ////rect(60, 80, int(height/6), int(height/6));
+    ////rect(60, 80, int(height/6), int(height/6));
+    ////rect(60, 80, int(height/6), int(height/6));
+    ////rect(60, 80, int(height/6), int(height/6));
+    ////rect(60, 80, int(height/6), int(height/6));
+    ////rect(60, 80, int(height/6), int(height/6));
+    ////rect(60, 80, int(height/6), int(height/6));
+    ////rect(60, 80, int(height/6), int(height/6));
+  }
 }
