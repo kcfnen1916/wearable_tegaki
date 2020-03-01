@@ -29,6 +29,9 @@ void write_tweet(String tweet){
     if (tweet.substring(0,5).equals("ENTER")){
        driver.switchTo().activeElement().sendKeys(Keys.ENTER);
     }
+    else if (tweet.substring(0,5).equals("SPACE")){
+       driver.switchTo().activeElement().sendKeys(" ");
+    }
   }
   else if (tweet.length() >= 9){
     if (tweet.substring(0,9).equals("BACKSPACE")){
