@@ -223,13 +223,13 @@ void loop()
             if (wearbo.m_input_data.length() == 0) {
                 output = "=";
             } else {
-                Serial.println("HANDWRITING");
+                //Serial.println("HANDWRITING");
                 for (auto hw : hw_lst) {
                     if (hw.m_begin == (String)wearbo.m_input_data.charAt(0) && hw.m_end == (String)wearbo.m_input_data.charAt(wearbo.m_input_data.length() - 1)) {
                         output.concat(hw.m_output);
                     }
                 }
-                Serial.println(output);
+                //Serial.println(output);
                 if (output.length() > 1) {
                     int dist[2][10] = {{-1, -1, -1, -1, -1, -1, -1, -1, -1, -1}, {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1}};
                     int i = 0;
@@ -245,7 +245,7 @@ void loop()
                     int min = 100;
                     int min_index = -1;
                     bool found = false;
-                    Serial.println("For start");
+                    //Serial.println("For start");
                     for (i = 0; i < 10; i++) {
                         if (dist[0][i] == -1) {
                             break;

@@ -5,7 +5,7 @@
 #include "Arduino.h"
 #include "bluetooth.hpp"
 // #include "config.hpp"
-#include "wifi.hpp"
+//#include "wifi.hpp"
 #include <Wire.h>
 
 #ifndef _BV
