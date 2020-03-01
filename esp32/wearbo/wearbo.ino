@@ -268,6 +268,9 @@ void loop()
             }
             if (wearbo.m_input_data.charAt(0) == 's'){
               output = "SPACE";
+              if  (wearbo.m_input_data.length() >= 2 && wearbo.m_input_data.charAt(1) == 'c'){
+                output = "CHANGE_MODE2";
+              }
               //Serial.print(output);
             }
             if (wearbo.m_ulst == 1) {
