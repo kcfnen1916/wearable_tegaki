@@ -3,10 +3,12 @@
 #include "hand_writing.hpp"
 #include "levenshtein_distance.hpp"
 #include <M5StickC.h>
+#include "BluetoothSerial.h"
 
 String output = "";
 
 BleKeyboard bleKeyboard;
+//BluetoothSerial SerialBT;
 
 Wearbo wearbo = Wearbo(12);
 
@@ -34,6 +36,7 @@ Gesture mode_30 = Gesture("sd", 2, "CHANGE_MODE3", 0);
 Gesture mode_31 = Gesture("ds", 2, "CHANGE_MODE3", 0);
 Gesture right = Gesture("ctyud", 5, "RIGHT", 0);
 Gesture left = Gesture("duytc", 5, "LEFT", 0);
+Gesture tweet = Gesture("cghjs", 5, "TWEET", 0);
 
 Gesture a = Gesture("t", 1, "a", 1);
 Gesture b = Gesture("tc", 2, "b", 1);
@@ -143,7 +146,7 @@ HandWriting x_hw = HandWriting("x", "t_h_m_u_h_b");
 HandWriting y_hw = HandWriting("y", "t_h_u_h_b");
 HandWriting z_hw = HandWriting("z", "t_y_u_h_b_n_m");
 
-Gesture ges_lst[61] = {right, left, enter, mode_10, mode_11, mode_20, mode_21, mode_30, mode_31, b, c, d, f, g, h, j, k, l, n, o, p, q, s, t, u, v, x, y, z, hyphen, slash, sharp, colon, brcr, quot, dubquot, comma, question, exclam, spc, delet, a, e, i, m, r, w, at, brcl, period, chuplow, zero, one, two, three, four, five, six, seven, eight, nine};
+Gesture ges_lst[62] = {tweet, right, left, enter, mode_10, mode_11, mode_20, mode_21, mode_30, mode_31, b, c, d, f, g, h, j, k, l, n, o, p, q, s, t, u, v, x, y, z, hyphen, slash, sharp, colon, brcr, quot, dubquot, comma, question, exclam, spc, delet, a, e, i, m, r, w, at, brcl, period, chuplow, zero, one, two, three, four, five, six, seven, eight, nine};
 HandWriting hw_lst[55] = {a_hw, a_hw2, b_hw, b_hw2, b_hw3, b_hw4, b_hw5, b_hw6, c_hw, d_hw, d_hw2, d_hw3, d_hw4, d_hw5, e_hw, e_hw2, f_hw, g_hw, g_hw2, h_hw, h_hw2, i_hw, i_hw2, i_hw3, j_hw, j_hw2, k_hw, k_hw2, k_hw3, l_hw, l_hw2, l_hw3, l_hw4, m_hw, n_hw, o_hw, p_hw, p_hw2, p_hw3, p_hw4,p_hw5,p_hw6, q_hw, q_hw2, q_hw3, r_hw, r_hw2, s_hw, t_hw, u_hw, v_hw, w_hw, x_hw, y_hw, z_hw};
 int vib_pin = 26;
 
@@ -151,6 +154,7 @@ void setup()
 {
     Serial.begin(115200);
     Serial.println("Starting wearbo");
+    //SerialBT.begin("ESP32");
 
     wearbo.m_cap = Adafruit_MPR121();
 
@@ -171,6 +175,7 @@ void setup()
 
 void loop()
 {
+    //SerialBT.println("Hello World");
     output = "";
     wearbo.m_input_data = "";
     // m_input_time = "";
@@ -189,6 +194,7 @@ void loop()
         //Serial.println(output);
         if (output == "CHANGE_ULST") {
             wearbo.change_ulst();
+            Serial.println("a/A");
         } else if (output == "CHANGE_MODE1") {
             wearbo.change_mode(1);
         } else if (output == "CHANGE_MODE2") {
@@ -204,7 +210,6 @@ void loop()
         }
     } else if (wearbo.m_mode == 3) {
         if (wearbo.m_input_data.charAt(0) == 'd' || wearbo.m_input_data.charAt(0) == 'c') {
-          //Serial.println(wearbo.m_input_data);
             for (auto g : ges_lst) {
                 if (g.m_mode == 1 || g.m_mode == 0) {
                     output = g.judge_gesture(wearbo.m_input_data);
@@ -213,16 +218,16 @@ void loop()
                     }
                 }
             }
-            //Serial.println(output);
             if (output == "CHANGE_ULST") {
                 wearbo.change_ulst();
+                Serial.println("a/A");
             } else if (output == "CHANGE_MODE1") {
                 wearbo.change_mode(1);
             } else if (output == "CHANGE_MODE2") {
                 wearbo.change_mode(2);
             } else if (output == "CHANGE_MODE3") {
                 wearbo.change_mode(3);
-            } else if (output == "BACKSPACE" || output == "ENTER" || output == "LEFT" || output == "RIGHT") {
+            } else if (output == "BACKSPACE" || output == "ENTER" || output == "LEFT" || output == "RIGHT" || output == "TWEET" ) {
                 send_ble(output);
             }
         } else {
@@ -274,7 +279,6 @@ void loop()
               //Serial.print(output);
             }
             if (wearbo.m_ulst == 1) {
-                //Serial.println(low2up(output.charAt(0)));
                 if (output != "SPACE"){
                   send_ble(low2up(output.charAt(0)));
                 }

@@ -1,5 +1,6 @@
 #include "bluetooth.hpp"
 #include "Arduino.h"
+#include "BluetoothSerial.h"
 
 
 void send_ble(String output)
@@ -15,6 +16,8 @@ void send_ble(String output)
         bleKeyboard.write(KEY_RIGHT_ARROW);
     } else if (output == "SPACE"){
        bleKeyboard.print(" ");
+    } else if (output == "tweet"){
+      
     } else {
         bleKeyboard.print(output);
     }
