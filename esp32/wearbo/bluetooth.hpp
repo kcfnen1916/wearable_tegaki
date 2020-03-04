@@ -1,9 +1,11 @@
-#ifndef INCLUDE_GUARD_BLE_HPP
-#define INCLUDE_GUARD_BLE_HPP
+#ifndef INCLUDE_GUARD_BLUETOOTH_HPP
+#define INCLUDE_GUARD_BLUETOOTH_HPP
 
 #include <BleKeyboard.h>
+#include "BluetoothSerial.h"
 
-extern BleKeyboard bleKeyboard;
+//extern BleKeyboard bleKeyboard;
+extern BluetoothSerial SerialBT;
 
 void send_ble(String output);
-#endif  // INCLUDE_GUARD_BLE_HPP
+#endif  // INCLUDE_GUARD_BLUETOOTH_HPP

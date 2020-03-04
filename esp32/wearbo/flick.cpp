@@ -89,6 +89,7 @@ void Wearbo::record()
                         }
                         m_input_data.concat(m_key_lst[i]);
                         Serial.println(m_key_lst[i]+"1");
+                        SerialBT.println(m_key_lst[i]+"1");
                     } else {
                         if (m_unique) {
                             m_input_data.concat(m_key_lst[i]);
@@ -99,6 +100,7 @@ void Wearbo::record()
                         }
                         //m_input_data.concat(m_key_lst[i]);
                         Serial.println(m_key_lst[i]+"1");
+                        SerialBT.println(m_key_lst[i]+"1");
                     }
                 }
             }

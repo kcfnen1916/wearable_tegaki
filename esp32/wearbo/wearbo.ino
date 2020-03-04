@@ -7,8 +7,8 @@
 
 String output = "";
 
-BleKeyboard bleKeyboard;
-//BluetoothSerial SerialBT;
+//BleKeyboard bleKeyboard;
+BluetoothSerial SerialBT;
 
 Wearbo wearbo = Wearbo(12);
 
@@ -154,7 +154,6 @@ void setup()
 {
     Serial.begin(115200);
     Serial.println("Starting wearbo");
-    //SerialBT.begin("ESP32");
 
     wearbo.m_cap = Adafruit_MPR121();
 
@@ -166,7 +165,8 @@ void setup()
     Serial.println("MPR121 found!");
 
     M5.begin();
-    bleKeyboard.begin();
+    //bleKeyboard.begin();
+    SerialBT.begin("ESP32");
 
     Wire.begin(32, 33);
 
@@ -175,7 +175,6 @@ void setup()
 
 void loop()
 {
-    //SerialBT.println("Hello World");
     output = "";
     wearbo.m_input_data = "";
     // m_input_time = "";
@@ -195,6 +194,7 @@ void loop()
         if (output == "CHANGE_ULST") {
             wearbo.change_ulst();
             Serial.println("a/A");
+            SerialBT.println("a/A");
         } else if (output == "CHANGE_MODE1") {
             wearbo.change_mode(1);
         } else if (output == "CHANGE_MODE2") {
@@ -221,6 +221,7 @@ void loop()
             if (output == "CHANGE_ULST") {
                 wearbo.change_ulst();
                 Serial.println("a/A");
+                SerialBT.println("a/A");
             } else if (output == "CHANGE_MODE1") {
                 wearbo.change_mode(1);
             } else if (output == "CHANGE_MODE2") {
@@ -286,14 +287,10 @@ void loop()
                   send_ble(output);
                 }
             } else {
-                //Serial.println(output);
                 send_ble(output);
             }
-            //Serial.println(output);
         }
     }
-    // delay(80);
-    // dacWrite(vib_pin, 0);
 }
 
 String low2up(char c)
