@@ -175,6 +175,8 @@ void setup()
 
 void loop()
 {
+    double vbat = M5.Axp.GetVbatData() * 1.1 / 1000; 
+    //Serial.println( "=voltage"+String(vbat));
     output = "";
     wearbo.m_input_data = "";
     // m_input_time = "";
