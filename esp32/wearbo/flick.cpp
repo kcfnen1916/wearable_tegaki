@@ -96,9 +96,10 @@ void Wearbo::record()
                         } else {
                             if ((m_key_lst[i] != "d") && (m_key_lst[i] != "c") && (m_key_lst[i] != "s")) {
                                 m_input_data.concat(m_key_lst[i]);
+                            } else if (m_mode == 1){
+                                m_input_data.concat(m_key_lst[i]);
                             }
                         }
-                        //m_input_data.concat(m_key_lst[i]);
                         Serial.println(m_key_lst[i]+"1");
                         SerialBT.println(m_key_lst[i]+"1");
                     }

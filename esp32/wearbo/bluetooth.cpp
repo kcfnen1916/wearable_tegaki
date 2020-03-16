@@ -4,9 +4,11 @@
 
 
 void send_ble(String output)
-{
-    Serial.println(output);
-    SerialBT.println(output);
+{   
+    if (output != "CHANGE_MODE2"){
+      Serial.println(output);
+      SerialBT.println(output);
+    }
     if (output == "ENTER") {
         //bleKeyboard.write(KEY_RETURN);
     } else if (output == "BACKSPACE") {

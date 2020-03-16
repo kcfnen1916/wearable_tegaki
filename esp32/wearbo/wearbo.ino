@@ -199,10 +199,16 @@ void loop()
             SerialBT.println("a/A");
         } else if (output == "CHANGE_MODE1") {
             wearbo.change_mode(1);
+            SerialBT.println("Flick mode");
+            Serial.println("Flick mode");
         } else if (output == "CHANGE_MODE2") {
             wearbo.change_mode(2);
+            SerialBT.println("Number mode");
+            Serial.println("Number mode");
         } else if (output == "CHANGE_MODE3") {
             wearbo.change_mode(3);
+            SerialBT.println("Handwriting mode");
+            Serial.println("Handwriting mode");
         } else {
             if (wearbo.m_ulst == 1 && output.length() == 1) {
                 send_ble(low2up(output.charAt(0)));
@@ -226,10 +232,16 @@ void loop()
                 SerialBT.println("a/A");
             } else if (output == "CHANGE_MODE1") {
                 wearbo.change_mode(1);
+                Serial.println("Flick mode");
+                SerialBT.println("Flick mode");
             } else if (output == "CHANGE_MODE2") {
                 wearbo.change_mode(2);
+                Serial.println("Number mode");
+                SerialBT.println("Number mode");
             } else if (output == "CHANGE_MODE3") {
                 wearbo.change_mode(3);
+                Serial.println("Handwriting mode");
+                SerialBT.println("Handwriting mode");
             } else if (output == "BACKSPACE" || output == "ENTER" || output == "LEFT" || output == "RIGHT" || output == "TWEET" ) {
                 send_ble(output);
             }
