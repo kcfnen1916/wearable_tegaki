@@ -159,12 +159,13 @@ void loop()
     if (!wearbo.m_cap.begin(0x5A)) {
         Serial.println("MPR121 not found, check wiring?");
         M5.Lcd.printf("MPR121 not found, check wiring?");
+        esp_restart();
 //        while (1)
 //            ;
     }
     M5.Lcd.setTextSize(2);
     M5.Lcd.setCursor(1, 0);
-    M5.Lcd.printf("wearbo is working now");
+    M5.Lcd.printf("working now");
     //M5.Lcd.fillScreen(BLACK);
     output = "";
     wearbo.m_input_data = "";
