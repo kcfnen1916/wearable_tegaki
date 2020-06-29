@@ -3,6 +3,8 @@
 #include "hand_writing.hpp"
 #include <M5StickC.h>
 
+
+
 String output = "";
 
 BleKeyboard bleKeyboard;
@@ -134,17 +136,22 @@ void setup()
 {
     Serial.begin(115200);
     Serial.println("Starting wearbo");
+    Wire1.beginTransmission(0x51);
+    Wire1.write(0x00);
+    Wire1.write(0x00);
+    Wire1.write(0x00);
+    Wire1.endTransmission();
+    Serial.println("RTC status reset");
+
+    Serial.println("MPR121 found!");
+    M5.begin();
+    M5.Lcd.setRotation(3);
+   
+    M5.Lcd.setTextSize(1);
+    M5.Lcd.setCursor(0, 0);
 
     wearbo.m_cap = Adafruit_MPR121();
 
-    if (!wearbo.m_cap.begin(0x5A)) {
-        Serial.println("MPR121 not found, check wiring?");
-        while (1)
-            ;
-    }
-    Serial.println("MPR121 found!");
-
-    M5.begin();
     bleKeyboard.begin();
 
     Wire.begin(32, 33);
@@ -154,6 +161,15 @@ void setup()
 
 void loop()
 {
+    //Serial.println(wearbo.m_cap.begin(0x5A));
+    if (!wearbo.m_cap.begin(0x5A)) {
+        Serial.println("MPR121 not found, check wiring?");
+        M5.Lcd.printf("MPR121 not found, check wiring?");
+//        while (1)
+//            ;
+    }
+    M5.Lcd.printf("wearbo is working now");
+    M5.Lcd.fillScreen(BLACK);
     output = "";
     wearbo.m_input_data = "";
     // m_input_time = "";
@@ -297,7 +313,7 @@ void loop()
         }
     }
     // delay(80);
-    // dacWrite(vib_pin, 0);
+     dacWrite(vib_pin, 0);
 }
 
 String low2up(char c)
