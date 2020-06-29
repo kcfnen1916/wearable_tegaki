@@ -136,12 +136,12 @@ void setup()
 {
     Serial.begin(115200);
     Serial.println("Starting wearbo");
-    Wire1.beginTransmission(0x51);
-    Wire1.write(0x00);
-    Wire1.write(0x00);
-    Wire1.write(0x00);
-    Wire1.endTransmission();
-    Serial.println("RTC status reset");
+//    Wire1.beginTransmission(0x51);
+//    Wire1.write(0x00);
+//    Wire1.write(0x00);
+//    Wire1.write(0x00);
+//    Wire1.endTransmission();
+//    Serial.println("RTC status reset");
 
     Serial.println("MPR121 found!");
     M5.begin();
@@ -168,8 +168,10 @@ void loop()
 //        while (1)
 //            ;
     }
+    M5.Lcd.setTextSize(2);
+    M5.Lcd.setCursor(1, 0);
     M5.Lcd.printf("wearbo is working now");
-    M5.Lcd.fillScreen(BLACK);
+    //M5.Lcd.fillScreen(BLACK);
     output = "";
     wearbo.m_input_data = "";
     // m_input_time = "";
