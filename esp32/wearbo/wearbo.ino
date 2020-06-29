@@ -136,12 +136,6 @@ void setup()
 {
     Serial.begin(115200);
     Serial.println("Starting wearbo");
-//    Wire1.beginTransmission(0x51);
-//    Wire1.write(0x00);
-//    Wire1.write(0x00);
-//    Wire1.write(0x00);
-//    Wire1.endTransmission();
-//    Serial.println("RTC status reset");
 
     Serial.println("MPR121 found!");
     M5.begin();
